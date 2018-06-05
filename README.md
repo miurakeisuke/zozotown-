@@ -10,11 +10,9 @@
 |point|integer|null:false|
 |release_date|date||
 |gender|string|null:false|
-|new/used|boolean|null:false|
+|product_status|boolean|null:false|
 |description|text||
 |stock|integer|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |staff_review_id|reference|foreign_key:true|
 |shop_news_id|reference|foreign_key:true|
 |coupon_id|reference|foreign_key:true|
@@ -37,7 +35,7 @@
 - belongs_to :shop
 - belongs_to :category
 - has_many   :colors
-- has_manu   :sizes
+- has_many   :sizes
 - belongs_to :brand
 - has_many   :product_likes
 - has_one    :detail
@@ -55,13 +53,11 @@
 |gender|string|null:false|
 |password|text|null:false|
 |address|text|null:false|
-|postal_code|integer|null:false|
-|tel_number|integer|null:false|
+|postal_code|string|null:false|
+|tel_number|string|null:false|
 |credit_card_number|integer||
 |point|integer|null:false|
 |birthday|date|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_like_id|reference|foreign_key:true|
 |brand_like_id|reference|foreign_key:true|
 |shop_id|reference|foreign_key:true|
@@ -81,8 +77,6 @@
 ## products_users
 |Column|Type|Options|
 |------|----|-------|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -93,8 +87,6 @@
 ## product_likes
 |Column|Type|Options|
 |------|----|-------|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -105,8 +97,6 @@
 ## shop_likes
 |Column|Type|Options|
 |------|----|-------|
-|created_at|timestamp||
-|updated_at|timestamp||
 |shop_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -117,8 +107,6 @@
 ## brand_likes
 |Column|Type|Options|
 |------|----|-------|
-|created_at|timestamp||
-|updated_at|timestamp||
 |brand_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -131,8 +119,6 @@
 |------|----|-------|
 |order_number|integer|null:false|
 |order_status|string|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -144,8 +130,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |point_count|integer|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
@@ -157,8 +141,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |size|string|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -168,8 +150,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -179,8 +159,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |url|text||
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -194,8 +172,6 @@
 |stretch|string||
 |soft|string||
 |image_url|text||
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -210,8 +186,6 @@
 |postage|integer|null: false|
 |gift|boolean|null: false|
 |inquiry_number|integer|null: false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -221,8 +195,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
 ### Association
@@ -233,8 +205,6 @@
 |------|----|-------|
 |name|string|null:false|
 |introduction|text||
-|created_at|timestamp||
-|updated_at|timestamp||
 |shop_brand_id|reference|foreign_key:true|
 |product_id|reference|foreign_key:true|
 |shop_news_id|reference|foreign_key:true|
@@ -251,8 +221,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |shop_id|reference|foreign_key:true|
 |brand_like_id|reference|foreign_key:true|
@@ -268,8 +236,6 @@
 |------|----|-------|
 |news|string|null:false|
 |image|text||
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |shop_id|reference|foreign_key:true|
 
@@ -281,8 +247,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |coupons_count|integer|null:false|
-|created_at|timestamp||
-|updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |shop_id|reference|foreign_key:true|
 
