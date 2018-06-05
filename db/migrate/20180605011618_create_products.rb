@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :description
       t.integer :price, null: false
       t.integer :point, null: false
-      t.integer :point, null: false
       t.timestamps
     end
   end
