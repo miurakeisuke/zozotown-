@@ -5,28 +5,28 @@
 ## products
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
-|price|integer|null:false|
-|point|integer|null:false|
+|name|string|null: false|
+|price|integer|null: false|
+|point|integer|null: false|
 |release_date|date||
-|gender|string|null:false|
-|product_status|boolean|null:false|
+|gender|string|null: false|
+|product_status|boolean|null: false|
 |description|text||
-|stock|integer|null:false|
-|staff_review_id|reference|foreign_key:true|
-|shop_news_id|reference|foreign_key:true|
-|coupon_id|reference|foreign_key:true|
-|shop_id|reference|foreign_key:true|
-|category_id|reference|foreign_key:true|
-|color_id|reference|foreign_key:true|
-|size_id|reference|foreign_key:true|
-|brand_id|reference|foreign_key:true|
-|product_like_id|reference|foreign_key:true|
-|detail_id|reference|foreign_key:true|
-|point_id|reference|foreign_key:true|
-|order_id|reference|foreign_key:true|
-|image_id|reference|foreign_key:true|
-|products_users_id|reference|foreign_key:true|
+|stock|integer|null: false|
+|staff_review_id|reference|foreign_key: true|
+|shop_news_id|reference|foreign_key: true|
+|coupon_id|reference|foreign_key: true|
+|shop_id|reference|foreign_key: true|
+|category_id|reference|foreign_key: true|
+|color_id|reference|foreign_key: true|
+|size_id|reference|foreign_key: true|
+|brand_id|reference|foreign_key: true|
+|product_like_id|reference|foreign_key: true|
+|detail_id|reference|foreign_key: true|
+|point_id|reference|foreign_key: true|
+|order_id|reference|foreign_key: true|
+|image_id|reference|foreign_key: true|
+|products_users_id|reference|foreign_key: true|
 
 ### Association
 - has_many   :staff_reviews
@@ -48,22 +48,22 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null:false, unique: true|
-|name|string|null:false|
-|gender|string|null:false|
-|password|text|null:false|
-|address|text|null:false|
-|postal_code|string|null:false|
-|tel_number|string|null:false|
+|email|string|null: false, unique: true|
+|name|string|null: false|
+|gender|string|null: false|
+|password|text|null: false|
+|address|text|null: false|
+|postal_code|string|null: false|
+|tel_number|string|null: false|
 |credit_card_number|integer||
-|point|integer|null:false|
-|birthday|date|null:false|
-|product_like_id|reference|foreign_key:true|
-|brand_like_id|reference|foreign_key:true|
-|shop_id|reference|foreign_key:true|
-|oreder_id|reference|foreign_key:true|
-|product_user_id|reference|foreign_key:true|
-|point_id|reference|foreign_key:true|
+|point|integer|null: false|
+|birthday|date|null: false|
+|product_like_id|reference|foreign_key: true|
+|brand_like_id|reference|foreign_key: true|
+|shop_id|reference|foreign_key: true|
+|oreder_id|reference|foreign_key: true|
+|product_user_id|reference|foreign_key: true|
+|point_id|reference|foreign_key: true|
 
 ### Association
 - has_many   :product_likes
@@ -77,8 +77,8 @@
 ## products_users
 |Column|Type|Options|
 |------|----|-------|
-|product_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -87,8 +87,8 @@
 ## product_likes
 |Column|Type|Options|
 |------|----|-------|
-|product_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -97,8 +97,8 @@
 ## shop_likes
 |Column|Type|Options|
 |------|----|-------|
-|shop_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|shop_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :shop
@@ -107,8 +107,8 @@
 ## brand_likes
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|brand_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :brand
@@ -117,10 +117,10 @@
 ## orders
 |Column|Type|Options|
 |------|----|-------|
-|order_number|integer|null:false|
-|order_status|string|null:false|
-|product_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|order_number|integer|null: false|
+|order_status|string|null: false|
+|product_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -129,9 +129,9 @@
 ## points
 |Column|Type|Options|
 |------|----|-------|
-|point_count|integer|null:false|
-|product_id|reference|foreign_key:true|
-|user_id|reference|foreign_key:true|
+|point_count|integer|null: false|
+|product_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -140,8 +140,8 @@
 ## sizes
 |Column|Type|Options|
 |------|----|-------|
-|size|string|null:false|
-|product_id|reference|foreign_key:true|
+|size|string|null: false|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -149,8 +149,8 @@
 ## categories
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
-|product_id|reference|foreign_key:true|
+|name|string|null: false|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - has_many :products
@@ -159,7 +159,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |url|text||
-|product_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -172,7 +172,7 @@
 |stretch|string||
 |soft|string||
 |image_url|text||
-|product_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -186,7 +186,7 @@
 |postage|integer|null: false|
 |gift|boolean|null: false|
 |inquiry_number|integer|null: false|
-|product_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -194,8 +194,8 @@
 ## colors
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
-|product_id|reference|foreign_key:true|
+|name|string|null: false|
+|product_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -203,12 +203,12 @@
 ## shops
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
+|name|string|null: false|
 |introduction|text||
-|shop_brand_id|reference|foreign_key:true|
-|product_id|reference|foreign_key:true|
-|shop_news_id|reference|foreign_key:true|
-|coupon_id|reference|foreign_key:true|
+|shop_brand_id|reference|foreign_key: true|
+|product_id|reference|foreign_key: true|
+|shop_news_id|reference|foreign_key: true|
+|coupon_id|reference|foreign_key: true|
 
 ### Association
 - has_many :shops_brands
@@ -220,13 +220,13 @@
 ## brands
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
-|product_id|reference|foreign_key:true|
-|shop_id|reference|foreign_key:true|
-|brand_like_id|reference|foreign_key:true|
+|name|string|null: false|
+|product_id|reference|foreign_key: true|
+|shop_id|reference|foreign_key: true|
+|brand_like_id|reference|foreign_key: true|
 
 ### Association
-- has_many :brand_likes
+- has_many :products
 - has_many :shops_brands
 - has_many :brand_likes
 - has_many :shops, through: :shops_brands
@@ -236,8 +236,8 @@
 |------|----|-------|
 |news|string|null:false|
 |image|text||
-|product_id|reference|foreign_key:true|
-|shop_id|reference|foreign_key:true|
+|product_id|reference|foreign_key: true|
+|shop_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -246,9 +246,9 @@
 ## coupons
 |Column|Type|Options|
 |------|----|-------|
-|coupons_count|integer|null:false|
-|product_id|reference|foreign_key:true|
-|shop_id|reference|foreign_key:true|
+|coupons_count|integer|null: false|
+|product_id|reference|foreign_key: true|
+|shop_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :product
