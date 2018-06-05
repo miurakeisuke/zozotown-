@@ -1,4 +1,5 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
   def index
+    @message = "Good morning"
   end
 end
