@@ -23,7 +23,7 @@
 |color_id|reference|foreign_key:true|
 |size_id|reference|foreign_key:true|
 |brand_id|reference|foreign_key:true|
-|product_likes_id|reference|foreign_key:true|
+|product_like_id|reference|foreign_key:true|
 |detail_id|reference|foreign_key:true|
 |point_id|reference|foreign_key:true|
 |order_id|reference|foreign_key:true|
@@ -32,7 +32,7 @@
 
 ### Association
 - has_many   :staff_reviews
-- has_many   :shop_newses
+- has_many   :shop_news
 - has_many   :coupons
 - belongs_to :shop
 - belongs_to :category
@@ -40,7 +40,7 @@
 - has_manu   :sizes
 - belongs_to :brand
 - has_many   :product_likes
-- belongs_to :detail
+- has_one    :detail
 - has_many   :points
 - has_many   :orders
 - has_many   :images
@@ -90,7 +90,7 @@
 - belongs_to :user
 - belongs_to :product
 
-## products_likes
+## product_likes
 |Column|Type|Options|
 |------|----|-------|
 |created_at|timestamp||
@@ -102,12 +102,12 @@
 - belongs_to :product
 - belongs_to :user
 
-## shops_likes
+## shop_likes
 |Column|Type|Options|
 |------|----|-------|
 |created_at|timestamp||
 |updated_at|timestamp||
-|product_id|reference|foreign_key:true|
+|shop_id|reference|foreign_key:true|
 |user_id|reference|foreign_key:true|
 
 ### Association
@@ -137,7 +137,7 @@
 |user_id|reference|foreign_key:true|
 
 ### Association
-- belongs_to :brand
+- belongs_to :product
 - belongs_to :user
 
 ## points
@@ -189,9 +189,9 @@
 ## staff_reviews
 |Column|Type|Options|
 |------|----|-------|
-|shin|string||
+|thickness|string||
 |opacity|string||
-|strech|string||
+|stretch|string||
 |soft|string||
 |image_url|text||
 |created_at|timestamp||
@@ -210,6 +210,7 @@
 |postage|integer|null: false|
 |gift|boolean|null: false|
 |inquiry_number|integer|null: false|
+|created_at|timestamp||
 |updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 
@@ -242,7 +243,7 @@
 ### Association
 - has_many :shops_brands
 - has_many :products
-- has_many :shop_newses
+- has_many :shop_news
 - has_many :coupons
 - has_many :brands, through: :shops_brands
 
@@ -254,13 +255,15 @@
 |updated_at|timestamp||
 |product_id|reference|foreign_key:true|
 |shop_id|reference|foreign_key:true|
+|brand_like_id|reference|foreign_key:true|
 
 ### Association
 - has_many :brand_likes
 - has_many :shops_brands
+- has_many :brand_likes
 - has_many :shops, through: :shops_brands
 
-## shop_newses
+## shop_news
 |Column|Type|Options|
 |------|----|-------|
 |news|string|null:false|
