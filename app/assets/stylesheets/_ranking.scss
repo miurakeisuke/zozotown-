@@ -70,12 +70,12 @@ ul li {
     margin-top: 43px;
     float: right;
     font-size: 12px;
-    :hover {
-      text-decoration: underline;
-    }
     a {
       text-decoration: none;
       color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
