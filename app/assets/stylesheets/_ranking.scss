@@ -8,7 +8,7 @@
     margin: auto;
     text-align: left;
     position: relative;
-    .nav-bar {
+    .navigation-bar {
       width: 980px;
       padding: 25px 0;
       margin: 0 auto;
@@ -33,7 +33,7 @@ ul li {
   position: relative;
 }
 
-#contentHeader {
+#content_header {
   margin-top: 5px;
   border-bottom: solid 1px #dcdcdc;
   .crown {
@@ -45,7 +45,7 @@ ul li {
   height: auto;
   padding: 0 0 0 43px;
   }
-  #mainTab {
+  #main_tab {
     margin-top: 29px;
     float: left;
     li {
@@ -66,7 +66,7 @@ ul li {
       background-color: #EEEEEE;
     }
   }
-  #otherRanking {
+  #other_ranking {
     margin-top: 43px;
     float: right;
     font-size: 12px;
@@ -82,41 +82,41 @@ ul li {
 
 
 
-.resultGuideListTop {
+.result_guide_list_top {
   font-size: 14px;
   margin: 22px 0 0 7px;
   padding: 0 0 20px;
   clear: both;
 }
 
-.brandLabel {
+.brand_label {
   float: left;
 }
 
-.brandLabelTitle {
+.brand_label_title {
   text-decoration: none;
 }
 
-.brandLabel a {
+.brand_label a {
   color: blue;
 }
 
-.brandLabel a:hover {
+.brand_label a:hover {
   text-decoration: underline;
 }
 
-.brandLabelRow {
+.brand_label_row {
   display: table;
   font-size: 14px;
   margin: 2px 0 6px;
 }
 
-.narrowListContainer {
+.narrow_list_container {
   float: left;
   position: relative;
 }
 
-.narrowListContainer:before {
+.narrow_list_container:before {
   content: "|" ;
   display: block;
   float: left;
@@ -124,28 +124,28 @@ ul li {
   color: #dcdcdc;
 }
 
-.narrowList {
+.narrow_list {
   float: left;
   font-size: 12px;
   margin: 0 9px 0 6px;
   position: relative;
 }
 
-.pulldownParent{
+.pulldown_parent{
   zoom: 1;
   list-style-type: none;
   margin: 5px auto 30px;
   padding: 0;
 }
 
-.pulldownParent:before, .pulldownParent:after{
+.pulldown_parent:before, .pulldown_parent:after{
   content: "";
   display: table;
 }
-.pilldownParewnt:after{
+.pilldown_parewnt:after{
   clear: both;
 }
-.pulldownParent li{
+.pulldown_parent li{
   position: relative;
   width: 100%;
   float: left;
@@ -153,7 +153,7 @@ ul li {
   padding: 0;
   text-align: center;
 }
-.pulldownParent li a{
+.pulldown_parent li a{
   text-align: left;
   display: block;
   margin: 0;
@@ -165,7 +165,7 @@ ul li {
   background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_10.png) no-repeat right -6px ;
 }
 
-.pulldownParent li ul{
+.pulldown_parent li ul{
   border: solid 2px #EEEEEE;
   border-radius: 1px;
   width: 436px;
@@ -178,12 +178,12 @@ ul li {
   padding: 8px 0;
 }
 
-.pulldownParent li ul li{
+.pulldown_parent li ul li{
   width: 218px;
 }
 
 
-.pulldownParent li ul li a{
+.pulldown_parent li ul li a{
   border-radius: 2px 2px 0 0 ;
   color: #1c1c1c;
   padding: 5px 27px 8px 13px;
@@ -191,16 +191,16 @@ ul li {
   text-align: left;
 }
 
-.pulldownParent li ul li a.current-menu {
+.pulldown_parent li ul li a.current-menu {
   background-color: #F2F2F2;
 }
 
 
-.pulldownParent li a:hover{
+.pulldown_parent li a:hover{
   color: #EEEEEE;
 }
 
-.pulldownParent li ul li a:hover {
+.pulldown_parent li ul li a:hover {
   background-color: #F2F2F2;
   color: #1c1c1c;
 }
@@ -216,17 +216,17 @@ ul li {
   margin-left: 0;
 }
 
-.rankingL {
+.ranking_l {
   float: left;
   margin: 0 0 0 25px;
   width: 310px;
 }
 
-.rankBox {
+.rank_box {
   position: relative;
 }
 
-.rankingGrid .iconSet.icoL {
+.ranking_grid .icon_set.ico_l {
   top: 10px;
   left: 10px;
 }
@@ -245,12 +245,12 @@ ul li {
   height: 372px;
 }
 
-.rankIteminfo {
+.rank_item_info {
   float: left;
   overflow: hidden;
 }
 
-.brandName {
+.brand_name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -258,7 +258,7 @@ ul li {
   margin: 10px 0 0 ;
 }
 
-.rankingL dt {
+.ranking_l dt {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -266,11 +266,11 @@ ul li {
   font-size: 14px;
 }
 
-.rankingL .price {
+.ranking_l .price {
   font-size: 18px;
 }
 
-.rankingL .tax {
+.ranking_l .tax {
   font-size: 11px;
   margin: 0 0 0 4px;
   white-space: nowrap;
@@ -280,7 +280,7 @@ ul li {
 
 
 
-#SearchLinkBlock {
+#search_link_block {
   padding: 0 0 80px;
 }
 
@@ -288,7 +288,7 @@ ul li {
   text-align: center;
 }
 
-a.gBtn {
+a.g_btn {
   display: inline-block;
   margin: 0 auto;
   min-width: 220px;
@@ -299,7 +299,7 @@ a.gBtn {
   word-wrap: break-word;
 }
 
-.gBtn {
+.g_btn {
   font-size: 15px;
   border-radius: 4px;
   background-color: #007ebe;
