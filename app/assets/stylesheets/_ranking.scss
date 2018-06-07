@@ -50,16 +50,16 @@ ul li {
     float: left;
     li {
       margin-right:1px;
-      :hover {
-          background-color: #EEEEEE;
-          border-color: gray;
-      }
       a {
         display: inline-block;
         border-radius: 2px 2px 0 0;
         color: #646464;
         padding: 10px 27px 8px 27px;
         text-decoration: none;
+        &:hover {
+          background-color: #EEEEEE;
+          border-color: gray;
+        }
       }
     }
     .current {
