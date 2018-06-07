@@ -1,0 +1,316 @@
+#zozotown {
+  min-width: 1000px;
+  margin: auto;
+  position: relative;
+  zoom: 1;
+  #wrapper {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    position: relative;
+    .nav-bar {
+      width: 980px;
+      padding: 25px 0;
+      margin: 0 auto;
+      font-size: 13px;
+      ul.clearfix {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+ul li {
+  float: left;
+}
+
+#body {
+  width: 980px;
+  margin: 0 auto 0;
+  position: relative;
+}
+
+#contentHeader {
+  margin-top: 5px;
+  border-bottom: solid 1px #dcdcdc;
+  .crown {
+    font-size: 23px;
+    float: left;
+  }
+  h1 {
+  font-size: 23px;
+  height: auto;
+  padding: 0 0 0 43px;
+  }
+  #mainTab {
+    margin-top: 29px;
+    float: left;
+    li {
+      margin-right:1px;
+      :hover {
+          background-color: #EEEEEE;
+          border-color: gray;
+      }
+      a {
+        display: inline-block;
+        border-radius: 2px 2px 0 0;
+        color: #646464;
+        padding: 10px 27px 8px 27px;
+        text-decoration: none;
+      }
+    }
+    .current {
+      background-color: #EEEEEE;
+    }
+  }
+  #otherRanking {
+    margin-top: 43px;
+    float: right;
+    font-size: 12px;
+    :hover {
+      text-decoration: underline;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+}
+
+
+
+.resultGuideListTop {
+  font-size: 14px;
+  margin: 22px 0 0 7px;
+  padding: 0 0 20px;
+  clear: both;
+}
+
+.brandLabel {
+  float: left;
+}
+
+.brandLabelTitle {
+  text-decoration: none;
+}
+
+.brandLabel a {
+  color: blue;
+}
+
+.brandLabel a:hover {
+  text-decoration: underline;
+}
+
+.brandLabelRow {
+  display: table;
+  font-size: 14px;
+  margin: 2px 0 6px;
+}
+
+.narrowListContainer {
+  float: left;
+  position: relative;
+}
+
+.narrowListContainer:before {
+  content: "|" ;
+  display: block;
+  float: left;
+  padding: 2px 0 2px 19px;
+  color: #dcdcdc;
+}
+
+.narrowList {
+  float: left;
+  font-size: 12px;
+  margin: 0 9px 0 6px;
+  position: relative;
+}
+
+.pulldownParent{
+  zoom: 1;
+  list-style-type: none;
+  margin: 5px auto 30px;
+  padding: 0;
+}
+
+.pulldownParent:before, .pulldownParent:after{
+  content: "";
+  display: table;
+}
+.pilldownParewnt:after{
+  clear: both;
+}
+.pulldownParent li{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pulldownParent li a{
+  text-align: left;
+  display: block;
+  margin: 0;
+  padding: 2px 35px 9px 13px;
+  color: #646464;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_10.png) no-repeat right -6px ;
+}
+
+.pulldownParent li ul{
+  border: solid 2px #EEEEEE;
+  border-radius: 1px;
+  width: 436px;
+  list-style: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.pulldownParent li ul li{
+  width: 218px;
+}
+
+
+.pulldownParent li ul li a{
+  border-radius: 2px 2px 0 0 ;
+  color: #1c1c1c;
+  padding: 5px 27px 8px 13px;
+  background: #FFF;
+  text-align: left;
+}
+
+.pulldownParent li ul li a.current-menu {
+  background-color: #F2F2F2;
+}
+
+
+.pulldownParent li a:hover{
+  color: #EEEEEE;
+}
+
+.pulldownParent li ul li a:hover {
+  background-color: #F2F2F2;
+  color: #1c1c1c;
+}
+
+#normal li ul{
+  display: none;
+}
+#normal li:hover ul {
+  display: block;
+}
+
+.fst {
+  margin-left: 0;
+}
+
+.rankingL {
+  float: left;
+  margin: 0 0 0 25px;
+  width: 310px;
+}
+
+.rankBox {
+  position: relative;
+}
+
+.rankingGrid .iconSet.icoL {
+  top: 10px;
+  left: 10px;
+}
+
+.photo a {
+  background-color: #ffffff;
+}
+
+.phtotolink {
+  display: block;
+  position: relative;
+}
+
+.image {
+  width: 310px;
+  height: 372px;
+}
+
+.rankIteminfo {
+  float: left;
+  overflow: hidden;
+}
+
+.brandName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #808080;
+  margin: 10px 0 0 ;
+}
+
+.rankingL dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #808080;
+  font-size: 14px;
+}
+
+.rankingL .price {
+  font-size: 18px;
+}
+
+.rankingL .tax {
+  font-size: 11px;
+  margin: 0 0 0 4px;
+  white-space: nowrap;
+  vertical-align: 1px;
+  color: #808080;
+}
+
+
+
+#SearchLinkBlock {
+  padding: 0 0 80px;
+}
+
+.btn {
+  text-align: center;
+}
+
+a.gBtn {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 220px;
+  padding: 11px 40px 10px;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  word-wrap: break-word;
+}
+
+.gBtn {
+  font-size: 15px;
+  border-radius: 4px;
+  background-color: #007ebe;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.clearfix:after {
+  content:"";
+  display: block;
+  clear: both;
+}
