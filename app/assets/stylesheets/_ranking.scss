@@ -51,16 +51,18 @@ ul li {
 // ここからタブ関係
 
 #content_header {
-  margin-top: 5px;
-  border-bottom: solid 1px #dcdcdc;
-  .crown {
-    font-size: 23px;
+  margin: 0 auto;
+  width: 980px;
+  i {
+    color: black;
     float: left;
+    font-size: 30px;
+    margin-top: 7px;
   }
   h1 {
-  font-size: 23px;
-  height: auto;
-  padding: 0 0 0 43px;
+    padding: 5px 0 0 40px;
+    background-position: 0 -120px;
+    font-size: 23px;
   }
   #main_tab {
     margin-top: 29px;
