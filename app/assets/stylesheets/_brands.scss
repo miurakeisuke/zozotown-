@@ -8,6 +8,10 @@
       width: 980px;
       font-size: 13px;
       color: gray;
+      a{
+      text-decoration: none;
+      color: #007ebe;
+      }
     }
     #index_header {
       margin: 0 auto;
@@ -22,35 +26,79 @@
         background-position: 0 -120px;
         font-size: 23px;
       }
-    }
-    #search_area {
-      padding: 0 35px;
-      height: 83px;
-      margin: 32px auto 0;
-      width: 883px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-      p {
-        padding: 28px 0 0;
-        .search_query {
-          width: 883px;
-          border: 0;
-          height: 33px;
-          font-size: 16px;
-          font-family: FontAwesome;
-          color: gray;
+      #content_header {
+        margin-top: 5px;
+        clear: both;
+        #main_tab {
+          margin-top: 29px;
+          float: left;
+          li {
+            margin-right:1px;
+            display: inline;
+            a {
+              display: inline-block;
+              border-radius: 2px 2px 0 0;
+              color: #646464;
+              padding: 10px 27px 8px 27px;
+              text-decoration: none;
+              &:hover {
+                background-color: #EEEEEE;
+                border-color: gray;
+              }
+            }
+          }
+          .current {
+            background-color: #EEEEEE;
+            padding: 14px 0 12px 0;
+          }
         }
-       }
-      }
-    #initial_zone {
-      margin-top: 19px;
-      ul {
-        margin-left: 20px;
+        #zozo_tab {
+          margin-top: 43px;
+          float: right;
+          font-size: 14px;
+        }
         li {
           display: inline;
-          border-right: 1px solid #dcdcdc;
-          padding: 0 13px 0 2px;
-          font-size: 13px;
+            a{
+            text-decoration: none;
+            color: #007ebe;
+            }
+          }
+        }
+      }
+    }
+    .search_zone {
+      border-top: solid 1px #dcdcdc;
+      clear: both;
+      #search_area {
+        padding: 0 50px;
+        height: 83px;
+        margin: 32px auto 0;
+        width: 883px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        p {
+          padding: 28px 0 0;
+          .search_query {
+            width: 883px;
+            border: 0;
+            height: 33px;
+            font-size: 16px;
+            font-family: FontAwesome;
+            color: gray;
+          }
+         }
+        }
+      #initial_zone {
+        margin-top: 19px;
+        ul {
+          margin-left: 20px;
+          li {
+            display: inline;
+            border-right: 1px solid #dcdcdc;
+            padding: 0 13px 0 2px;
+            font-size: 13px;
+          }
         }
       }
     }
@@ -83,4 +131,3 @@
       }
     }
   }
-}

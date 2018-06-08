@@ -8,8 +8,23 @@
       <h1>
         ブランド一覧
       </h1>
+      <div class="clearfix" id="content_header">
+        <ul id="main_tab">
+          <li id="tab_all" class="current"><a class="selected">すべて</a></li>
+          <li id="tab_men"><a href="/ranking/all-sales-men.html">メンズ</a></li>
+          <li id="tab_women"><a href="/ranking/all-sales-women.html">レディース</a></li>
+          <li id="tab_kids"><a href="/ranking/all-sales-kids.html">キッズ</a>
+        </ul>
+        <ul id="zozo_tab">
+          <li id="zozotown" class="zozotown">
+            ZOZOTOWN |
+          </li>
+          <li>
+            <%= link_to 'ZOZOUSED', "https://www.google.co.jp/", class: "zozoused" %>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- ここに三浦さん作成のviewが入ります -->
     <div class="search_zone">
       <div id=search_area>
         <p>
@@ -19,8 +34,9 @@
       </div>
       <div id=initial_zone>
         <ul>
-          <li>A</li>
-          <li>B</li>
+          <li><a href="#initial_a">A</a></li>
+          <!-- スクロールできるくらいコンテンツが増えると、ページ内リンクするようになります。 -->
+          <li><a href="#initial_b">B</a></li>
           <li>C</li>
           <li>D</li>
           <li>E</li>
@@ -52,7 +68,7 @@
 
     <div class="result_wrapper">
       <dl>
-        <dt>A</dt>
+        <dt id="initial_a">A</dt>
         <dd>
           <%= link_to 'AAA', "https://www.google.co.jp/", class: "list_company" %>
           <span class="company_count">(4)
@@ -77,7 +93,7 @@
     </div>
     <div class="result_wrapper">
       <dl>
-        <dt>B</dt>
+        <dt id="initial_b"><dt>B</dt>
           <dd>
             <%= link_to 'BAA', "https://www.google.co.jp/", class: "list_company" %>
             <span class="company_count">(4)
