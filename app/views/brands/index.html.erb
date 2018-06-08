@@ -1,105 +1,105 @@
-<div class=body>
-  <div class=breadcrumbs>
-    <%= render_breadcrumbs separator: ' ＞ ' %>
-  </div>
-  <div id=index_header>
-    <i class="fa fa-tag fa-2x"></i>
-    <h1>
-      ブランド一覧
-    </h1>
-  </div>
-
-  <!-- ここに三浦さん作成のviewが入ります -->
-  <div class="search_zone">
-    <div id=search_area>
-      <p>
-        <input class="search_query" name="keyword" placeholder=" &#xF002;お探しのブランドは何ですか？" type="text" value="">
-        </input>
-      </p>
+<div class=wrapper>
+  <div class=center_content>
+    <div class=breadcrumbs>
+      <%= render_breadcrumbs separator: ' ＞ ' %>
     </div>
-    <div id=initial_zone>
-      <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        <li>F</li>
-        <li>G</li>
-        <li>H</li>
-        <li>I</li>
-        <li>J</li>
-        <li>K</li>
-        <li>L</li>
-        <li>M</li>
-        <li>N</li>
-        <li>O</li>
-        <li>P</li>
-        <li>Q</li>
-        <li>R</li>
-        <li>S</li>
-        <li>T</li>
-        <li>U</li>
-        <li>V</li>
-        <li>W</li>
-        <li>X</li>
-        <li>Y</li>
-        <li>Z</li>
-        <li>その他</li>
-      </ul>
+    <div id=index_header>
+      <i class="fa fa-tag fa-2x"></i>
+      <h1>
+        ブランド一覧
+      </h1>
     </div>
-  </div>
+    <!-- ここに三浦さん作成のviewが入ります -->
+    <div class="search_zone">
+      <div id=search_area>
+        <p>
+          <input class="search_query" name="keyword" placeholder=" &#xF002;お探しのブランドは何ですか？" type="text" value="">
+          </input>
+        </p>
+      </div>
+      <div id=initial_zone>
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+          <li>E</li>
+          <li>F</li>
+          <li>G</li>
+          <li>H</li>
+          <li>I</li>
+          <li>J</li>
+          <li>K</li>
+          <li>L</li>
+          <li>M</li>
+          <li>N</li>
+          <li>O</li>
+          <li>P</li>
+          <li>Q</li>
+          <li>R</li>
+          <li>S</li>
+          <li>T</li>
+          <li>U</li>
+          <li>V</li>
+          <li>W</li>
+          <li>X</li>
+          <li>Y</li>
+          <li>Z</li>
+          <li>その他</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="result_wrapper">
-    <dl>
-      <dt>A</dt>
-      <dd>
-        <%= link_to 'AAA', "https://www.google.co.jp/", class: "list_company" %>
-        <span class="company_count">(4)
-        </span>
-      </dd>
-      <dd>
-        <%= link_to 'ABC', "https://www.google.co.jp/", class: "list_company" %>
-        <span class="company_count">(4)
-        </span>
-      </dd>
-      <dd>
-        <%= link_to 'ACB', "https://www.google.co.jp/", class: "list_company" %>
-        <span class="company_count">(4)
-        </span>
-      </dd>
-      <dd>
-        <%= link_to 'ACC', "https://www.google.co.jp/", class: "list_company" %>
-        <span class="company_count">(4)
-        </span>
-      </dd>
-    </dl>
-  </div>
-  <div class="result_wrapper">
-    <dl>
-      <dt>B</dt>
+    <div class="result_wrapper">
+      <dl>
+        <dt>A</dt>
         <dd>
-          <%= link_to 'BAA', "https://www.google.co.jp/", class: "list_company" %>
+          <%= link_to 'AAA', "https://www.google.co.jp/", class: "list_company" %>
           <span class="company_count">(4)
           </span>
         </dd>
         <dd>
-          <%= link_to 'BBC', "https://www.google.co.jp/", class: "list_company" %>
+          <%= link_to 'ABC', "https://www.google.co.jp/", class: "list_company" %>
           <span class="company_count">(4)
           </span>
         </dd>
         <dd>
-          <%= link_to 'BCB', "https://www.google.co.jp/", class: "list_company" %>
+          <%= link_to 'ACB', "https://www.google.co.jp/", class: "list_company" %>
           <span class="company_count">(4)
           </span>
         </dd>
         <dd>
-          <%= link_to 'BCC', "https://www.google.co.jp/", class: "list_company" %>
+          <%= link_to 'ACC', "https://www.google.co.jp/", class: "list_company" %>
           <span class="company_count">(4)
           </span>
         </dd>
-    </dl>
+      </dl>
+    </div>
+    <div class="result_wrapper">
+      <dl>
+        <dt>B</dt>
+          <dd>
+            <%= link_to 'BAA', "https://www.google.co.jp/", class: "list_company" %>
+            <span class="company_count">(4)
+            </span>
+          </dd>
+          <dd>
+            <%= link_to 'BBC', "https://www.google.co.jp/", class: "list_company" %>
+            <span class="company_count">(4)
+            </span>
+          </dd>
+          <dd>
+            <%= link_to 'BCB', "https://www.google.co.jp/", class: "list_company" %>
+            <span class="company_count">(4)
+            </span>
+          </dd>
+          <dd>
+            <%= link_to 'BCC', "https://www.google.co.jp/", class: "list_company" %>
+            <span class="company_count">(4)
+            </span>
+          </dd>
+      </dl>
+    </div>
   </div>
 </div>
-
 
