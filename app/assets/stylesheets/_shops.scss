@@ -8,6 +8,10 @@
       width: 980px;
       font-size: 13px;
       color: gray;
+      a{
+      text-decoration: none;
+      color: #007ebe;
+      }
     }
     #index_header {
       margin: 0 auto;
@@ -22,61 +26,114 @@
         background-position: 0 -120px;
         font-size: 23px;
       }
-    }
-    #search_area {
-      padding: 0 35px;
-      height: 83px;
-      margin: 32px auto 0;
-      width: 883px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-      p {
-        padding: 28px 0 0;
-        .search_query {
-          width: 883px;
-          border: 0;
-          height: 33px;
-          font-size: 16px;
-          font-family: FontAwesome;
-          color: gray;
-        }
-       }
-      }
-
-    #initial_zone {
-      margin-top: 19px;
-      ul {
-        margin-left: 20px;
-        li {
-          display: inline;
-          border-right: 1px solid #dcdcdc;
-          padding: 0 13px 0 2px;
-          font-size: 13px;
-        }
-      }
-    }
-    .result_wrapper {
-      clear: both;
-      padding: 36px 0 10px 0;
-      margin: 0 0 0 15px;
-      dl {
-        dt {
-          font-size:18px;
-          margin: 1px 0 0 32px;
-          padding-bottom: 22px;
-        }
-        dd {
-          i {
-            color: #8c8c8c;
-          }
+      #content_header {
+        margin-top: 5px;
+        clear: both;
+        #main_tab {
+          margin-top: 29px;
           float: left;
-          margin: -6px 0 0 32px;
-          height: 44px;
-          width: 285px;
-          line-height: 16px;
-          .list_company {
-            height: 56px;
+          li {
+            margin-right:1px;
+            display: inline;
+            a {
+              display: inline-block;
+              border-radius: 2px 2px 0 0;
+              color: #646464;
+              padding: 10px 27px 8px 27px;
+              text-decoration: none;
+              &:hover {
+                background-color: #EEEEEE;
+                border-color: gray;
+              }
+            }
+          }
+          .current {
+            background-color: #EEEEEE;
+            padding: 14px 0 12px 0;
+          }
+        }
+        #side_tab {
+          margin-top: 43px;
+          float: right;
+          font-size: 14px;
+          color: #808080;
+        }
+        i {
+          color: #808080;
+          display: inline;
+          padding: 3px 0 0 0;
+        }
+        li {
+          margin-left: 2px;
+          display: inline;
+          }
+        }
+      }
+    }
+    // .add_new_shops {
+    // }
+    .search_zone {
+      border-top: solid 1px #dcdcdc;
+      clear: both;
+      #search_area {
+        padding: 0 35px;
+        height: 83px;
+        margin: 32px auto 0;
+        width: 883px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        p {
+          padding: 28px 0 0;
+          .search_query {
+            width: 883px;
+            border: 0;
+            height: 33px;
+            font-size: 16px;
+            font-family: FontAwesome;
+            color: gray;
+          }
+         }
+        }
+      #initial_zone {
+        margin-top: 19px;
+        ul {
+          margin-left: 20px;
+          li {
+            display: inline;
+            border-right: 1px solid #dcdcdc;
+            padding: 0 13px 0 2px;
             font-size: 13px;
+          }
+        }
+      }
+      .shop_result_wrapper {
+        clear: both;
+        padding: 36px 0 10px 0;
+        margin: 0 0 0 15px;
+        dl {
+          dt {
+            font-size:18px;
+            margin: 1px 0 0 32px;
+            padding-bottom: 22px;
+          }
+          dd {
+            float: left;
+            margin: -6px 0 0 32px;
+            height: 44px;
+            width: 285px;
+            line-height: 16px;
+            i {
+              color: #8c8c8c;
+              padding: 3px;
+            }
+            i {
+              color: #8c8c8c;
+              padding: 3px;
+            }
+            .list_company {
+              height: 56px;
+              font-size: 13px;
+            }
           }
         }
       }
@@ -99,6 +156,7 @@
           border: solid 1px #2490D0;
           border-radius: 2px;
           color: #2490D0;
+          text-decoration: none;
           // ここはjsでチェックボックスを外して最下部に戻る機能を入れる
         }
       }
@@ -112,9 +170,9 @@
           border-radius: 2px;
           color: white;
           margin-left: 5px;
+          text-decoration: none;
           // ここはjsでsearchにつながる機能を入れる
         }
       }
     }
   }
-}
