@@ -1,0 +1,320 @@
+.breadcrumbs {
+    padding: 25px 0;
+    margin: 0 auto;
+    width: 980px;
+    font-size: 13px;
+    color: #808080;
+    a {
+      text-decoration: none;
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+#zozotown {
+  min-width: 1000px;
+  margin: auto;
+  position: relative;
+  zoom: 1;
+  #wrapper {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    position: relative;
+    .navigation_bar {
+      width: 980px;
+      padding: 25px 0;
+      margin: 0 auto;
+      font-size: 13px;
+      ul.clearfix {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+ul li {
+  float: left;
+}
+
+#body {
+  width: 980px;
+  margin: 0 auto 0;
+  position: relative;
+}
+
+// ここからタブ関係
+
+#content_header {
+  margin: 0 auto;
+  width: 980px;
+  i {
+    color: black;
+    float: left;
+    font-size: 30px;
+    margin-top: 7px;
+  }
+  h1 {
+    padding: 5px 0 0 40px;
+    background-position: 0 -120px;
+    font-size: 23px;
+  }
+  #main_tab {
+    margin-top: 29px;
+    float: left;
+    li {
+      margin-right:1px;
+      a {
+        display: inline-block;
+        border-radius: 2px 2px 0 0;
+        color: #646464;
+        padding: 10px 27px 8px 27px;
+        text-decoration: none;
+        &:hover {
+          background-color: #EEEEEE;
+          border-color: gray;
+        }
+      }
+    }
+    .current {
+      background-color: #EEEEEE;
+    }
+  }
+  #other_ranking {
+    margin-top: 43px;
+    float: right;
+    font-size: 12px;
+    a {
+      text-decoration: none;
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// ここから、カテゴリー関係
+
+.result_guide_list_top {
+  font-size: 14px;
+  margin: 22px 0 0 7px;
+  padding: 0 0 20px;
+  clear: both;
+  .brand_label {
+    float: left;
+    &__title {
+      text-decoration: none;
+    }
+    a {
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__row {
+      display: table;
+      font-size: 14px;
+      margin: 2px 0 6px;
+    }
+  }
+  .narrow_list_container {
+    float: left;
+    position: relative;
+    &:before {
+      content: "|" ;
+      display: block;
+      float: left;
+      padding: 2px 0 2px 19px;
+      color: #dcdcdc;
+    }
+    .narrow_list {
+      float: left;
+      font-size: 12px;
+      margin: 0 9px 0 6px;
+      position: relative;
+      .pulldown_parent{
+        zoom: 1;
+        list-style-type: none;
+        margin: 5px auto 30px;
+        padding: 0;
+        &:before {
+          content: "";
+          display: table;
+        }
+        &:after {
+          content: "";
+          display: table;
+          clear:both;
+        }
+        li {
+          position: relative;
+          width: 100%;
+          float: left;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          a {
+            text-align: left;
+            display: block;
+            margin: 0;
+            padding: 2px 35px 9px 13px;
+            color: #646464;
+            font-size: 14px;
+            line-height: 1;
+            text-decoration: none;
+            background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_10.png) no-repeat right -6px ;
+            &:hover {
+              color: #EEEEEE;
+            }
+          }
+          ul {
+            border: solid 2px #EEEEEE;
+            border-radius: 1px;
+            width: 436px;
+            list-style: none;
+            position: absolute;
+            z-index: 9999;
+            top: 100%;
+            left: 0;
+            margin: 0;
+            padding: 8px 0 0 0 ;
+            li {
+              width: 218px;
+              a {
+                border-radius: 2px 2px 0 0 ;
+                color: #1c1c1c;
+                padding: 5px 27px 8px 13px;
+                background: #FFF;
+                text-align: left;
+                &.current_menu {
+                  background-color: #F2F2F2;
+                }
+                &:hover {
+                  background-color: #F2F2F2;
+                  color: #1c1c1c;
+                }
+              }
+            }
+          }
+        }
+      }
+      #normal {
+        li {
+          ul {
+            display: none;
+          }
+          &:hover {
+            ul{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ここからランキング部分。いじってません
+
+.fst {
+  margin-left: 0;
+}
+
+.ranking_l {
+  float: left;
+  margin: 0 0 0 25px;
+  width: 310px;
+}
+
+.rank_box {
+  position: relative;
+}
+
+.ranking_grid .icon_set.ico_l {
+  top: 10px;
+  left: 10px;
+}
+
+.photo a {
+  background-color: #ffffff;
+}
+
+.phtotolink {
+  display: block;
+  position: relative;
+}
+
+.image {
+  width: 310px;
+  height: 372px;
+}
+
+.rank_item_info {
+  float: left;
+  overflow: hidden;
+}
+
+.brand_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #808080;
+  margin: 10px 0 0 ;
+}
+
+.ranking_l dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #808080;
+  font-size: 14px;
+}
+
+.ranking_l .price {
+  font-size: 18px;
+}
+
+.ranking_l .tax {
+  font-size: 11px;
+  margin: 0 0 0 4px;
+  white-space: nowrap;
+  vertical-align: 1px;
+  color: #808080;
+}
+
+// ここから下の青い一覧ボタン
+
+#search_link_block {
+  padding: 0 0 80px;
+  .btn {
+    text-align: center;
+  }
+  a.g_btn {
+    display: inline-block;
+    margin: 0 auto;
+    min-width: 220px;
+    padding: 11px 40px 10px;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    word-wrap: break-word;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #007ebe;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+.clearfix:after {
+  content:"";
+  display: block;
+  clear: both;
+}
