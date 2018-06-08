@@ -1,165 +1,162 @@
 <body id="zozotown">
   <div id="wrapper">
     <header></header>
-    <div class="navigation_bar">
-      <ul class="clearfix">
-        <li><a href="root">zozotown</a></li>
-        <li> >人気アイテムランキング</li>
-      </ul>
+    <div class=breadcrumbs>
+      <%= render_breadcrumbs separator: ' ＞ ' %>
     </div>
-      <div id="body" class="clearfix">
-        <div class="content">
-          <article>
-            <section id="ranking_result">
-              <div class="clearfix" id="content_header">
-                <div class="crown">冠</div>
-                <h1>人気アイテムランキング</h1>
-                <ul id="main_tab">
-                  <li id="tab_all" class="current"><a class="selected">すべて</a></li>
-                  <li id="tab_men"><a href="/ranking/all-sales-men.html">メンズ</a></li>
-                  <li id="tab_women"><a href="/ranking/all-sales-women.html">レディース</a></li>
-                  <li id="tab_kids"><a href="/ranking/all-sales-kids.html">キッズ</a></li>
-                </ul>
-                <p id="other_ranking"><a href="/ranking/gift/all-sales.html">ギフトアイテムのランキングを見る</a></p>
-              </div>
-              <div class="result_guide_list_top clearfix">
-                <div class="brand_label">
-                  <div class="brand_label_row">
-                    <a href="#" class="brand_label__title" data-toggle="brand">ブランド選択</a>
-                  </div>
-                </div>
-                <div class="narrow_list_container">
-                  <div class="narrow_list">
-                    <div class="pulldown_wrapper">
-                      <ul class="pulldown_parent" id ="normal">
-                        <li><a href="#" class="selected">すべてのカテゴリー</a>
-                          <div class="pulldown_child twocolum clearfix">
-                            <ul id="category">
-                              <li><a class="current_menu">すべてのカテゴリー</a></li>
-                              <li><a href="root">ヘアアクセサリー</a></li>
-                              <li><a href="root">トップス</a></li>
-                              <li><a href="root">アクセサリー</a></li>
-                              <li><a href="root">ジャケット/アウター</a></li>
-                              <li><a href="root">アンダーウェア</a></li>
-                              <li><a href="root">パンツ</a></li>
-                              <li><a href="root">レッグウェア</a></li>
-                              <li><a href="root">オールインワン/サロペット</a></li>
-                              <li><a href="root">帽子</a></li>
-                              <li><a href="root">スカート</a></li>
-                              <li><a href="root">インテリア</a></li>
-                              <li><a href="root">ワンピース</a></li>
-                              <li><a href="root">食器/キッチン</a></li>
-                              <li><a href="root">スーツ/ネクタイ</a></li>
-                              <li><a href="root">雑貨/ホビー/スポーツ</a></li>
-                              <li><a href="root">バッグ</a></li>
-                              <li><a href="root">コスメ/香水</a></li>
-                              <li><a href="root">シューズ</a></li>
-                              <li><a href="root">音楽/本・雑誌</a></li>
-                              <li><a href="root">ファッション雑貨</a></li>
-                              <li><a href="root">水着/着物・浴衣</a></li>
-                              <li><a href="root">財布/小物</a></li>
-                              <li><a href="root">マタニティ/ベビー</a></li>
-                              <li><a href="root">時計</a></li>
-                              <li><a href="root">その他</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+    <div id="body" class="clearfix">
+      <div class="content">
+        <article>
+          <section id="ranking_result">
+            <div class="clearfix" id="content_header">
+              <i class="fa fa-trophy"></i>
+              <h1>人気アイテムランキング</h1>
+              <ul id="main_tab">
+                <li id="tab_all" class="current"><a class="selected">すべて</a></li>
+                <li id="tab_men"><a href="/ranking/all-sales-men.html">メンズ</a></li>
+                <li id="tab_women"><a href="/ranking/all-sales-women.html">レディース</a></li>
+                <li id="tab_kids"><a href="/ranking/all-sales-kids.html">キッズ</a></li>
+              </ul>
+              <p id="other_ranking"><a href="/ranking/gift/all-sales.html">ギフトアイテムのランキングを見る</a></p>
+            </div>
+            <div class="result_guide_list_top clearfix">
+              <div class="brand_label">
+                <div class="brand_label_row">
+                  <a href="#" class="brand_label__title" data-toggle="brand">ブランド選択</a>
                 </div>
               </div>
-              <div id="ranking_item" class="ranking_grid clearfix">
-                <div class="clearfix">
-                  <div class="fst clearfix rank_box ranking_l" data-sid="1982">
-                    <p class="rank clearfix">
-                      <span class="icon_settop1 ico_l">1</span>
-                    </p>
-                    <div class="photo">
-                      <a class="photolink" href="root">
-                        <img src="http://img5.zozo.jp/goodsimages/481/31242481/31242481_8_D_500.jpg" width="310" height="372" alt="ZOZOSUIT(採寸ボディースーツ)">
-                        <div class="feed-tag-group">
-                        </div>
-                      </a>
-                    </div>
-                    <div class="rank_item_info">
-                      <p class="brand_name">zozo</p>
-                      <dl>
-                        <dt>ZOZOSUIT</dt>
-                        <dd class="price">¥2,000<span class="tax">税込</span></dd>
-                      </dl>
-                    </div>
-                  </div>
-                  <div class="fst clearfix rank_box ranking_l" data-sid="1982">
-                    <p class="rank clearfix">
-                      <span class="icon_settop1 ico_l">2</span>
-                    </p>
-                    <div class="photo">
-                      <a class="photolink" href="root">
-                        <img src="http://img5.zozo.jp/goodsimages/343/26557343/26557343_1_D_500.jpg" width="310" height="372" alt="ZOZOSUIT(採寸ボディースーツ)">
-                        <div class="feed_tag_group">
-                        </div>
-                      </a>
-                    </div>
-                    <div class="rank_itemset">
-                      <p class="brand_name">無印良品</p>
-                      <dl>
-                        <dt>普通のYシャツ</dt>
-                        <dd class="price">¥3,000?<span class="tax">税込</span></dd>
-                      </dl>
-                    </div>
-                  </div>
-                  <div class="fst clearfix rank_box ranking_l" data-sid="1982">
-                    <p class="rank clearfix">
-                      <span class="icon_settop1 ico_l">3</span>
-                    </p>
-                    <div class="photo">
-                      <a class="photolink" href="sampleだよ">
-                        <img class="image" src="http://img5.zozo.jp/goodsimages/662/32552662/32552662B_1_D_500.jpg"alt="ZOZOSUIT(採寸ボディースーツ)">
-                        <div class="feed_tag_group">
-                        </div>
-                      </a>
-                    </div>
-                    <div class="rank_itemset">
-                      <p class="brand_name">不明</p>
-                      <dl>
-                        <dt>よくわからないもの</dt>
-                        <dd class="price">時価<span class="tax">税込</span></dd>
-                      </dl>
-                    </div>
-                  </div>
-                  <ul class="raning_grid clearfix">
-                    <li class="rank_box clearfix ranking_m">
-                      <li class="rank_box clearfix ranking_m" data-sid="1787">
-                        <p class="rank clearfix">
-                          <span class="icon_settop4">4</span>
-                        </p>
-                        <div class="photo">
-                          <a class="photoLink" href="/?c=gr&amp;did=40311240&amp;rid=1004">
-                            <img src="rain.jpg" width="215" height="258" alt="Champion(チャンピオン)のChampion Authentic T-SHIRTS/ チャンピオン コットン Tシャツ(1/2スリーブ)(Tシャツ/カットソー)">
-                            <div class="feed_tag_group"></div>
-                          </a>
-                        </div>
-                        <div class="rank_itemset">
-                          <p class="brand_name">VANS</p>
-                          <dl>
-                            <dt>[VANS]オフザウォールロゴショートスリーブTシャツ</dt>
-                              <dd class="price">"¥3,240"<span class="tax">税込</span></dd>
-                          </dl>
+              <div class="narrow_list_container">
+                <div class="narrow_list">
+                  <div class="pulldown_wrapper">
+                    <ul class="pulldown_parent" id ="normal">
+                      <li><a href="#" class="selected">すべてのカテゴリー</a>
+                        <div class="pulldown_child twocolum clearfix">
+                          <ul id="category">
+                            <li><a class="current_menu">すべてのカテゴリー</a></li>
+                            <li><a href="root">ヘアアクセサリー</a></li>
+                            <li><a href="root">トップス</a></li>
+                            <li><a href="root">アクセサリー</a></li>
+                            <li><a href="root">ジャケット/アウター</a></li>
+                            <li><a href="root">アンダーウェア</a></li>
+                            <li><a href="root">パンツ</a></li>
+                            <li><a href="root">レッグウェア</a></li>
+                            <li><a href="root">オールインワン/サロペット</a></li>
+                            <li><a href="root">帽子</a></li>
+                            <li><a href="root">スカート</a></li>
+                            <li><a href="root">インテリア</a></li>
+                            <li><a href="root">ワンピース</a></li>
+                            <li><a href="root">食器/キッチン</a></li>
+                            <li><a href="root">スーツ/ネクタイ</a></li>
+                            <li><a href="root">雑貨/ホビー/スポーツ</a></li>
+                            <li><a href="root">バッグ</a></li>
+                            <li><a href="root">コスメ/香水</a></li>
+                            <li><a href="root">シューズ</a></li>
+                            <li><a href="root">音楽/本・雑誌</a></li>
+                            <li><a href="root">ファッション雑貨</a></li>
+                            <li><a href="root">水着/着物・浴衣</a></li>
+                            <li><a href="root">財布/小物</a></li>
+                            <li><a href="root">マタニティ/ベビー</a></li>
+                            <li><a href="root">時計</a></li>
+                            <li><a href="root">その他</a></li>
+                          </ul>
                         </div>
                       </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="ranking_item" class="ranking_grid clearfix">
+              <div class="clearfix">
+                <div class="fst clearfix rank_box ranking_l" data-sid="1982">
+                  <p class="rank clearfix">
+                    <span class="icon_settop1 ico_l">1</span>
+                  </p>
+                  <div class="photo">
+                    <a class="photolink" href="root">
+                      <img src="http://img5.zozo.jp/goodsimages/481/31242481/31242481_8_D_500.jpg" width="310" height="372" alt="ZOZOSUIT(採寸ボディースーツ)">
+                      <div class="feed-tag-group">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="rank_item_info">
+                    <p class="brand_name">zozo</p>
+                    <dl>
+                      <dt>ZOZOSUIT</dt>
+                      <dd class="price">¥2,000<span class="tax">税込</span></dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="fst clearfix rank_box ranking_l" data-sid="1982">
+                  <p class="rank clearfix">
+                    <span class="icon_settop1 ico_l">2</span>
+                  </p>
+                  <div class="photo">
+                    <a class="photolink" href="root">
+                      <img src="http://img5.zozo.jp/goodsimages/343/26557343/26557343_1_D_500.jpg" width="310" height="372" alt="ZOZOSUIT(採寸ボディースーツ)">
+                      <div class="feed_tag_group">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="rank_itemset">
+                    <p class="brand_name">無印良品</p>
+                    <dl>
+                      <dt>普通のYシャツ</dt>
+                      <dd class="price">¥3,000?<span class="tax">税込</span></dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="fst clearfix rank_box ranking_l" data-sid="1982">
+                  <p class="rank clearfix">
+                    <span class="icon_settop1 ico_l">3</span>
+                  </p>
+                  <div class="photo">
+                    <a class="photolink" href="sampleだよ">
+                      <img class="image" src="http://img5.zozo.jp/goodsimages/662/32552662/32552662B_1_D_500.jpg"alt="ZOZOSUIT(採寸ボディースーツ)">
+                      <div class="feed_tag_group">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="rank_itemset">
+                    <p class="brand_name">不明</p>
+                    <dl>
+                      <dt>よくわからないもの</dt>
+                      <dd class="price">時価<span class="tax">税込</span></dd>
+                    </dl>
+                  </div>
+                </div>
+                <ul class="raning_grid clearfix">
+                  <li class="rank_box clearfix ranking_m">
+                    <li class="rank_box clearfix ranking_m" data-sid="1787">
+                      <p class="rank clearfix">
+                        <span class="icon_settop4">4</span>
+                      </p>
+                      <div class="photo">
+                        <a class="photoLink" href="/?c=gr&amp;did=40311240&amp;rid=1004">
+                          <img src="rain.jpg" width="215" height="258" alt="Champion(チャンピオン)のChampion Authentic T-SHIRTS/ チャンピオン コットン Tシャツ(1/2スリーブ)(Tシャツ/カットソー)">
+                          <div class="feed_tag_group"></div>
+                        </a>
+                      </div>
+                      <div class="rank_itemset">
+                        <p class="brand_name">VANS</p>
+                        <dl>
+                          <dt>[VANS]オフザウォールロゴショートスリーブTシャツ</dt>
+                            <dd class="price">"¥3,240"<span class="tax">税込</span></dd>
+                        </dl>
+                      </div>
                     </li>
-                  </ul>
-              </div>
-              <div id="search_link_block">
-                <p class="btn">
-                  <a class="g_btn btn_m" href="/search/?sex=kids">すべてのアイテム一覧</a>
-                </p>
-              </div>
-            </section>
-          </article>
-        </div>
+                  </li>
+                </ul>
+            </div>
+            <div id="search_link_block">
+              <p class="btn">
+                <a class="g_btn btn_m" href="/search/?sex=kids">すべてのアイテム一覧</a>
+              </p>
+            </div>
+          </section>
+        </article>
       </div>
+    </div>
 
       <footer></footer>
 
