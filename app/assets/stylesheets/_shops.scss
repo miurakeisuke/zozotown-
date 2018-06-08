@@ -3,7 +3,7 @@
     margin: 0 auto 0;
     width: 980px;
     .breadcrumbs {
-      padding: 25px 0;
+      padding: 25px 7px;
       margin: 0 auto;
       width: 980px;
       font-size: 13px;
@@ -87,15 +87,32 @@
     width: 100%;
     background-color: #f0f0f0;
     clear: both;
-    ul {
+    ul.twin_btn {
       text-align: center;
       padding: 29px 0;
       margin: 0 auto;
       li {
         display: inline;
         .reset_btn {
-          padding: 8px 0 7px;
+          padding: 10px 45px 10px;
           font-size: 13px;
+          border: solid 1px #2490D0;
+          border-radius: 2px;
+          color: #2490D0;
+          // ここはjsでチェックボックスを外して最下部に戻る機能を入れる
+        }
+      }
+      li {
+      display: inline;
+        .show_btn {
+          padding:10px 45px 10px;
+          font-size: 13px;
+          border: solid 1px #2490D0;
+          background-color: #2490D0;
+          border-radius: 2px;
+          color: white;
+          margin-left: 5px;
+          // ここはjsでsearchにつながる機能を入れる
         }
       }
     }
