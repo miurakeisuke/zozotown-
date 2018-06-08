@@ -1,0 +1,117 @@
+.breadcrumbs {
+    padding: 25px 0;
+    margin: 0 auto;
+    width: 980px;
+    font-size: 13px;
+    color: #808080;
+    a {
+      text-decoration: none;
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+.wrapper {
+  width: 980px;
+  #index_header {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #EEEEEE;
+    h1 {
+      font-size: 30px;
+      padding: 5px 0 0 0;
+    }
+  }
+  .keyword_index {
+    width: 100%;
+    padding-top: 30px;
+    .mall_list {
+      height: 100px;
+      &__title {
+        font-size: 20px;
+      }
+      &__name {
+        font-size: 12px;
+        float: left;
+        margin: 15px 20px 0 0;
+        a {
+          color: #808080;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .search_list {
+      height: 170px;
+      &__title {
+        font-size: 20px;
+      }
+      ul {
+        float: left;
+        li {
+          width: 200px;
+          font-size: 12px;
+          float: left;
+          margin: 15px 20px 0 0;
+          a {
+            color: #808080;
+            text-decoration: none;
+            text-aline: left;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .member_service {
+      height: 100px;
+      &__title {
+      font-size: 20px;
+      }
+      ul {
+        float: left;
+        li {
+          width: 200px;
+          font-size: 12px;
+          float: left;
+          margin: 15px 20px 0 0;
+          a {
+            color: #808080;
+            text-decoration: none;
+            text-aline: left;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .help_and_guide {
+      height: 200px;
+      &__title {
+        font-size: 20px;
+      }
+      ul {
+        float: left;
+        li {
+          width: 200px;
+          font-size: 12px;
+          float: left;
+          margin: 15px 20px 0 0;
+          a {
+            color: #808080;
+            text-decoration: none;
+            text-aline: left;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
