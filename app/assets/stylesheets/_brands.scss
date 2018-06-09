@@ -13,7 +13,7 @@
       color: #007ebe;
       }
     }
-    #index_header {
+    .index_header {
       margin: 0 auto;
       width: 980px;
       i {
@@ -26,10 +26,10 @@
         background-position: 0 -120px;
         font-size: 23px;
       }
-      #content_header {
+      .content_header {
         margin-top: 5px;
         clear: both;
-        #main_tab {
+        .main_tab {
           margin-top: 29px;
           float: left;
           li {
@@ -70,7 +70,7 @@
     .search_zone {
       border-top: solid 1px #dcdcdc;
       clear: both;
-      #search_area {
+      .search_area {
         padding: 0 50px;
         height: 83px;
         margin: 32px auto 0;
