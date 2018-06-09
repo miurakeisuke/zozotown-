@@ -13,7 +13,7 @@
       color: #007ebe;
       }
     }
-    #shop_index_header {
+    .shop_index_header {
       margin: 0 auto;
       width: 980px;
       .fa.fa-home.fa-2x {
@@ -26,10 +26,10 @@
         background-position: 0 -120px;
         font-size: 23px;
       }
-      #shop_content_header {
+      .shop_content_header {
         margin-top: 5px;
         clear: both;
-        #shop_main_tab {
+        .shop_main_tab {
           margin-top: 29px;
           float: left;
           .shop_select_list {
@@ -55,7 +55,7 @@
           }
         }
       }
-      #shop_side_tab {
+      .shop_side_tab {
         margin-top: 43px;
         float: right;
         font-size: 14px;
@@ -99,7 +99,7 @@
   }
   .shop_search_zone {
     clear: both;
-    #shop_search_area {
+    .shop_search_area {
       padding: 0 46px;
       height: 83px;
       margin: 32px auto 0;
@@ -118,7 +118,7 @@
         }
        }
       }
-      #shop_initial_zone {
+      .shop_initial_zone {
         margin-top: 19px;
         .shop_search_unordered_list {
           li {
@@ -164,7 +164,7 @@
   width: 100%;
   background-color: #f0f0f0;
   clear: both;
-  ul.shop_twin_btn {
+  .shop_twin_btn {
     text-align: center;
     padding: 29px 0;
     margin: 0 auto;
