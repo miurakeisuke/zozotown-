@@ -1,5 +1,5 @@
-.wrapper {
-  .center_content {
+.shop_wrapper {
+  .shop_center_content {
     margin: 0 auto 0;
     width: 980px;
     .breadcrumbs {
@@ -8,34 +8,34 @@
       width: 980px;
       font-size: 13px;
       color: gray;
-      a{
+      a {
       text-decoration: none;
       color: #007ebe;
       }
     }
-    #index_header {
+    #shop_index_header {
       margin: 0 auto;
       width: 980px;
-      i {
+      .fa.fa-home.fa-2x {
         color: black;
         float: left;
         padding: 7px;
       }
-      h1 {
+      .shop_index {
         padding: 5px 0 0 40px;
         background-position: 0 -120px;
         font-size: 23px;
       }
-      #content_header {
+      #shop_content_header {
         margin-top: 5px;
         clear: both;
-        #main_tab {
+        #shop_main_tab {
           margin-top: 29px;
           float: left;
-          li {
+          .shop_select_list {
             margin-right:1px;
             display: inline;
-            a {
+            .shop_none_selected {
               display: inline-block;
               border-radius: 2px 2px 0 0;
               color: #646464;
@@ -47,57 +47,80 @@
               }
             }
           }
-          .current {
+          .shop_selected {
             background-color: #EEEEEE;
-            padding: 14px 0 12px 0;
-          }
-        }
-        #side_tab {
-          margin-top: 43px;
-          float: right;
-          font-size: 14px;
-          color: #808080;
-        }
-        i {
-          color: #808080;
-          display: inline;
-          padding: 3px 0 0 0;
-        }
-        li {
-          margin-left: 2px;
-          display: inline;
+            color: #646464;
+            padding: 14px 27px 11px 27px;
+            border-radius: 2px 2px 0 0;
           }
         }
       }
-    }
-    // .add_new_shops {
-    // }
-    .search_zone {
-      border-top: solid 1px #dcdcdc;
-      clear: both;
-      #search_area {
-        padding: 0 35px;
-        height: 83px;
-        margin: 32px auto 0;
-        width: 883px;
-        background-color: #f0f0f0;
-        border-radius: 5px;
-        p {
-          padding: 28px 0 0;
-          .search_query {
-            width: 883px;
-            border: 0;
-            height: 33px;
-            font-size: 16px;
-            font-family: FontAwesome;
-            color: gray;
-          }
-         }
+      #shop_side_tab {
+        margin-top: 43px;
+        float: right;
+        font-size: 14px;
+        color: #808080;
+      }
+      .fa.fa-camera {
+        color: #808080;
+        display: inline;
+        padding: 3px 0 0 0;
+      }
+      .shop_stsaff_code {
+        margin-left: 2px;
+        display: inline;
         }
-      #initial_zone {
+      }
+    }
+  }
+  .new_shop_result_wrapper {
+    border-top: solid 1px #dcdcdc;
+    clear: both;
+    .new_shop_description_list {
+      .new_shop_description_term {
+        padding: 25px 0 25px;
+        font-size: 18px;
+      }
+      dd {
+        float: left;
+        height: 44px;
+        width: 285px;
+        .fa.fa-check-circle {
+          color: #8c8c8c;
+          padding: 3px;
+        }
+        .new_shop_list_company {
+          height: 56px;
+          font-size: 13px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .shop_search_zone {
+    clear: both;
+    #shop_search_area {
+      padding: 0 46px;
+      height: 83px;
+      margin: 32px auto 0;
+      width: 883px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      .shop_search_query_area {
+        padding: 28px 0 0;
+        .shop_search_query {
+          width: 883px;
+          border: 0;
+          height: 33px;
+          font-size: 16px;
+          font-family: FontAwesome;
+          color: gray;
+        }
+       }
+      }
+      #shop_initial_zone {
         margin-top: 19px;
-        ul {
-          margin-left: 20px;
+        .shop_search_unordered_list {
           li {
             display: inline;
             border-right: 1px solid #dcdcdc;
@@ -106,73 +129,70 @@
           }
         }
       }
-      .shop_result_wrapper {
-        clear: both;
-        padding: 36px 0 10px 0;
-        margin: 0 0 0 15px;
-        dl {
-          dt {
-            font-size:18px;
-            margin: 1px 0 0 32px;
-            padding-bottom: 22px;
+    .shop_result_wrapper {
+      clear: both;
+      padding: 36px 0 10px 0;
+      .shop_description_list {
+        .shop_description_term {
+          font-size:18px;
+          padding-bottom: 22px;
+        }
+        dd {
+          float: left;
+          height: 44px;
+          width: 285px;
+          .fa.fa-check-circle {
+            color: #8c8c8c;
+            padding: 3px;
           }
-          dd {
-            float: left;
-            margin: -6px 0 0 32px;
-            height: 44px;
-            width: 285px;
-            line-height: 16px;
-            i {
-              color: #8c8c8c;
-              padding: 3px;
-            }
-            i {
-              color: #8c8c8c;
-              padding: 3px;
-            }
-            .list_company {
-              height: 56px;
-              font-size: 13px;
-            }
+          .shop_list_company {
+            height: 56px;
+            font-size: 13px;
+            text-decoration: none;
+          }
+          .fa.fa-camera {
+            color: #808080;
+            display: inline;
+            padding: 3px 0 0 0;
           }
         }
       }
     }
   }
-  .chaser {
-    height: 90px;
-    width: 100%;
-    background-color: #f0f0f0;
-    clear: both;
-    ul.twin_btn {
-      text-align: center;
-      padding: 29px 0;
-      margin: 0 auto;
-      li {
-        display: inline;
-        .reset_btn {
-          padding: 10px 45px 10px;
-          font-size: 13px;
-          border: solid 1px #2490D0;
-          border-radius: 2px;
-          color: #2490D0;
-          text-decoration: none;
-          // ここはjsでチェックボックスを外して最下部に戻る機能を入れる
-        }
-      }
-      li {
+.shop_chaser {
+  height: 90px;
+  width: 100%;
+  background-color: #f0f0f0;
+  clear: both;
+  ul.shop_twin_btn {
+    text-align: center;
+    padding: 29px 0;
+    margin: 0 auto;
+    li {
       display: inline;
-        .show_btn {
-          padding:10px 45px 10px;
-          font-size: 13px;
-          border: solid 1px #2490D0;
-          background-color: #2490D0;
-          border-radius: 2px;
-          color: white;
-          margin-left: 5px;
-          text-decoration: none;
-          // ここはjsでsearchにつながる機能を入れる
-        }
+      .shop_reset_btn {
+        padding: 10px 45px 10px;
+        font-size: 13px;
+        border: solid 1px #2490D0;
+        border-radius: 2px;
+        color: #2490D0;
+        text-decoration: none;
+        // ここはjsでチェックボックスを外して最下部に戻る機能を入れる
+      }
+    }
+    li {
+    display: inline;
+      .shop_show_btn {
+        padding:10px 45px 10px;
+        font-size: 13px;
+        border: solid 1px #2490D0;
+        background-color: #2490D0;
+        border-radius: 2px;
+        color: white;
+        margin-left: 5px;
+        text-decoration: none;
+        // ここはjsでsearchにつながる機能を入れる
       }
     }
   }
+}
