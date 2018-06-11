@@ -1,0 +1,147 @@
+  <div class="shop_wrapper">
+    <div class="shop_center_content">
+      <div class="breadcrumbs">
+        <%= render_breadcrumbs separator: ' ＞ ' %>
+      </div>
+      <div class="shop_index_header">
+        <i class="fa fa-home fa-2x"></i>
+        <h1 class="shop_index">
+          ショップ一覧
+        </h1>
+        <div class="shop_content_header">
+          <ul class="shop_main_tab">
+            <li id="tab_all" class="shop_select_list"><a class="shop_selected">すべて</a></li>
+            <li id="tab_men" class="shop_select_list"><a class="shop_none_selected" href="/ranking/all-sales-men.html">メンズ</a></li>
+            <li id="tab_women" class="shop_select_list"><a class="shop_none_selected" href="/ranking/all-sales-women.html">レディース</a></li>
+            <li id="tab_kids" class="shop_select_list"><a class="shop_none_selected" href="/ranking/all-sales-kids.html">キッズ</a>
+          </ul>
+          <ul class="shop_side_tab">
+            <i class="fa fa-camera"></i>
+            <li class="shop_stsaff_code">
+              ：ショップスタッフコーディネート
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="new_shop_result_wrapper">
+        <dl class= "new_shop_description_list">
+          <dt class= "new_shop_description_term">新しいショップが加わりました</dt>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'ASICS WALKINGS', "https://www.google.co.jp/", class: "new_shop_list_company" %>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to "PULLFFY", "https://www.google.co.jp/", class: "new_shop_list_company" %>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to "Tokyo135°", "https://www.google.co.jp/", class: "new_shop_list_company" %>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'TOYSRUS BABiESRUS', "https://www.google.co.jp/", class: "new_shop_list_company" %>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'utatane', "https://www.google.co.jp/", class: "new_shop_list_company" %>
+          </dd>
+        </dl>
+      </div>
+      <div class="shop_search_zone">
+        <div class="shop_search_area">
+          <p class="shop_search_query_area">
+            <input class="shop_search_query" name="keyword" placeholder=" &#xF002;お探しのショップは何ですか？" type="text" value="">
+            </input>
+          </p>
+        </div>
+        <div class="shop_initial_zone">
+          <ul class="shop_search_unordered_list">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+            <li>K</li>
+            <li>L</li>
+            <li>M</li>
+            <li>N</li>
+            <li>O</li>
+            <li>P</li>
+            <li>Q</li>
+            <li>R</li>
+            <li>S</li>
+            <li>T</li>
+            <li>U</li>
+            <li>V</li>
+            <li>W</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>Z</li>
+            <li>その他</li>
+            <li>モール</li>
+          </ul>
+        </div>
+      <div class= "shop_result_wrapper">
+        <dl class= "shop_description_list">
+          <dt class= "shop_description_term">A</dt>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'A BAG OF CHIPS', "https://www.google.co.jp/", class: "shop_list_company" %>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'A BATHING APE', "https://www.google.co.jp/", class: "shop_list_company" %>
+            <i class="fa fa-camera"></i>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'A&F COUNTRY', "https://www.google.co.jp/", class: "shop_list_company" %>
+          </dd>
+          <dd>
+             <i class="fa fa-check-circle"></i>
+            <%= link_to 'a.depeche', "https://www.google.co.jp/", class: "shop_list_company" %>
+          </dd>
+        </dl>
+      </div>
+      <div class="shop_result_wrapper">
+        <dl class= "shop_description_list">
+          <dt class= "shop_description_term">B</dt>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'B:MING LIFE STORE by BEAMS', "https://www.google.co.jp/", class: "shop_list_company" %>
+            <i class="fa fa-camera"></i>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to "B'2nd", "https://www.google.co.jp/", class: "shop_list_company" %>
+            <i class="fa fa-camera", style="color: #8c8c8c;"></i>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to "B'2nd Womens", "https://www.google.co.jp/", class: "shop_list_company" %>
+            <i class="fa fa-camera"></i>
+          </dd>
+          <dd>
+            <i class="fa fa-check-circle"></i>
+            <%= link_to 'babybaby', "https://www.google.co.jp/", class: "shop_list_company" %>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="shop_chaser">
+      <ul class="shop_twin_btn">
+        <li class="shop_btn">
+          <%= link_to "リセットする", "https://www.google.co.jp/", class: "shop_reset_btn" %>
+        </li>
+        <li class="shop_btn">
+          <%= link_to "商品を見る", "https://www.google.co.jp/", class: "shop_show_btn" %>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
