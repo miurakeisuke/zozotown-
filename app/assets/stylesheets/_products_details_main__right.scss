@@ -1,0 +1,43 @@
+.products_details_main__right {
+  float: right;
+  width: 395px;
+  &__coupon {
+    padding: 0 0 10px;
+    height: 20px;
+    background-color: #e73656;
+    font-size: 13px;
+    border: 1px solid #e73656;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    &__all {
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+  }
+  &__innner {
+    &__ships {
+      padding: 0 0 10px 0;
+      &__wrapper {
+        &__info {
+          border: 1px solid #e73656;
+          padding: 8px 8px 6px;
+          width: 377px;
+          text-align: center;
+          color: red;
+          font-size: 13px;
+          .info_strong {
+            font-weight: bold;
+          }
+        }
+        &__date {
+        font-size: 12px;
+        padding: 0 0 8px;
+        margin-top: 12px;
+        }
+      }
+    }
+  }
+  &__goods_info {
+  }
+}
