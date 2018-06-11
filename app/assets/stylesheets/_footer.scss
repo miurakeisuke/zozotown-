@@ -124,10 +124,10 @@
       border-bottom: 1px solid #e5e5e5;
       border-top: 1px solid #e5e5e5;
       display: block;
-      height: 19px;
+      height: 40px;
       li{
         float: left;
-        padding: 0 7px 0 0;
+        padding: 0 5px 0 0;
         margin: 0 10px 0 0;
         border-right: 1px solid #e5e5e5;
         letter-spacing: 0.2px;
@@ -161,4 +161,9 @@
   content: "";
   display: block;
   clear: both;
+}
+
+.fa-check-square-o:before{
+  color: #808080;
+  font-size: 12px;
 }
