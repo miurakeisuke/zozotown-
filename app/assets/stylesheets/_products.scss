@@ -10,6 +10,10 @@
   width: 1000px;
   box-sizing: border-box;
   margin: 0 auto;
+  // ヘッダー固定のため
+  padding-top: 41px;
+  background-color: white;
+  // 本当はwithを100%にして、コンテンツヘッダー（すべて、メンズ、レディース、キッズ）の背景色を統一したい
 }
 
 // left-contents
