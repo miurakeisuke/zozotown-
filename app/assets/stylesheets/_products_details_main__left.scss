@@ -1,90 +1,146 @@
-// 大川作成の商品詳細ページの左側
 .products_details_main__left{
   width: 560px;
   height: 1908px;
   background-color: white;
+  float: left;
   &__photo{
-  width: 560px;
-  height: 761px;
+  height: 760px;
   margin-bottom: 5px;
-    ul{
-      // float: left;
-      .btn_left{
-        width: 30px;
-        height: 600px;
-        background-color: red;
-        float: left;
-      }
-      .photo_main{
+  position: relative;
+    &-main{
+      width: 560px;
+      height: 600px;
+      .main_image {
         width: 500px;
         height: 600px;
+      }
+    }
+    ul {
+      position: absolute;
+      top:0;
+      width: 560px;
+      height: 600px;
+      #btn_left {
+        width: 30px;
+        height: 100%;
+        background-color: blue;
         float: left;
-        img{
-          width: 500px;
-          height: 600px;
+      }
+      #btn_right{
+        right:0;
+        width: 30px;
+        height: 100%;
+        background-color: red;
+        float: right;
+      }
+    }
+    &-sub{
+      margin-top: 10px;
+      padding: 5px 0;
+      width: 100%;
+      height: 148px;
+      border-bottom: 1px solid #EEEEEE;
+      &-line {
+        height: 70px;
+        li {
+          list-style: none;
+          float: left;
+          width: 50px;
+          margin: 10px 5px;
+          .sub-image {
+            width: 45px;
+            height: 80%;
+          }
         }
       }
-      .btn_right{
-        width: 30px;
-        height: 600px;
-        background-color: red;
+    }
+  }
+  &__staff_review {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    &__title {
+      i {
+        font-size: 25px;
+        color: blue;
         float: left;
       }
-    }
-    .photo_sub{
-      width: 552px;
-      height: 148px;
-      background-color: yellow;
-    }
-    // .photo_main{
-    //   width: 500px;
-    //   height: 600px;
-    //   position: relative;
-    //   img{
-    //     width: 400px;
-    //     height: 400px;
-    //     margin: 0 auto;
-    //   }
-    // }
-    // ul{
-    //   .btn_left{
-    //     width: 30px;
-    //     height: 600px;
-    //     position: absolute;
-    //     left: -30px;
-    //   }
-    //   .btn_right{
-    //     width: 30px;
-    //     height: 600px;
-    //     position: absolute;
-    //     right: -30px;
-    //   }
-    // }
-    .photo_sub{
-      width: 552px;
-      height: 148px;
+      h3 {
+        font-size: 18px;
+        float: left;
+        margin-left: 7px;
+      }
     }
   }
-  &__cordinate{
-    width: 560px;
-    height: 279px;
-    padding-top: 30px;
-    border-top: 1px solid black;
-    margin-top: 25px;
-    background-color: red;
+  &__cordinate {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    &__title {
+      font-size: 18px;
+    }
+    &__snaps {
+      width: 120px;
+      margin: 10px 5px 10px 5px;
+      float: left;
+      .snaps-image {
+        width: 120px;
+        height: 120px;
+      }
+      &__model_data {
+        width: 120px;
+        color: #EEEEEE;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.2;
+        margin: 6px 0 0;
+      }
+    }
   }
-  &__item{
-    width: 560px;
-    height: 527px;
-    padding: 30px 0;
-    border-top: 1px solid black;
-    margin-top: 25px;
-    background-color: green;
+  &__relation {
+    padding-bottom: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    &__title {
+      font-size: 18px;
+    }
+    &__items {
+      width: 120px;
+      margin: 10px 5px 10px 5px;
+      float: left;
+      .items-image {
+        width: 120px;
+        height: 120px;
+      }
+      &__brands {
+        width: 120px;
+        color: #EEEEEE;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.2;
+        margin: 6px 0 0;
+      }
+      &__price {
+        width: 100%;
+        &-value {
+          font-size: 16px;
+          float: left;
+        }
+        &-tax {
+          font-size: 12px;
+          color: #EEEEEE;
+        }
+      }
+    }
   }
-  &__shopnews{
-    width: 560px;
-    height: 291px;
-    border-top: 1px solid black;
-    background-color: olive;
-  }
+}
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
 }
