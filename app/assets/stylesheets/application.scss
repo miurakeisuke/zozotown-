@@ -2,9 +2,15 @@
 @import "./header";
 @import "./footer";
 @import "./contents-bar";
-@import "./products";
+// @import "./products";
 @import "./brands";
 @import "./shops";
 @import "font-awesome";
 @import "./rankings";
 @import "./carts";
+
+// TopPageに当たるスタイルシート
+@import "./toppage/common";
+@import "./toppage/left";
+@import "./toppage/middle";
+@import "./toppage/right";
