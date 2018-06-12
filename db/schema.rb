@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_073408) do
+ActiveRecord::Schema.define(version: 2018_06_12_083821) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2018_06_12_073408) do
     t.bigint "shop_id"
     t.index ["product_id"], name: "index_brands_on_product_id"
     t.index ["shop_id"], name: "index_brands_on_shop_id"
+  end
+
+  create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_carts_on_product_id"
   end
 
   create_table "colors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -81,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_073408) do
 
   add_foreign_key "brands", "products"
   add_foreign_key "brands", "shops"
+  add_foreign_key "carts", "products"
   add_foreign_key "colors", "products"
   add_foreign_key "images", "products"
   add_foreign_key "shop_brands", "brands"
