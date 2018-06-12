@@ -623,6 +623,7 @@ img {
   background-color: red;
   border-color: red;
   color: #fff;
+  font-size: 1px;
 }
 
 .icon_small {
@@ -794,18 +795,10 @@ img {
       padding: 10px;
       position: relative;
       border-bottom: 1px solid #ebebeb;
-      .mark {
-        background-color: black;
-        height: 30px;
-        width: 30px;
-        line-height: 30px;
-        float: left;
+      .rank {
         position: absolute;
-        top: -5px;
-        left: -5px;
-        color: white;
-        font-size: 10px;
-        text-align: center;
+        top: -3px;
+        left: -2px;
       }
     }
       .news-image {
