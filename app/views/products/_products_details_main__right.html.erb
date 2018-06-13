@@ -21,12 +21,12 @@
   </div>
   <div class="products_details_main__right__value">
     <div class="products_details_main__right__value__name">
-      よくわからないポロシャツ
+      <%= @product.name %>
     </div>
     <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__review">いろんな人の着用レビュー</a>
     <div class="products_details_main__right__value__price clearfix">
       <div class="products_details_main__right__value__price-discount">¥4000 ↓</div>
-      <div class="products_details_main__right__value__price-data">¥時価</div>
+      <div class="products_details_main__right__value__price-data">¥<%= @product.price %></div>
       <div class="products_details_main__right__value__price-tax">税込</div>
       <div class="products_details_main__right__value__price-fukidashi">吹き出しが入る</div>
     </div>
@@ -54,7 +54,7 @@
       </li>
       <li class="detail-point clearfix">
         <i class="fa fa-money"></i>
-        <div class="detail-point-explain">気分次第でポイント還元（ZOZOCARD : 知らん）</div>
+        <div class="detail-point-explain"><%= @product.point %>ポイント還元（ZOZOCARD : 知らん）</div>
       </li>
       <li class="detail-favarite clearfix">
         <i class="fa fa-heart-o"></i>
