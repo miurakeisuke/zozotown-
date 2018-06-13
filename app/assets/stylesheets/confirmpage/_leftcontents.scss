@@ -1,0 +1,103 @@
+.confirm_left {
+  width: 645px;
+  float: left;
+  font-size: 13px;
+}
+
+.address_table,
+.payment_table,
+.point_table,
+.delivery_items,
+.new_item_notification {
+  border-top: 1px solid #e4e4e4;
+}
+
+.address_table .ttl,
+.payment_table .ttl,
+.point_table .ttl,
+.delivery_items .ttl,
+.new_item_notification .ttl,
+.delivery_date_table .ttl,
+.delivery_products_table .ttl,
+.postage_table .ttl {
+  width: 120px;
+  padding-left: 20px;
+  height: 58px;
+}
+
+.address_table .ttl {
+  height: 95px;
+}
+
+.delivery_products_table .ttl {
+  height: 120px;
+}
+
+.address_table .change,
+.payment_table .change,
+.delivery_date_table .change,
+.delivery_products_table .change {
+  width: 64px;
+  text-align: center;
+  .change_btn {
+    border: 1px solid #007ebe;
+    border-radius: 2px;
+    padding: 5px 12px 5px;
+    text-decoration: none;
+    color: #007ebe;
+  }
+}
+
+.delivery_items {
+  padding: 20px 0;
+  .ttl {
+    height: 15px;
+  }
+  .delivery_items_body {
+    margin: 20px 0 0 20px;
+    border: solid 1px #eeeeee;
+    border-radius: 10px;
+    table {
+      border-bottom: solid 1px #eeeeee;
+      p {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.delivery_products_info {
+  width: 227px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.delivery_products_img {
+  width: 80px;
+  img {
+    width: 70px;
+    height: 84px;
+  }
+}
+
+.postage_table {
+  margin: 15px 0;
+
+  .price {
+    padding-left: 65px;
+  }
+}
+
+.price {
+  width: 115px;
+  padding: 0;
+  text-align: center;
+}
+
+.address_table div {
+  width: 430px;
+}
+
+.postage_table .last {
+  border: none;
+}
