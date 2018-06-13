@@ -1,0 +1,98 @@
+.confirm_right {
+  float: right;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #f6f6f6;
+  width: 303px;
+  padding: 0 0 20px 0;
+  margin-right: 10px;
+
+  .confirm_btn {
+    padding: 0 20px 14px 20px;
+    margin-top: 12px;
+  }
+  .products_total_payment {
+    padding: 5px 20px 0;
+
+    .goods_total {
+      padding-top: 5px;
+    }
+  }
+  .point_option {
+    background: #eaeaea;
+    padding: 10px 20px 0 20px;
+    margin-top: 10px;
+
+    .trade_discount {
+      color: #007ebe;
+
+      .tradable_items {
+        margin: 8px 0;
+      }
+    }
+    .use_point {
+      label {
+        color: #007ebe;
+      }
+
+      .user_point {
+        padding-left: 17px;
+        font-size: 12px;
+      }
+    }
+  }
+  .discount_option {
+    padding: 10px 20px;
+    background: #eaeaea;
+
+    .goods_total {
+      border-top: 1px solid #cecece;
+      padding-top: 15px;
+    }
+    #use_point {
+      color: red;
+    }
+  }
+  .final_total_payment {
+    padding: 0 20px;
+    margin: 10px 0;
+
+    .final_total {
+      border-top: 1px solid #cecece;
+      font-size: 15px;
+      padding: 10px 0;
+      margin-top: 5px;
+
+      .tax_text {
+        font-size: 5px;
+      }
+      #final_payment {
+        color: red;
+      }
+    }
+  }
+  .attention {
+    padding: 0 20px 0;
+    font-size: 11px;
+
+    .attention_note {
+      color: gray;
+    }
+    .return {
+      margin-top: 10px;
+
+      &_about {
+        margin-top: 10px;
+
+        a {
+          color: #007ebe;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
