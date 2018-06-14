@@ -9,4 +9,5 @@ class Cart < ApplicationRecord
 #     ３パターンから選択
 # end
   end
+  belongs_to :user
 end
