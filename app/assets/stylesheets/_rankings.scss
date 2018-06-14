@@ -1,3 +1,18 @@
+.breadcrumbs {
+    padding: 25px 0;
+    margin: 0 auto;
+    width: 980px;
+    font-size: 13px;
+    color: #808080;
+    a {
+      text-decoration: none;
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
 #zozotown {
   min-width: 1000px;
   margin: auto;
@@ -23,7 +38,7 @@
   }
 }
 
-ul li {
+#main_tab li{
   float: left;
 }
 
@@ -36,16 +51,18 @@ ul li {
 // ここからタブ関係
 
 #content_header {
-  margin-top: 5px;
-  border-bottom: solid 1px #dcdcdc;
-  .crown {
-    font-size: 23px;
+  margin: 0 auto;
+  width: 980px;
+  i {
+    color: black;
     float: left;
+    font-size: 30px;
+    margin-top: 7px;
   }
   h1 {
-  font-size: 23px;
-  height: auto;
-  padding: 0 0 0 43px;
+    padding: 5px 0 0 40px;
+    background-position: 0 -120px;
+    font-size: 23px;
   }
   #main_tab {
     margin-top: 29px;
@@ -168,7 +185,7 @@ ul li {
             margin: 0;
             padding: 8px 0 0 0 ;
             li {
-              width: 218px;
+              width: 50%;
               a {
                 border-radius: 2px 2px 0 0 ;
                 color: #1c1c1c;
@@ -193,7 +210,7 @@ ul li {
             display: none;
           }
           &:hover {
-            ul{
+            ul {
               display: block;
             }
           }

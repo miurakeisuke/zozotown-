@@ -1,0 +1,152 @@
+.right-content {
+  width: 212px;
+  float: left;
+  margin: 15px 15px 0 10px;
+  .ad-part {
+    .ad-image {
+      margin: 8px 0;
+      width:100%;
+    }
+  }
+  .shopnews,
+  .fashionnews {
+    text-align: left;
+    margin-top: 18px;
+    h2 {
+      font-size: 18px;
+      padding: 10px;
+      border-bottom: 1px solid #ebebeb;
+    }
+    ol {
+      li {
+      padding: 10px;
+      position: relative;
+      border-bottom: 1px solid #ebebeb;
+      .rank {
+        position: absolute;
+        top: -3px;
+        left: -2px;
+      }
+    }
+      .news-image {
+        width: 40%;
+      }
+      .description {
+        width: 55%;
+        padding: 0 5px;
+        float:right;
+        span {
+          color: gray;
+          font-size: 11px;
+        }
+        p {
+          color: black;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .shopnews-list,
+  .fashionnews-list {
+    text-align: right;
+    margin: 15px 0;
+    font-size: 13px;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.pickup-link {
+  text-align: left;
+  ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+    .pickup-image {
+      width: 41px;
+      height: 55px;
+      vertical-align: -23px;
+      display: inline-block;
+    }
+    .description {
+      width: 75%;
+      height: 60px;
+      line-height: 60px;
+      float: right;
+      p {
+        line-height: 1.4;
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 13px;
+        span {
+        color: #E73656;
+        }
+      }
+    }
+  }
+}
+
+.mail-lists {
+  text-align: left;
+  .mail-list {
+    padding: 10px;
+    min-height: 80px;
+    border-bottom: 1px solid #ebebeb;
+    a {
+      text-decoration: none;
+      h3 {
+        font-family: impact, sans-serif;
+        font-size: 19px;
+        color: black;
+      }
+      .description {
+        p {
+          color: #808080;
+          font-size: 12px;
+          margin-top: 9px;
+        }
+      }
+    }
+    .app_store {
+      height: 50px;
+      line-height: 50px;
+      li {
+        float: left;
+        img {
+          width: 95px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+.sns-lists {
+  padding: 10px;
+  height: 80px;
+  text-align: left;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 13px;
+  ul li {
+    float: left;
+    padding-right: 10px;
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+.line-friend {
+  padding: 10px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}

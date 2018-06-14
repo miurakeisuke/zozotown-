@@ -1,0 +1,161 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+
+.carts__header {
+  margin: 0 auto;
+  width: 980px;
+  i {
+    color: #00BFFF;
+    float: left;
+    padding-top: 5px;
+    font-size: 30px;
+  }
+  h1 {
+    padding: 5px 0 0 40px;
+    font-size: 23px;
+    width: 250px;
+  }
+}
+
+.carts__contents_wrapper {
+  width: 100%;
+  height: 1320px;
+  margin-top: 20px;
+}
+
+.carts__left_contents {
+  width: 60%;
+  float: left;
+  &-banner {
+    width: 100%;
+    margin: 10px 0;
+  }
+  &__products {
+    width: 100%;
+    height: 193px;
+    border-top: solid 1px #808080;
+    padding: 30px 0 0 15px;
+    position: relative;
+    &-image {
+      width: 145px;
+      height: 150px;
+      float: left;
+    }
+    &-info {
+      width: 225px;
+      float: left;
+      list-style: none;
+      margin-top: 10px;
+      li {
+        padding-top: 5px;
+        margin: 0 0 2px 20px;
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+    &-price {
+      width: 90px;
+      font-size: 12px;
+      float: left;
+      text-align: center;
+      padding: 65px 0;
+    }
+    &-btn {
+      width: 74px;
+      font-size: 14px;
+      float: left;
+      padding: 65px 0;
+    }
+    &-delete {
+      float: left;
+      width: 52px;
+      font-size: 14px;
+      padding: 65px 0;
+    }
+  }
+  &__total {
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: solid 1px #808080;
+    &-title {
+      font-size: 14px;
+      float: left;
+      margin-left: 350px;
+    }
+    &-value {
+      font-size: 14px;
+      color: red;
+      float: right;
+      margin-right: 30px;
+    }
+  }
+}
+
+
+.carts__right_contents {
+  width: 40%;
+  height: 900px;
+  float: right;
+  &__registar_link {
+    float: left;
+    margin-left: 50px;
+    width: 70%;
+    height: 350px;
+    border-radius: 6px;
+    border: 1px solid #EDEDED;
+    box-shadow: 1px 0 5px 4px rgba(69, 145, 175, 0.60);
+    padding: 30px 0 ;
+    &-btn {
+      text-align: center;
+      a.g_btn {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 15px 70px 15px;
+        text-align: center;
+        white-space: nowrap;
+        width: auto;
+        word-wrap: break-word;
+        font-size: 15px;
+        border-radius: 4px;
+        background-color: #007ebe;
+        color: white;
+        text-decoration: none;
+      }
+    }
+    &-postage {
+      width: 216px;
+      height: 50px;
+      padding: 5px 0;
+      margin: 20px auto;
+      background-color: gray;
+      border-radius: 1px;
+      background-color: #EEEEEE;
+      .fa-exclamation-circle {
+        color: blue;
+        font-size: 28px;
+        padding: 3px;
+        float: left;
+      }
+      .information {
+        float: left;
+        margin-left: 15px;
+        p {
+          font-size: 10px;
+          white-space: nowrap;
+        }
+        a {
+          font-size: 8px;
+          color: blue;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

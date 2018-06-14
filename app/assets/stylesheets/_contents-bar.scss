@@ -1,0 +1,41 @@
+.contentHeader{
+  padding-top: 51px;
+  height: 41px;
+  width: 100%;
+  background-color: white;
+  .content-inner{
+    width: 980px;
+    margin: auto;
+    height: 41px;
+    line-height: 41px;
+    text-align: left;
+    font-size: 13px;
+    .taball{
+      width: 81px;
+      float: left;
+      text-align: center;
+    }
+    .tabmen{
+      width: 81px;
+      float: left;
+      text-align: center;
+    }
+    .tabladies{
+      width: 107px;
+      float: left;
+      text-align: center;
+    }
+    .tabkids{
+      width: 81px;
+      float: left;
+      text-align: center;
+    }
+  a{
+    text-decoration: none;
+    color: #000000;
+    }
+    li:hover{
+      background-color: #dcdcdc;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<header>
+      <div class="header-inner">
+
+        <div class="header-inner-left">
+          <h1>
+            <%= link_to "ZOZOTOWN", root_path, class: "title" %>
+          </h1>
+          <div class="search">
+            <form>
+              <p class="search-text">
+                <input type="text" placeholder="何かお探しですか？">
+              </p>
+              <p class="hsubmit">
+                <a class="icon fa-search" href="#"></a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="header-inner-right">
+          <ul>
+            <li class="customer-name">
+              <p><span>username</span>様</p>
+              <ul class="name-dropdown">
+                <li><%= link_to "登録情報", root_path, class: "title" %></li>
+                <li><a href="#">注文履歴・発送状況</a></li>
+                <li><a href="#">メールマガジン</a></li>
+                <li><a href="#">ログアウト</a></li>
+              </ul>
+            </li>
+            <li id="fa-comment-o">
+              <a class="icon fa-comment-o" href="#"><span class="notice"></span></a>
+              <ul>
+                <i class="icon fa-comment-o icon-comment"></i>
+                <li>新着のお知らせはありません。</li>
+              </ul>
+            </li>
+            <li id="fa-heart-o">
+              <a class="icon fa-heart-o" href="#"></a>
+              <div class="favorite">
+                <div class="top">お気に入り</div>
+                <div class="middle">
+                  <a href="#" class="middle-favorite">アイテム一覧</a>
+                  <a href="#" class="middle-favorite">ブランド一覧</a>
+                  <a href="#" class="middle-favorite">ショップ一覧</a>
+                </div>
+                <div class="bottom">
+                  <div class="brand">
+                    <dt>ブランド</dt>
+                    <dd>
+                      <i class="icon fa-heart-o icon-heart"></i>
+                      <p>お気に入りブランドを<br>見つけよう！
+                      </p>
+                    </dd>
+                  </div>
+                  <div class="shop">
+                    <dt>ショップ</dt>
+                    <dd>
+                      <i class="icon fa-heart-o icon-heart"></i>
+                      <p>お気に入りショップを<br>見つけよう！</p>
+                    </dd>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="fa-shopping-cart">
+              <a class="icon fa-shopping-cart" href="https://www.yahoo.co.jp/"><span class="cart"></span></a>
+              <ul>
+                <i class="icon fa-shopping-cart icon-cart"></i>
+                <li class="aaa">
+                  <%= render cart_links_partial_path %>
+                </li>
+              </ul>
+            </li>
+            <li id="fa-bars">
+              <a class="icon fa-bars" href="#"></a>
+              <div class="menu">
+                <div class="menu-search">
+                  <dt>探す</dt>
+                  <dd><a href="#">カテゴリー一覧</a></dd>
+                  <dd><a href="#">ブランド一覧</a></dd>
+                  <dd><a href="#">ショップ一覧</a></dd>
+                  <dd><a href="#">ショップニュース一覧</a></dd>
+                  <dd><a href="#">コーディネイト一覧</a></dd>
+                  <dd><a href="#">ファッションまとめ一覧</a></dd>
+                  <dd><a href="#">ランキング一覧</a></dd>
+                  <dd><a href="#">こだわり検索</a></dd>
+                </div>
+                <div class="menu-service">
+                  <dt>サービス</dt>
+                  <dd><a href="#">おまかせ定期便</a></dd>
+                  <dd><a href="#">ギフトラッピング</a></dd>
+                  <dd><a href="#">ブランド古着買取</a></dd>
+                </div>
+                <div class="menu-mall">
+                  <dt>モール</dt>
+                  <dd>
+                    <a href="#">ZOZOTOWN</a>
+                    <span>日本最大級のファッション通販サイト</span>
+                  </dd>
+                  <dd>
+                    <a href="#">ZOZOUSED</a>
+                    <span>ブランド古着のファッションモール</span>
+                  </dd>
+                </div>
+                <div class="menu-help">
+                  <dt>ヘルプ</dt>
+                  <dd><a href="#">よくある質問</a></dd>
+                  <dd><a href="#">お届けについて</a></dd>
+                  <dd><a href="#">お支払い方法について</a></dd>
+                  <dd><a href="#">注文取消し・返品について</a></dd>
+                  <dd><a href="#">はじめての方へ</a></dd>
+                  <dd><a href="#">新規会員登録</a></dd>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
