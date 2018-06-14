@@ -1,0 +1,565 @@
+#searchResultSidebar .float {
+  position: relative;
+}
+
+#searchResultSidebar {
+  position: relative;
+  z-index: 50;
+  float: left;
+  width: 200px;
+  overflow: visible;
+}
+
+#searchResultNum {
+  position: relative;
+  z-index: 1;
+  background: url(http://zozo.jp/common_2015/img/sidebar/bg_sidebar.png) no-repeat 0 0;
+  width: 200px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+#searchResultNum .inner {
+  background: #c3c3c3 url(http://zozo.jp/common_2015/img/sidebar/bg_sidebar.png) no-repeat left top;
+  color: #fff;
+  width: 181px;
+  padding-bottom: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+#searchResultNum #resultNum {
+  padding: 14px 15px 8px;
+  font-size: 13px;
+  color: #ffff;
+  border-bottom: 0px;
+}
+
+#searchResultNum #resultNum span {
+  font-weight: normal;
+  line-height: 1.1;
+  font-family: helvetica;
+  font-size: 35px;
+}
+
+#searchResultSidebar #searchSidebarMysize {
+  background: #f0f0f0;
+  margin: 0;
+  padding: 13px 0;
+  width: 181px;
+}
+
+#searchSidebarMysize .mysizeInner {
+  border-radius: 5px;
+  padding: 15px 0;
+  margin: 0 8px;
+}
+
+#searchSidebarMysize .mysizeInner.disabled {
+  background: #aaaaaa;
+  color: #ffffff;
+}
+
+#searchSidebarMysize .mysizeInner h2 {
+  // border: none;
+}
+
+#searchResultSidebar .sideBox h2 {
+  font-size: 18px;
+  padding: 0 0 6px 10px;
+  border-bottom : 1px solid #e6e6e6;
+}
+
+#searchSidebarMysize .mysizeInner.disabled h2 .ico {
+  background-position: 0 0;
+}
+
+#searchSidebarMysize .mysizeInner h2 .ico {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: -8px;
+}
+
+#searchSidebarMysize .mysizeInner .ico {
+  background: url(http://img4.zozo.jp/pc/_search/img/ico_mysize.png)no-repeat;
+}
+
+#searchSidebarMysize .mysizeInner.disabled p {
+  padding: 0 14px;
+}
+
+#searchSidebarMysize .mysizeInner p {
+  font-size: 12px;
+  line-height: 1.58;
+}
+
+#searchSidebarMysize .toggle {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#searchSidebarMysize .toggle .slide {
+  display: inline-block;
+  margin: auto;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+#searchSidebarMysize .mysizeInner.disabled .toggle .slide {
+  background: #d5d5d5;
+  color: #222222;
+  padding: 0 10px 0 0;
+}
+
+#searchSidebarSelecter {
+  background: #f0f0f0;
+  width: 179px;
+  border-radius: 0 0 4px 4px;
+  border: solid 1px #ededed;
+}
+
+#searchResultSidebar .sideBox {
+  margin: 25px 0 0;
+  padding: 0 0 13px;
+  width: 180px
+}
+
+#searchSidebarSelecter .sideBox ul li a{
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#searchResultSidebar .sideBox ul li a {
+  padding: 7px 5px 6px 14px;
+  display: block;
+}
+
+#searchResultSidebar a {
+  color: #646464;
+}
+
+#searchResultSidebar a:link {
+  text-decoration: none;
+}
+
+#searchResultSidebar a:link:hover {
+  background-color: rgba(235, 235, 235, 0.8);
+}
+
+#searchResultSidebar li.over {
+  position: relative;
+}
+
+#searchResultSidebar li.over>a {
+  background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_4.png) no-repeat 162px center;
+}
+
+#searchResultSidebar li.over div {
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  box-shadow: 0 2px 8px rgba(77, 77, 77, 0.2);
+  border-radius: 4px;
+}
+
+#searchResultSidebar li.over div ul {
+  padding: 15px 10px 15px;
+  background: #ffffff;
+  border-radius: 4px;
+  height: 62px;
+}
+
+#searchResultSidebar li.over div ul li {
+  width: 180px;
+  float: left;
+  line-height: 1.4;
+}
+
+#searchResultSidebar li.over div ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  border-bottom: none;
+}
+
+#searchType li ul {
+  display: none;
+}
+
+#searchType li:hover ul {
+  display: block;
+}
+
+#searchResultSidebar #popBrandSelect {
+  text-align: right;
+  padding: 10px 10px 0 0;
+}
+
+#popBrandSelect a:hover {
+  color: #007ebe;
+  text-decoration: underline;
+}
+
+#popBrandSelect a:hover:visited {
+  color: #007ebe;
+}
+
+#searchResultSidebar #popShopSelect {
+  text-align: right;
+  padding: 10px 10px 0 0;
+}
+
+#popShopSelect a:hover {
+  color: #007ebe;
+  text-decoration: underline;
+}
+
+#popShopSelect a:hover:visited {
+  color: #007ebe;
+}
+
+#searchResultSidebar #searchCategory {
+  z-index: 5;
+  position: relative;
+}
+
+#searchResultSidebar #searchCategory .lists {
+  border-top: #ebebeb 1px solid;
+}
+
+#searchResultSidebar #searchCategory .lists li {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+#searchCategory .lists li {
+  position: relative;
+}
+
+#searchCategory .lists li a {
+  border-bottom: solid 1px #f2f2f2;
+  padding: 10px 2px 8px 5px;
+  display: block;
+  background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_4.png) no-repeat scroll 160px 14px;
+}
+
+#searchCategory .lists li a:link {
+  text-decoration: none;
+}
+
+#searchCategory .lists li a:link:hover {
+  background-color: rgba(235, 235, 235, 0.8);
+}
+
+#searchCategory .lists li div {
+  position: absolute;
+  left: 160px;
+  top: 0;
+  z-index: 20;
+}
+
+#searchCategory .lists li div ul {
+  padding: 2px 10px 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(77, 77, 77, 0.2);
+  width: 180px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+#searchCategory .lists li div ul li {
+  border: 0;
+  padding: 0;
+  position:relative;
+}
+
+#searchCategory .lists li div ul li a {
+  background: none;
+  border: 0;
+}
+
+#hoverCategory li ul{
+  display: none;
+}
+
+#hoverCategory li:hover ul {
+  display: block;
+}
+
+#searchHeight #searchHeightForm {
+  position: relative;
+}
+
+#searchResultSidebar .slider {
+  font-size: 11px;
+  padding: 14px 0 16px 11px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.sliderCtrlContainer {
+  height: 20px;
+  width: 150px;
+  background: url(http://zozo.jp/common_2015/img/sidebar/sidebar_gauge.png) no-repeat center center;
+}
+
+.slideCtrl {
+  position: relative;
+}
+
+.ui-slider {
+  text-align: left;
+}
+
+.ui-slider-horizontal {
+  height: 20px;
+  width: 140px;
+  margin: 0 0 0 7px;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 8px;
+  height: 100%;
+}
+
+
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+
+.ui-widget-header {
+  margin: 0 0 0 0;
+  background: url(http://zozo.jp/common_2015/img/sidebar/sidebar_gauge_on.png) no-repeat center center;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: 0;
+  margin-left: -.8em;
+  background: url(http://zozo.jp/common_2015/img/sidebar/sidebar_handle.png) no-repeat center center;
+  width: 21px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+}
+
+#searchResultSidebar .slider .controll {
+  margin: 10px 0 0 0;
+  overflow: hidden;
+}
+
+#searchHeight .slider .controll p.main {
+  float: left;
+  color: #a0a0a0;
+  padding: 0 8px 0 0;
+}
+
+#searchHeight .slider .controll p.max {
+  color: #a0a0a0;
+}
+
+#searchHeight .slider .controll p input {
+  vertical-align: bottom;
+}
+
+#searchHeight .slider .controll input {
+  width: 42px;
+  padding: 4px;
+  text-align: right;
+}
+
+.sideBox .controll input {
+  font-size: 10px;
+}
+
+input [type="text"] {
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+}
+
+ul.btn {
+  margin: 12px 0 0;
+}
+
+ul.btn li {
+  float: right;
+  margin: 0 0 0 7px;
+  position: relative;
+}
+
+#searchSidebarSelecter .sideBox ul.btn {
+  padding: 0 10px 0 20px;
+}
+
+#searchSidebarSelecter .sideBox ul.btn li {
+  margin-left: 4px;
+}
+
+#searchSidebarSelecter .gBtnWhite.btnSS {
+  background: none;
+  padding: 2px 0 0;
+  width: 51px;
+  font-size: 13px;
+}
+
+ul.btn .gBtnWhite.btnSS {
+  padding: 2px 0 0;
+}
+
+.gBtnWhite.btnSS {
+  width: 51px;
+  font-size: 13px;
+}
+
+.gBtnWhite {
+  border: 1px solid #2490D0;
+  color: #2490D0 !important;
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  -webkit-font-smoothimg: subpixel-antialiased;
+  -webkit-appearance: none;
+}
+
+#searchSidebarSelecter .submit.gBtn.btnSS {
+  padding: 2px 0 2px 0;
+  width: 53px;
+}
+
+.gBtn.btnSS {
+  color: #ffffff !important;
+  display: block;
+  text-align: center;
+  background: #2490D0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  border: none;
+}
+
+#searchResultSidebar #searchPrice {
+  margin: 47px 0 0;
+}
+
+#searchPrice .slider .controll p.main {
+  float: left;
+  color: #a0a0a0;
+  padding: 0 20px 0 0;
+}
+
+#searchPrice .slider .controll p.max {
+  color: #a0a0a0;
+}
+
+#searchPrice .slider .controll p input {
+  vertical-align: bottom;
+}
+
+#searchPrice .slider .controll input {
+  width: 42px;
+  padding: 4px;
+  text-align: right;
+}
+
+#searchResultSidebar #searchColor {
+  margin: 47px 0 0;
+}
+
+#searchResultSidebar #colorSelect {
+  margin: 0;
+  padding: 4px 0 20px 0;
+}
+
+#searchResultSidebar #colorSelect li {
+  position: relative;
+  float: left;
+  width: 26px;
+  height: 26px;
+  margin: 6px 0 0 8px;
+}
+
+#searchResultSidebar #colorSelect li.c1 .pop {
+  background-position: 0 0;
+}
+
+#searchResultSidebar #colorSelect li .pop {
+  position: absolute;
+  left:-14px;
+  top: -25px;
+  width: 70px;
+  height: 28px;
+  display: none;
+  background: url(http://zozo.jp/common_2015/img/ico/color.png) no-repeat 0;
+  padding: 0;
+}
+
+#searchResultSidebar #colorSelect li a {
+  font-size: 11px;
+  line-height: 1.455;
+  padding: 4px;
+  border-bottom: none;
+}
+
+#searchResultSidebar #colorSelect li.c1 a .ico_color {
+  background-position: -2px -2px;
+}
+
+#searchResultSidebar #colorSelect li a .ico_color {
+  display: block;
+  width: 18px;
+  height: 0;
+  padding: 18px 0 0;
+  margin: 0 3px 0 0;
+  float: left;
+  overflow: hidden;
+  background: url(http://zozo.jp/common_2015/img/ico/ico_color.png);
+}
+
+#searchResultSidebar #colorSelect li.c2 .pop {
+  background-position: -7px -29px;
+}
+
+#searchResultSidebar #colorSelect li.c2 a .ico_color {
+  background-position: -22px -2px;
+}
+
+#searchResultSidebar #colorSelect li.c3 .pop {
+  background-position: -7px -58px;
+}
+
+#searchResultSidebar #colorSelect li.c3 a .ico_color {
+  background-position: -42px -2px;
+}
+
+#giftLeftBanner {
+  position: relative;
+  z-index: 10;
+  width: 181px;
+  overflow: visible;
+  margin: 40px 0 0 0;
+}
+
+img {
+  border: 0 none;
+  vertical-align: bottom;
+}
