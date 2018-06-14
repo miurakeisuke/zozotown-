@@ -11,8 +11,8 @@ class ProductsController < ApplicationController
     @product = Product.all.find(params[:id])
     @product_image = @product.images
 
-    current_cart = current_user.cart_id
-    @product_into_cart = current_cart
+    @current_cart = User.find(1).cart.products
+    # User.find(1)は後でcurrent_cartになおしてね
   end
 
 end
