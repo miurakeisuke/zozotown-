@@ -162,7 +162,6 @@ header{
       .icon{
         display: none;
         position: absolute;
-        // background-color: red;
       }
       li{
         position: absolute;
@@ -182,7 +181,6 @@ header{
   background-color: black;
   i{
     display: inline-block;
-    // background-color: white;
     width: 295px;
     height: 147px;
     top: 51px;
@@ -245,7 +243,6 @@ header{
             border-right: 1px solid #ededed;
             padding: 0 30px 7px 1px;
             height: 130px;
-            // overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             p{
@@ -270,7 +267,6 @@ header{
         }
           dd{
             padding: 0 30px 7px 1px;
-            // overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             p{
@@ -330,24 +326,21 @@ header{
 #fa-shopping-cart:hover{
   background-color: black;
   z-index: 999;
-  i{
-    display: inline-block;
-    // background-color: white;
-    width: 295px;
-    height: 147px;
-    top: 51px;
-    right: -50px;
-    border-radius: 0 0 4px 4px;
-    z-index: 90;
-  }
-  li{
-    display: block;
-    background-color: white;
-    width: 278px;
-    height: 147px;
-    top: 51px;
-    right: -54px;
-    border-radius: 0 0 4px 4px;
+  ul{
+    i{
+    }
+    li{
+      display: inline-block;
+      background-color: white;
+      width: 278px;
+      height: 147px;
+      top: 51px;
+      right: -54px;
+      border-radius: 0 0 4px 4px;
+      a{
+        font-size: 10px;
+      }
+    }
   }
 }
 
@@ -406,7 +399,6 @@ header{
         dd{
           padding: 0 0 13px 0;
           text-align: left;
-          // overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           font-size: 13px;
@@ -433,7 +425,6 @@ header{
         dd{
           padding: 0 0 13px 0;
           text-align: left;
-          // overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           font-size: 13px;
@@ -464,7 +455,6 @@ header{
         dd{
           padding: 0 0 13px 0;
           text-align: left;
-          // overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           font-size: 13px;

@@ -3,7 +3,7 @@
 
         <div class="header-inner-left">
           <h1>
-            <a class="title" href="#">ZOZOTOWN</a>
+            <%= link_to "ZOZOTOWN", root_path, class: "title" %>
           </h1>
           <div class="search">
             <form>
@@ -22,7 +22,7 @@
             <li class="customer-name">
               <p><span>username</span>様</p>
               <ul class="name-dropdown">
-                <li><a href="#">登録情報</a></li>
+                <li><%= link_to "登録情報", root_path, class: "title" %></li>
                 <li><a href="#">注文履歴・発送状況</a></li>
                 <li><a href="#">メールマガジン</a></li>
                 <li><a href="#">ログアウト</a></li>
@@ -64,10 +64,12 @@
               </div>
             </li>
             <li id="fa-shopping-cart">
-              <a class="icon fa-shopping-cart" href="#"><span class="cart"></span></a>
+              <a class="icon fa-shopping-cart" href="https://www.yahoo.co.jp/"><span class="cart"></span></a>
               <ul>
                 <i class="icon fa-shopping-cart icon-cart"></i>
-                <li>カートに商品がありません。</li>
+                <li class="aaa">
+                  <%= render cart_links_partial_path %>
+                </li>
               </ul>
             </li>
             <li id="fa-bars">

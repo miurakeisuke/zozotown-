@@ -2,7 +2,9 @@
 <!-- 写真部分 -->
   <div class="products_details_main__left__photo">
     <div class="products_details_main__left__photo-main clearfix">
-      <img src="http://img5.zozo.jp/goodsimages/663/28701663/28701663_32_D_125.jpg" alt="#" class="main_image">
+      <% @product_image.each do |image| %>
+        <img src="<%= image.url %>" alt="#" class="main_image">
+      <% end %>
     </div>
     <ul>
       <li id="btn_left"></li>
