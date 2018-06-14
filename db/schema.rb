@@ -109,8 +109,8 @@ ActiveRecord::Schema.define(version: 2018_06_14_053821) do
     t.integer "credit_card_number"
     t.integer "point", null: false
     t.date "birthday", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: "2018-05-26 08:15:41", null: false
+    t.datetime "updated_at", default: "2018-05-26 08:15:41", null: false
   end
 
   add_foreign_key "colors", "products"
