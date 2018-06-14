@@ -10,5 +10,5 @@ class User < ApplicationRecord
   has_many :products_users, :dependent => :destroy
   belongs_to :point
   has_many :products, through: :products_users
-  belongs_to :cart
+  has_one :cart
 end
