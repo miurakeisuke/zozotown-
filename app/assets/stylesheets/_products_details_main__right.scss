@@ -6,7 +6,6 @@
     margin: 0 auto;
     padding: 7px 0;
     background-color: #e73656;
-    font-size: 13px;
     border: 1px solid #e73656;
     text-align: center;
     color: white;
@@ -34,9 +33,10 @@
   &__post_date {
     width: 100%;
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 12px;
     float: left;
     text-decoration: none;
+    color: #007ebe;
     &:hover {
       text-decoration: underline;
     }
@@ -46,25 +46,21 @@
     margin-top: 10px;
     float: left;
     .shops_data {
-      font-size: 15px;
       list-style: none;
       .shops_name {
-        color: #EEEEEE;
+        color: #646464;
         text-decoration: none;
         &:hover {
-          color: #808080;
           text-decoration: underline;
         }
       }
     }
     .brands_data {
-      font-size: 15px;
       list-style: none;
       .brands_name {
-        color: #EEEEEE;
+        color: #646464;
         text-decoration: none;
         &:hover {
-          color: #808080;
           text-decoration: underline;
         }
       }
@@ -73,13 +69,13 @@
   &__value {
     width: 100%;
     clear: both;
+    margin-bottom: 15px;
     &__name {
       padding-top: 12px;
-      font-size: 20px;
+      font-size: 18px;
     }
     &__review {
-      font-size: 8px;
-      color: blue;
+      color: #007ebe;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -87,24 +83,56 @@
     }
     &__price {
       width: 100%;
+      margin: 13px 0;
       &-discount {
-        color: #EEEEEE;
+        color: #808080;
         font-size: 14px;
       }
       &-data {
         font-size: 28px;
-        color: red;
+        color: #E73656;
         float: left;
       }
       &-tax {
         font-size: 12px;
         float: left;
         margin: 20px 0 0 8px;
-        color: red;
+        color: #E73656;
       }
-      &-fukidashi {
-        font-size: 15px;
-        float: right;
+      &-balloon {
+        float: left;
+        background: #efefef;
+        position: relative;
+        padding: 10px 10px 8px;
+        margin: 0 -20px 0 20px;
+        font-size: 11px;
+        line-height: 1.454545454545455;
+        color: #333333;
+        &:after {
+          right: 100%;
+          top: 50%;
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(240, 240, 240, 0);
+          border-right-color: #efefef;
+          border-width: 10px;
+          margin-top: -10px;
+        }
+        .balloon-up {
+          font-weight: bold;
+          a {
+            color:#333333;
+            font-weight: normal;
+          }
+        }
+        #payment_month,
+        #payment_day {
+          font-weight: bold;
+        }
       }
     }
     &__information {
@@ -120,26 +148,23 @@
       }
       &-explain {
         font-size: 15px;
-        color: red;
+        color: #E73656;
         margin-left: 8px;
         float: left;
+        margin-top: 2px;
       }
     }
     &__bonus {
       width: 100%;
-      clear: both;
+      margin-top: 10px;
       &-explain {
-        float: left;
-        color: blue;
-        font-size: 12px;
+        color: #007ebe;
         .explain_strong {
           font-weight: bold;
         }
       }
       &-link {
-        font-size: 12px;
-        margin-left: 30px ;
-        color: blue;
+        color: #007ebe;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -163,16 +188,13 @@
         }
         &-explain {
           margin-left: 10px;
-          font-size: 12px;
           float: left;
           .trade_in_strong {
             font-weight: bold;
           }
         }
         .trade_in-link {
-          font-size: 12px;
-          margin-left: 20px ;
-          color: blue;
+          color: #007ebe;
           text-decoration: none;
           &:hover {
             text-decoration: underline;
@@ -187,11 +209,10 @@
         }
         &-explain {
           margin-left: 10px;
-          font-size: 12px;
           float: left;
         }
       }
-      .detail-favarite {
+      .detail-favorite {
         width: 100%;
         i {
           font-size: 20px;
@@ -199,12 +220,11 @@
         }
         &-explain {
           margin-left: 10px;
-          font-size: 12px;
           float: left;
         }
       }
       .detail-return {
-        margin-top: 10px;
+        margin-top: 15px;
         width: 100%;
         &-explain {
           float: left;
@@ -236,7 +256,7 @@
         width: 340px;
         height: 72px;
         float: right;
-        border-bottom: 1px solid #808080;
+        border-bottom: 1px solid #dcdcdc;
         &-explain {
           padding-top: 10px;
           list-style: none;
@@ -297,12 +317,15 @@
           border-radius: 50px;
           border: 1px solid #808080;
         }
+        .pretty {
+          font-size: 30px;
+        }
       }
       &-size_m {
         width: 340px;
         height: 72px;
         float: right;
-        border-bottom: 1px solid #808080;
+        border-bottom: 1px solid #dcdcdc;
         &-explain {
           padding-top: 10px;
           list-style: none;
@@ -368,7 +391,7 @@
         width: 340px;
         height: 72px;
         float: right;
-        border-bottom: 1px solid #808080;
+        border-bottom: 1px solid #dcdcdc;
         &-explain {
           padding-top: 10px;
           list-style: none;
@@ -498,7 +521,6 @@
     }
   }
 }
-
 
 .clearfix:after {
   content: "";
