@@ -20,6 +20,7 @@
 
       li {
         margin: 10px 0 0;
+
         a {
           color: #646464;
           -webkit-font-smoothing: antialiased;
@@ -348,6 +349,9 @@ a {
 
 .bannerRecruitItem {
   border-top: 1px solid #f2f2f2;
+  .last {
+    border-bottom: 1px solid #f2f2f2;
+  }
 }
 
 .bannerRecruitNew .bannerRecruitLink:before {
@@ -394,10 +398,3 @@ a {
     }
   }
 }
-
-// #leftContent #menuBanner ul {
-//   margin: -20px 0 0 0;
-//   li {
-//     margin: 20px 0 0 0;
-//   }
-// }

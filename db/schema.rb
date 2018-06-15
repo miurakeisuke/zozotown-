@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 2018_06_14_053821) do
     t.date "release_date"
     t.string "gender", null: false
     t.boolean "product_status", null: false
+    t.bigint "color_id"
+    t.bigint "size_id"
     t.bigint "brand_id"
     t.bigint "cart_id"
     t.bigint "image_id"
@@ -65,7 +67,6 @@ ActiveRecord::Schema.define(version: 2018_06_14_053821) do
     t.index ["color_id"], name: "index_products_on_color_id"
     t.index ["image_id"], name: "index_products_on_image_id"
     t.index ["size_id"], name: "index_products_on_size_id"
-    t.index ["brand_id"], name: "index_products_on_brand_id"
   end
 
   create_table "shop_brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
