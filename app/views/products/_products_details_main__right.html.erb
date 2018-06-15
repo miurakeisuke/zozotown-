@@ -23,46 +23,67 @@
     <div class="products_details_main__right__value__name">
       <%= @product.name %>
     </div>
-    <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__review">いろんな人の着用レビュー</a>
+    <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__review"><span id="">8</span>件の着用レビュー</a>
     <div class="products_details_main__right__value__price clearfix">
       <div class="products_details_main__right__value__price-discount">¥4000 ↓</div>
       <div class="products_details_main__right__value__price-data">¥<%= @product.price %></div>
       <div class="products_details_main__right__value__price-tax">税込</div>
-      <div class="products_details_main__right__value__price-fukidashi">吹き出しが入る</div>
+      <div class="products_details_main__right__value__price-balloon">
+        <p class="balloon-up">
+          ツケ払いできます
+          <span><a href="#">詳細</a></span>
+        </p>
+        <p>
+          お支払いは
+          <span id="payment_month">8月</span><span id="payment_day">16日</span>
+          でOK
+        </p>
+      </div>
     </div>
     <div class="products_details_main__right__value__information clearfix">
       <div class="products_details_main__right__value__information-ratio">２０％ＯFF</div>
-      <div class="products_details_main__right__value__information-explain">(値引き額: ぼちぼち)
+      <div class="products_details_main__right__value__information-explain">
+        <p>(値引き額 : ¥<span id="">2,484</span>)</p>
       </div>
     </div>
     <div class="products_details_main__right__value__bonus clearfix">
       <div class="products_details_main__right__value__bonus-explain">
-        5千円以上買うと
-        <span class="explain_strong">旅行や漫画、エステの割引券もらえる</span>
+        5千円以上買うと<span class="explain_strong">旅行や漫画、エステの割引券もらえる</span>
+        <span>
+          <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__bonus-link">詳細</a>
+        </span>
       </div>
-      <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__bonus-link">詳細</a>
     </div>
-    <div class="products_details_main__right__value__detail">
+    <div class="products_details_main__right__value__detail clearfix">
       <li class="detail-trade_in clearfix">
         <i class="fa fa-recycle"></i>
         <div class="detail-trade_in-explain">
-          下取り利用なら
-          <span class="trade_in_strong">¥0</span>
-          で買えるかも
+          下取り利用なら<span class="trade_in_strong">¥0</span>で買えるかも
+          <span>
+            <a href="http://www.dot-st.com/globalwork/" class="trade_in-link">詳細</a>
+          </span>
         </div>
-        <a href="http://www.dot-st.com/globalwork/" class="trade_in-link">詳細</a>
       </li>
       <li class="detail-point clearfix">
         <i class="fa fa-money"></i>
-        <div class="detail-point-explain"><%= @product.point %>ポイント還元（ZOZOCARD : 知らん）</div>
+        <div class="detail-point-explain">
+          <p><%= @product.point %>ポイント還元（ZOZOCARD : <%= @product.point * 2 %>ポイント還元）</p>
+        </div>
       </li>
-      <li class="detail-favarite clearfix">
+      <li class="detail-favorite clearfix">
         <i class="fa fa-heart-o"></i>
-        <div class="detail-favarite-explain">お気に入りアイテム登録人数 : 全人類</div>
+        <div class="detail-favorite-explain">
+          <p>お気に入りアイテム登録数 :<%= @okiniiri %></p>
+        </div>
+      </li>
+      <li class="detail-return clearfix">
+        <div class="detail-return-explain">
+          <p>※このアイテムは<span>返品・交換対象外商品</span>です。</p>
+        </div>
       </li>
     </div>
   </div>
-  <div class="products_details_main__right__stock">
+  <div class="products_details_main__right__stock clearfix">
     <div class="products_details_main__right__stock__color">
       <div class="products_details_main__right__stock__color-image">
         <img src="http://img5.zozo.jp/goodsimages/639/11022639/11022639B_16_D_35.jpg">
