@@ -62,14 +62,31 @@
 
 .pickup-link {
   text-align: left;
+  padding-left: 10px;
   ul li {
-    padding: 10px;
     border-bottom: 1px solid #ebebeb;
-    .pickup-image {
-      width: 41px;
-      height: 55px;
-      vertical-align: -23px;
+
+    .pickup-link-icon {
       display: inline-block;
+      background: url(http://img4.zozo.jp/fix/town/default/ico_index_2015.png) no-repeat;
+      width: 41px;
+      height: 60px;
+      vertical-align: -23px;
+    }
+    .pre_sale {
+      background-position: -127px 4px;
+    }
+    .gift_wraping {
+      background-position: -127px -53px;
+    }
+    .zozoused_icon {
+      background-position: -9px -53px;
+    }
+    .zozocard_icon {
+      background-position: -68px 7px;
+    }
+    .disney_icon {
+      background-position: -68px -50px;
     }
     .description {
       width: 75%;
