@@ -14,20 +14,37 @@
     <div class="carts__contents_wrapper">
       <div class="carts__left_contents">
         <div class="carts__left_contents-banner">
-          <img src="http://img4.zozo.jp/pc/zozoomake/201806/omake_pc_cart_men.jpg">
         </div>
         <div class="carts__left_contents__products">
-          <img src="http://img5.zozo.jp/goodsimages/646/32016646/32016646B_6_D_125.jpg" class="carts__left_contents__products-image">
-          <ul class="carts__left_contents__products-info">
-            <li>GLOBAL WORK</li>
-            <li>GLOBAL WORK</li>
-            <li>デニムシャツ半袖/788441</li>
-            <li>カラー: スカイブルー</li>
-            <li>サイズ: X-LARGE</li>
-          </ul>
-          <div class="carts__left_contents__products-price">
-            ¥3780
-          </div>
+          <% @cart_product.each do |cart_product| %>
+            <% cart_product.images.each do |image| %>
+            <img src="<%= image.url %>" alt="#" class="carts__left_contents__products-image">
+            <% end %>
+            <ul class="carts__left_contents__products-info">
+              <li>
+                <%= cart_product.name %>
+              </li>
+              <li>
+                <%= cart_product.brand.name %>
+              </li>
+              <li>
+                デニムシャツ半袖/788441
+              </li>
+              <% cart_product.colors.each do |color| %>
+                <li>
+                  カラー: <%= color.name %>
+                </li>
+              <% end %>
+              <% cart_product.sizes.each do |size| %>
+                <li>
+                  サイズ: <%= size.name %>
+                </li>
+              <% end %>
+            </ul>
+            <div class="carts__left_contents__products-price">
+              ¥ <%= cart_product.price %>
+            </div>
+          <% end %>
           <div class="carts__left_contents__products-btn">ボタン
           </div>
           <div class="carts__left_contents__products-delete">削除

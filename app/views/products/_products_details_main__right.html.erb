@@ -79,9 +79,11 @@
         <div class="products_details_main__right__stock__color-size_s-carts_link">
           <a href="http://www.dot-st.com/globalwork/" class="carts_link-btn">
             <i  class="fa fa-shopping-cart"></i>
-            <div class="g_btn btn_m" href="http://www.dot-st.com/globalwork/">
-              カートに入れる
-            </div>
+            <%= form_for [@current_user, @current_user_cart] do |f| %>
+            <!-- current_user実装後、user_cart_pathになおす -->
+            <!-- form_forで配列にしているのは、users/1/carts/1にするため -->
+              <%= f.submit 'カートに入れる', class: "g_btn btn_m" %>
+            <% end %>
           </a>
         </div>
         <i class="fa fa-heart-o"></i>
