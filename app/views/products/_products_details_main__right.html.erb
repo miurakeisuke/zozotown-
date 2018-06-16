@@ -16,7 +16,9 @@
       <a href="http://www.dot-st.com/globalwork/" class="shops_name">GLOBALWORK</a>
     </li>
     <li class="brands_data">ブランド :
-      <a href="http://www.dot-st.com/globalwork/" class="brands_name">GLOBALWORK</a>
+      <a href="http://www.dot-st.com/globalwork/" class="brands_name">
+        <%= @product.brand.name %>
+      </a>
     </li>
   </div>
   <div class="products_details_main__right__value">
@@ -79,10 +81,13 @@
         <div class="products_details_main__right__stock__color-size_s-carts_link">
           <a href="http://www.dot-st.com/globalwork/" class="carts_link-btn">
             <i  class="fa fa-shopping-cart"></i>
-            <%= form_for [@current_user, @current_user_cart] do |f| %>
-            <!-- current_user実装後、user_cart_pathになおす -->
-            <!-- form_forで配列にしているのは、users/1/carts/1にするため -->
-              <%= f.submit 'カートに入れる', class: "g_btn btn_m" %>
+            <% @product_into_current_cart.each do |into_product| %>
+              <%= form_for @new_product_cart do |f| %>
+                <%= f.hidden_field :into_product, @current_user_cart %>
+              <!-- current_user実装後、user_cart_pathになおす -->
+              <!-- form_forで配列にしているのは、users/1/carts/1にするため -->
+                <%= f.submit 'カートに入れる', class: "g_btn btn_m" %>
+              <% end %>
             <% end %>
           </a>
         </div>

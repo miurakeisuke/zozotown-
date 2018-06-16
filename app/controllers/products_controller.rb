@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
     # formのhidden(今いるページのid)→appendで現れる→save
     # forom_forの設定自体のデータは記述するが、そのものを書くのではない
     # リダイレクト先
+    @new_product_cart = ProductCart.new
   end
 
 end

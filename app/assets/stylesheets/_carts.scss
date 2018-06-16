@@ -37,18 +37,21 @@
     width: 100%;
     height: 193px;
     border-top: solid 1px #808080;
-    padding: 30px 0 0 15px;
+    padding: 0 0 0 15px;
     position: relative;
     &-image {
       width: 145px;
       height: 150px;
       float: left;
+      clear: both;
+      margin-top: 40px;
     }
     &-info {
       width: 225px;
       float: left;
       list-style: none;
       margin-top: 10px;
+      margin-top: 40px;
       li {
         padding-top: 5px;
         margin: 0 0 2px 20px;
@@ -62,12 +65,14 @@
       float: left;
       text-align: center;
       padding: 65px 0;
+      margin-top: 40px
     }
     &-btn {
       width: 74px;
       font-size: 14px;
       float: left;
       padding: 65px 0;
+      margin-top: 40px
     }
     &-delete {
       float: left;
@@ -81,6 +86,7 @@
     padding-top: 15px;
     margin-top: 15px;
     border-top: solid 1px #808080;
+    clear: both;
     &-title {
       font-size: 14px;
       float: left;

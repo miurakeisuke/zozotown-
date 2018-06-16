@@ -1,17 +1,22 @@
 <body id="zozotown-carts">
   <div class="wrapper">
-    <header></header>
-    <div class="carts__header">
-      <i class="fa fa-shopping-cart"></i>
-      <h1>ショッピングカート</h1>
-      <!-- <p class="carts_header__navi">
-        <i class="fa fa-pencil-square-o"></i>
-        <div class="carts_header__navi__info">
-          ログイン・情報入力
-        </div>
-      </p> -->
-    </div>
+    <header>
+    </header>
+      <div class="carts__header">
+        <i class="fa fa-shopping-cart">
+        </i>
+        <h1>
+          ショッピングカート
+        </h1>
+        <!-- <p class="carts_header__navi">
+          <i class="fa fa-pencil-square-o"></i>
+          <div class="carts_header__navi__info">
+            ログイン・情報入力
+          </div>
+        </p> -->
+      </div>
     <div class="carts__contents_wrapper">
+            <!-- ここからleft_content -->
       <div class="carts__left_contents">
         <div class="carts__left_contents-banner">
         </div>
@@ -31,23 +36,25 @@
                 デニムシャツ半袖/788441
               </li>
               <% cart_product.colors.each do |color| %>
-                <li>
-                  カラー: <%= color.name %>
-                </li>
+              <li>
+                カラー: <%= color.name %>
+              </li>
               <% end %>
               <% cart_product.sizes.each do |size| %>
-                <li>
-                  サイズ: <%= size.name %>
-                </li>
+              <li>
+                サイズ: <%= size.name %>
+              </li>
               <% end %>
             </ul>
             <div class="carts__left_contents__products-price">
               ¥ <%= cart_product.price %>
             </div>
           <% end %>
-          <div class="carts__left_contents__products-btn">ボタン
+          <div class="carts__left_contents__products-btn">
+            ボタン
           </div>
-          <div class="carts__left_contents__products-delete">削除
+          <div class="carts__left_contents__products-delete">
+            削除
           </div>
         </div>
         <div class="carts__left_contents__total">
@@ -58,21 +65,30 @@
           </div>
         </div>
       </div>
-
+                    <!-- ここからright_content -->
       <div class="carts__right_contents">
         <form method="post" class="carts__right_contents__registar_link">
           <div class="carts__right_contents__registar_link-btn">
             <p class="btn">
-              <a class="g_btn btn_m" href="/search/?sex=kids">レジへ進む</a>
+              <a class="g_btn btn_m" href="/search/?sex=kids">
+                レジへ進む
+              </a>
             </p>
           </div>
           <div class="carts__right_contents__registar_link-postage">
-            <i class="fa fa-exclamation-circle"></i>
+            <i class="fa fa-exclamation-circle">
+            </i>
             <div class="information">
-              <p>送料は一律200円になりました。</p>
-              <a href">詳細はこちら</a>
+              <p>
+                送料は一律200円になりました。
+              </p>
+              <a href">
+                詳細はこちら
+              </a>
+              </div>
             </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
+  </div>
+</body>
