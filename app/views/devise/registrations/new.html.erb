@@ -1,4 +1,4 @@
-<div class="sign_up__wrapper">
+<div class="sign_up__wrapper clearfix">
   <article>
     <div class="sign_up__body">
       <div class="sign_up__content_bread_crunmb clearfix">
@@ -13,6 +13,15 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
         <div class="sign_up__content__title">基本情報</div>
+        <div class="sign_up__content__name clearfix">
+          <div class="sign_up__content__name__title">
+            <div class="sign_up__content__name__title-text">名前</div>
+              <div class="sign_up__content__name__title-attention">必須</div>
+          </div>
+          <div class="sign_up__content__name__input_box">
+            <input type="text" name="name" value onpaste="return false;" placeholder="例：松平定信" class="name_space">
+          </div>
+        </div>
         <div class="sign_up__content__gender">
           <div class="gender_title">性別</div>
           <ul class="gender_content">
@@ -231,6 +240,24 @@
             </a>
           </div>
         </div>
+        <div class="sign_up__content__address clearfix">
+          <div class="sign_up__content__address__title">
+            <div class="sign_up__content__address__title-text">住所</div>
+              <div class="sign_up__content__address__title-attention">必須</div>
+          </div>
+          <div class="sign_up__content__address__input_box">
+            <input type="text" name="address" value onpaste="return false;" placeholder="例：東京都新宿区歌舞伎町１丁目" class="address__space">
+          </div>
+        </div>
+        <div class="sign_up__content__telephone_number clearfix">
+          <div class="sign_up__content__telephone_number__title">
+            <div class="sign_up__content__telephone_number__title-text">電話番号</div>
+              <div class="sign_up__content__telephone_number__title-attention">必須</div>
+          </div>
+          <div class="sign_up__content__telephone_number__input_box">
+            <input type="text" name="telephone_number" value onpaste="return false;" placeholder="例：03-3200-9066" class="address__space">
+          </div>
+        </div>
         <div class="sign_up__content__email clearfix">
           <div class="sign_up__content__email__title">
             <p class="sign_up__content__email__title__first">メールアドレス</p>
@@ -246,21 +273,34 @@
             </div>
           </div>
         </div>
-        <div class="sign_up__content__password">
+        <div class="sign_up__content__password clearfix">
           <div class="sign_up__content__password__title">
             <div class="sign_up__content__password__title-text">パスワード</div>
               <div class="sign_up__content__password__title-attention">必須</div>
           </div>
           <div class="sign_up__content__password__input_box">
-            <input type="text" name="password" value onpaste="return false;" placeholder="例：2617116" class="password__space">
-            <div class="password__attention">
-
+            <input type="text" name="password" value onpaste="return false;" placeholder="例：2617116" class="password_space">
+            <div class="password_attention">
+              ※ ZOZO IDに含まれない英数字混合8~12文字
             </div>
           </div>
         </div>
         <div class="sign_up__content__agreement">
+          <input type="checkbox" name="agreement" value="yes">
+          <div class="sign_up__content__agreement__content">
+            <a href="http://zozo.jp/" class="agreement-text">利用規約</a>
+            <i class="fa fa-square-0"></i>
+            <span>、
+            </span>
+          </div>
+          <div class="sign_up__content__agreement__content">
+            <a href="http://zozo.jp/" class="agreement-text">個人情報保護方針</a>
+            <i class="fa fa-square-0"></i>
+            <span>に同意する</span>
+          </div>
         </div>
         <div class="sign_up__content__registration">
+          <input type="submit" name="registration" value="会員登録する" class="sign_up__content__registration__submit">
         </div>
       </div>
       <div class="sign_up__attention">
@@ -274,21 +314,4 @@
     </div>
   </article>
 </div>
-
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
-
-<!-- 何故かエラーが出るので、一旦コメントアウトしています。↓
- -->
-<!-- render "users/shared/links"  -->
