@@ -2,8 +2,11 @@ class ProductCartsController < ApplicationController
 
   def create
     @new_product_cart = ProductCart.new(cart_params)
-    @new_product_cart.save
-    move_to_current_cart
+    if @new_product_cart.save
+      move_to_current_cart
+    else
+      redirect_to root_path
+    end
   end
 
   def update

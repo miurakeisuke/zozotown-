@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     resources :carts, only: [:show, :update, :destroy]
   end
   resources :products, only: [:index, :show]
-  end
   resources :brands, only: :index
   resources :carts, only: [:show, :update, :destroy]
   resources :shops, only: :index

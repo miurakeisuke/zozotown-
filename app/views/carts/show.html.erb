@@ -21,7 +21,7 @@
         <div class="carts__left_contents-banner">
         </div>
         <div class="carts__left_contents__products">
-          <% @cart_product.each do |cart_product| %>
+          <% @cart_products.each do |cart_product| %>
             <% cart_product.images.each do |image| %>
             <img src="<%= image.url %>" alt="#" class="carts__left_contents__products-image">
             <% end %>

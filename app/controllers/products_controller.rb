@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     add_breadcrumb 'トップス', "/"
     add_breadcrumb 'シャツ/ブラウス', "/"
     add_breadcrumb 'アイテム詳細'
-    @product = Product.all.find(params[:id])
+    @product = Product.find(params[:id])
     @current_product_id = @product.id
     @product_image = @product.images
 
