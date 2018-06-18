@@ -5,7 +5,9 @@ class ProductCartsController < ApplicationController
     if @new_product_cart.save
       move_to_current_cart
     else
-      redirect_to root_path
+      # render template: "products/show"
+      # redirect_to product_path(params[:product_id])
+      # 今回はエラーが発生するのでここの条件分岐は実装しない
     end
   end
 
