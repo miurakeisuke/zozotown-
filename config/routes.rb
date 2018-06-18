@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :shops, only: :index
   resources :payments, only: :index
   resources :orders, only: [:index, :new]
+  resources :product_carts, only: [:create, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

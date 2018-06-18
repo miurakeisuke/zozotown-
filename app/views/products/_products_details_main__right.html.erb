@@ -81,7 +81,9 @@
         <div class="products_details_main__right__stock__color-size_s-carts_link">
           <a href="http://www.dot-st.com/globalwork/" class="carts_link-btn">
             <i  class="fa fa-shopping-cart"></i>
-              <%= form_for @new_product_cart do |f| %>
+              <%= form_for @product_cart, url: '/product_carts'  do |f| %>
+              <%= f.hidden_field :product_id, value: @current_product_id %>
+              <%= f.hidden_field :cart_id, value: @current_user_cart_id %>
                 <%= f.submit 'カートに入れる', class: "g_btn btn_m" %>
               <% end %>
           </a>
