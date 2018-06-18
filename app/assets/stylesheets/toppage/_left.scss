@@ -20,6 +20,7 @@
 
       li {
         margin: 10px 0 0;
+
         a {
           color: #646464;
           -webkit-font-smoothing: antialiased;
@@ -114,54 +115,54 @@
   }
 }
 
-// menuFavariteクラス無かったためコメントアウト
-// #leftContent #myFavarite .menuFavarite .lists {
+// menufavoriteクラス無かったためコメントアウト
+// #leftContent #myfavorite .menufavorite .lists {
 //   z-index: 2;
 // }
-#leftContent .menuFavarite .lists {
+#leftContent .menufavorite .lists {
   margin: 17px 0 0;
   padding: 0;
   border-top: #ebebeb 1px solid;
 }
-#leftContent .menuFavarite .lists li {
+#leftContent .menufavorite .lists li {
   margin: 0;
   line-height: 1.4;
   font-size: 13px;
 }
-.menuFavarite .lists li {
+.menufavorite .lists li {
   position: relative;
 }
-#myFavarite .lists .item a {
+#myfavorite .lists .item a {
   background-image: none;
 }
-.menuFavarite .lists li a {
+.menufavorite .lists li a {
   border-bottom: solid 1px #f2f2f2;
   padding: 10px 2px 8px 5px;
   display: block;
   background: url(http://zozo.jp/common_2015/img/ico/ico_arrow_4.png) no-repeat scroll 160px 14px;
 }
-.menuFavarite .lists li a:link {
+.menufavorite .lists li a:link {
   text-decoration: none;
 }
-.menuFavarite .lists li a:link:hover {
+.menufavorite .lists li a:link:hover {
   background: rgba(235, 235, 235, 0.8);
 }
 
-#myFavarite .lists li div {
+#myfavorite .lists li div {
   position: absolute;
   left: 160px;
   top: 0;
   z-index: 20;
 }
 
-#myFavarite .lists li ul.nonmember {
+#myfavorite .lists li ul.nonmember {
   width: 322px;
   height: 140px;
   text-align: center;
   padding: 27px 0 38px 0;
 }
 
-#myFavarite .lists li div ul {
+#myfavorite .lists li div ul {
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(77, 77, 77, 0.2);
   border-radius: 4px;
@@ -169,43 +170,43 @@
   margin-top: -1px;
 }
 
-#myFavarite .lists li ul.nonmember li.tit {
+#myfavorite .lists li ul.nonmember li.tit {
   font-size: 16px;
   color: #808080;
   padding: 50px 0 0 9px;
   background: url("http://zozo.jp/common_2015/img/common/ico_common.png") no-repeat scroll 140px -412px;
 }
 
-#myFavarite .lists li ul.nonmember li.txt {
+#myfavorite .lists li ul.nonmember li.txt {
   margin: 9px 0 0 0;
   padding: 0 0 8px 10px;
   line-height: 1.5;
   color: #808080;
 }
 
-#myFavarite .lists li ul.nonmember li.link {
+#myfavorite .lists li ul.nonmember li.link {
   margin: 0 0 0 0;
 }
 
-#myFavarite .lists li ul.nonmember li.link a {
+#myfavorite .lists li ul.nonmember li.link a {
   padding: 0;
   color: #007ebe;
 }
 
-#myFavarite .lists li ul.nonmember li.link a:link {
+#myfavorite .lists li ul.nonmember li.link a:link {
   text-decoration: none;
 }
 
-#myFavarite .lists li ul.nonmember li.link a:link:hover {
+#myfavorite .lists li ul.nonmember li.link a:link:hover {
   text-decoration: underline;
   color: #007ebe;
 }
 
-#myFavarite .lists li:hover > a {
+#myfavorite .lists li:hover > a {
   background: none;
 }
 
-#myFavarite .lists li a:hover {
+#myfavorite .lists li a:hover {
   background: none;
 }
 
@@ -348,6 +349,9 @@ a {
 
 .bannerRecruitItem {
   border-top: 1px solid #f2f2f2;
+  .last {
+    border-bottom: 1px solid #f2f2f2;
+  }
 }
 
 .bannerRecruitNew .bannerRecruitLink:before {
@@ -394,10 +398,3 @@ a {
     }
   }
 }
-
-// #leftContent #menuBanner ul {
-//   margin: -20px 0 0 0;
-//   li {
-//     margin: 20px 0 0 0;
-//   }
-// }

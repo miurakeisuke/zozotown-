@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   resources :products, only: [:index, :show]
   resources :brands, only: :index
+  resources :sitemaps, only: :index
   resources :carts, only: [:show, :update, :destroy]
   resources :shops, only: :index
   resources :payments, only: :index

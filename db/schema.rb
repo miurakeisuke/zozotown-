@@ -14,11 +14,17 @@ ActiveRecord::Schema.define(version: 2018_06_18_015708) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "shop_id"
+    t.index ["product_id"], name: "index_brands_on_product_id"
+    t.index ["shop_id"], name: "index_brands_on_shop_id"
   end
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -80,8 +86,12 @@ ActiveRecord::Schema.define(version: 2018_06_18_015708) do
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "introduction"
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "brand_id"
+    t.index ["brand_id"], name: "index_shops_on_brand_id"
+    t.index ["product_id"], name: "index_shops_on_product_id"
   end
 
   create_table "sizes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -110,11 +120,11 @@ ActiveRecord::Schema.define(version: 2018_06_18_015708) do
   add_foreign_key "carts", "users"
   add_foreign_key "colors", "products"
   add_foreign_key "images", "products"
-  add_foreign_key "product_carts", "carts"
-  add_foreign_key "product_carts", "products"
   add_foreign_key "products", "brands"
   add_foreign_key "products", "shops"
   add_foreign_key "shop_brands", "brands"
   add_foreign_key "shop_brands", "shops"
+  add_foreign_key "shops", "brands"
+  add_foreign_key "shops", "products"
   add_foreign_key "sizes", "products"
 end
