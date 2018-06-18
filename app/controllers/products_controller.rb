@@ -12,13 +12,15 @@ class ProductsController < ApplicationController
     @product_image = @product.images
 
     @current_user = User.find(1)
-    @current_user_cart = User.find(1).cart
-    @product_into_current_cart = User.find(1).cart.products
-    # User.find(1)は後でcurrent_cartになおして
-    # formのhidden(今いるページのid)→appendで現れる→save
-    # forom_forの設定自体のデータは記述するが、そのものを書くのではない
-    # リダイレクト先
-    @new_product_cart = ProductCart.new
+    @current_user_cart = @current_user.cart
+    @product_into_current_cart = @current_user_cart.products
+    binding.pry
+    @new_product_cart = ProductCart.new(product_cart_params)
+  end
+
+  private
+  def product_cart_params
+    params.require(:product_cart).merge(product_id: params[:product_id], cart_id: User.find(1).cart.id)
   end
 
 end

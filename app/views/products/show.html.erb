@@ -13,7 +13,5 @@
   <!-- 大川作成 -->
 <%= render '/products/products_details_main__left' %>
   <!-- 芝田さん作成 -->
-<% @product_into_current_cart.each do |cart_product| %>
-<%= render partial: '/products/products_details_main__right',  locals: { cart_product: cart_product } %>
-<% end %>
+<%= render partial: '/products/products_details_main__right' %>
 </div>
