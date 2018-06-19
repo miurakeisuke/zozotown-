@@ -5,8 +5,10 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       ## Database authenticatable
       t.string :name, null: false
-      t.string :gender, null: false
-      t.date :birthday, null: false
+      t.string :gender, null: false, default: ""
+      t.date :birth_year, null: false, default: 0
+      t.date :birth_month, null: false, default: 0
+      t.date :birth_day, null: false, default: 0
       t.string :postal_code, null: false
       t.text :address, null: false
       t.string :tel_number, null: false
@@ -41,7 +43,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
 
 
       # Uncomment below if timestamps were not included in your original model.
-      # t.timestamps null: false
+      t.timestamps null: false
     end
 
     add_index :users, :email,                unique: true
