@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_14_053821) do
+ActiveRecord::Schema.define(version: 2018_06_18_062504) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -98,18 +98,25 @@ ActiveRecord::Schema.define(version: 2018_06_14_053821) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", null: false
     t.string "name", null: false
-    t.string "gender", null: false
-    t.text "password", null: false
-    t.text "address", null: false
     t.string "postal_code", null: false
+    t.text "address", null: false
     t.string "tel_number", null: false
+    t.string "email", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.integer "credit_card_number"
-    t.integer "point", null: false
-    t.date "birthday", null: false
-    t.datetime "created_at", default: "2018-05-26 08:15:41", null: false
-    t.datetime "updated_at", default: "2018-05-26 08:15:41", null: false
+    t.string "gender", default: "0", null: false
+    t.date "birthday"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "brands", "products"
