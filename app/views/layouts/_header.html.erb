@@ -20,12 +20,14 @@
         <div class="header-inner-right">
           <ul>
             <li class="customer-name">
-              <p><span>username</span>様</p>
+              <p><span>name</span>様</p>
               <ul class="name-dropdown">
                 <li><%= link_to "登録情報", root_path, class: "title" %></li>
                 <li><a href="#">注文履歴・発送状況</a></li>
                 <li><a href="#">メールマガジン</a></li>
-                <li><a href="#">ログアウト</a></li>
+                <li>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                </li>
               </ul>
             </li>
             <li id="fa-comment-o">

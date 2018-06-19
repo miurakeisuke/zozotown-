@@ -154,6 +154,20 @@
   }
 }
 
+input[type="email"] {
+  width: 350px;
+  height: 40px;
+}
+
+input[type="password"] {
+  width: 150px;
+  height: 30px;
+}
+
+input[type="password"]::placeholder {
+  padding-left: 5px;
+}
+
 // ここからは下
 
 .under_attention {
