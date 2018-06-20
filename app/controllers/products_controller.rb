@@ -12,8 +12,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product_image = @product.images
 
-    @current_user = User.find(1)
-    @current_user_cart_id = @current_user.cart.id
+    @current_user_cart_id = current_user.cart.id
 
     @product_cart = ProductCart.new
     # form_forでProductCartのインスタンスを作った際、product_id/cart_idが入るようにしている
