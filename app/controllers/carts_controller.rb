@@ -10,6 +10,6 @@ class CartsController < ApplicationController
 
   def destroy
     ProductCart.find(params[:id]).destroy
-    redirect_to :root
+    redirect_to "/users/#{current_user.id}/carts/#{current_user.cart.id}"
   end
 end
