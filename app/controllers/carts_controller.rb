@@ -9,7 +9,12 @@ class CartsController < ApplicationController
   end
 
   def destroy
+    if current_user.id == Cart.find(params[:user_id]).user_id
       ProductCart.find(params[:id]).destroy
       redirect_to "/users/#{current_user.id}/carts/#{current_user.cart.id}"
+    else
+      redirect_to "/users/#{current_user.id}/carts/#{current_user.cart.id}"
+    end
   end
+
 end
