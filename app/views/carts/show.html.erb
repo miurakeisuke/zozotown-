@@ -21,6 +21,7 @@
         <div class="carts__left_contents-banner">
         </div>
         <div class="carts__left_contents__products">
+          <% $total_price = 0 %>
           <% @cart_products.each do |cart_product| %>
             <% cart_product.images.each do |image| %>
             <img src="<%= image.url %>" alt="#" class="carts__left_contents__products-image">
@@ -48,20 +49,24 @@
             </ul>
             <div class="carts__left_contents__products-price">
               ¥ <%= cart_product.price %>
+              <% $total_price += cart_product.price %>
             </div>
+             <% end %>
           <div class="carts__left_contents__products-btn">
             ボタン
           </div>
           <div class="carts__left_contents__products-delete">
-            削除
+            <% @product_cart.each do |product_cart_id| %>
+            <%= link_to '削除', "#{product_cart_id}", method: :delete %>
           </div>
-          <% end %>
+           <% end %>
         </div>
         <div class="carts__left_contents__total">
           <div class="carts__left_contents__total-title">
             商品合計
           </div>
-          <div class="carts__left_contents__total-value">¥3780
+          <div class="carts__left_contents__total-value">
+            ¥ <%= $total_price %>
           </div>
         </div>
       </div>
