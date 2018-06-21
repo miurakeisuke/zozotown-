@@ -26,3 +26,5 @@
 /config/master.key
 
 /app/assets/images
+
+config/secrets.yml
