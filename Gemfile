@@ -78,3 +78,6 @@ end
 gem "font-awesome-rails"
 gem 'devise'
 gem "pry-rails"
+gem 'fog-aws'
+gem 'carrierwave'
+gem 'mini_magick'
