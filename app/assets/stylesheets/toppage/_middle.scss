@@ -3,6 +3,7 @@
   margin: 0 15px;
   float: left;
   .section {
+    clear: both;
     border-bottom: solid 1px #ebebeb;
     padding: 22px 0 30px;
     .sectionHeader span {
@@ -27,10 +28,15 @@
 }
 
 .rankingList {
-  margin: 0 0 0 -17px;
-  overflow: hidden;
+  margin: 0 10px 0 -17px;
+  float: left;
 }
 
+.rankingList_second {
+  margin: 0 10px 0 -17px;
+  height: 270px;
+  float: left;
+}
 .listInner {
   .photo {
     position: relative;
@@ -42,11 +48,9 @@
   }
 }
 
-.rank1,
-.rank2,
-.rank3 {
+.rank1 {
   float: left;
-  margin: 0 0 0 14px;
+  margin: 0 0 0 10px;
   padding-bottom: 20px;
   width: 171px;
   height: 270px;
@@ -58,16 +62,9 @@
   }
 }
 
-.rank4,
-.rank5,
-.rank6,
-.rank7,
-.rank8,
-.rank9,
-.rank10,
-.rank11 {
+.rank4 {
   float: left;
-  margin: 0 0 0 14px;
+  margin: 0 0 0 10px;
   padding-bottom: 20px;
   width: 125px;
   img {
@@ -169,6 +166,9 @@
     padding-left: 2px;
     vertical-align: 1px;
     color: #808080;
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
   }
 }
 
