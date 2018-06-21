@@ -21,47 +21,52 @@
         <div class="carts__left_contents-banner">
         </div>
         <div class="carts__left_contents__products">
+          <% $total_price = 0 %>
           <% @cart_products.each do |cart_product| %>
             <% cart_product.images.each do |image| %>
-            <img src="<%= image.url %>" alt="#" class="carts__left_contents__products-image">
-            <% end %>
-            <ul class="carts__left_contents__products-info">
-              <li>
-                <%= cart_product.name %>
-              </li>
-              <li>
-                <%= cart_product.brand.name %>
-              </li>
-              <li>
-                デニムシャツ半袖/788441
-              </li>
-              <% cart_product.colors.each do |color| %>
-              <li>
-                カラー: <%= color.name %>
-              </li>
+              <img src="<%= image.url %>" alt="#" class="carts__left_contents__products-image">
               <% end %>
-              <% cart_product.sizes.each do |size| %>
-              <li>
-                サイズ: <%= size.name %>
-              </li>
-              <% end %>
-            </ul>
-            <div class="carts__left_contents__products-price">
-              ¥ <%= cart_product.price %>
+              <ul class="carts__left_contents__products-info">
+                <li>
+                  <%= cart_product.name %>
+                </li>
+                <li>
+                  <%= cart_product.brand.name %>
+                </li>
+                <li>
+                  デニムシャツ半袖/788441
+                </li>
+                <% cart_product.colors.each do |color| %>
+                <li>
+                  カラー: <%= color.name %>
+                </li>
+                <% end %>
+                <% cart_product.sizes.each do |size| %>
+                <li>
+                  サイズ: <%= size.name %>
+                </li>
+                <% end %>
+              </ul>
+              <div class="carts__left_contents__products-price">
+                ¥ <%= cart_product.price %>
+                <% $total_price += cart_product.price %>
+              </div>
+            <div class="carts__left_contents__products-btn">
+              ボタン
             </div>
           <% end %>
-          <div class="carts__left_contents__products-btn">
-            ボタン
-          </div>
-          <div class="carts__left_contents__products-delete">
-            削除
-          </div>
+        <div class="carts__left_contents__products-delete">
+          <% @product_cart.each do |product_cart_id| %>
+            <%= link_to '削除', "#{product_cart_id}", method: :delete, class: "carts__left_contents__products-delete__btn" %>
+          <% end %>
         </div>
+      </div>
         <div class="carts__left_contents__total">
           <div class="carts__left_contents__total-title">
             商品合計
           </div>
-          <div class="carts__left_contents__total-value">¥3780
+          <div class="carts__left_contents__total-value">
+            ¥ <%= $total_price %>
           </div>
         </div>
       </div>
