@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   resources :sitemaps, only: :index
   resources :carts, only: [:show, :update, :destroy]
   resources :shops, only: :index
-  resources :payments, only: :index
+  resources :users, only: [:index] do
+    resources :payments, only: :index
+  end
   resources :orders, only: [:index, :new]
   resources :product_carts, only: [:create, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
