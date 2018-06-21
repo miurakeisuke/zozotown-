@@ -3,7 +3,7 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="log_in__body">
         <div class="log_in__content_bread_crunmb clearfix">
-          <a href="http://zozo.jp/" class="log_in_bread">ZOZOTOWN</a>
+          <a href="/products" class="log_in_bread">ZOZOTOWN</a>
           <div class="bread_title">>ログイン</div>
         </div>
         <div class="log_in__content_header clearfix">
@@ -35,10 +35,10 @@
                 </p>
                 <ul class="help_link">
                   <li class="help_link-text">
-                    <a herf="/_member/forget/default.html">ID・パスワードをお忘れですか？</a>
+                    <a href="/constructions">ID・パスワードをお忘れですか？</a>
                   </li>
                   <li class="help_link-text">
-                    <a herf="/_member/regist/?pattern=">はじめてご利用の方（新規会員登録）</a>
+                    <a href="<%= new_user_registration_path %>">はじめてご利用の方（新規会員登録）</a>
                   </li>
                 </ul>
               </div>
@@ -69,9 +69,9 @@
           <ul class="under_attention__info">
             <li class="under_attention__info__text">
               ※ 外部サイトIDでログインについてはヘルプ内「
-              <a herf="/_newhelp/help_resort_yid.html" class="under_attention__info__link">Yahoo! JAPAN IDについて</a>
+              <a href="/constructions" class="under_attention__info__link">Yahoo! JAPAN IDについて</a>
                 」「
-              <a herf="/_newhelp/_help_resort_mid.html" class="under_attention__info__link">mixi IDについて</a>
+              <a href="/constructions" class="under_attention__info__link">mixi IDについて</a>
                 」をご覧ください。
             </li>
             <li class="under_attention__info__text">

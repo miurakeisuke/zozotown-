@@ -511,7 +511,11 @@ img {
 
 .rankingList {
   margin: 0 0 0 -17px;
-  overflow: hidden;
+  width: 171px;
+}
+.rankingList_second {
+  margin: 0 0 0 -17px;
+  clear:both;
 }
 
 .listInner {
@@ -525,10 +529,8 @@ img {
   }
 }
 
-.rank1,
-.rank2,
-.rank3 {
-  float: left;
+.rank1 {
+  display:flex;
   margin: 0 0 0 14px;
   padding-bottom: 20px;
   width: 171px;

@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
+    @products = Product.all
+    @images = Image.all
   end
 
   def show
@@ -11,9 +13,11 @@ class ProductsController < ApplicationController
     add_breadcrumb 'アイテム詳細'
     @product = Product.find(params[:id])
     @product_image = @product.images
+    @shops = Shop.all
+    @shop = @shops.find(params[:id])
 
-    @current_user = User.find(1)
-    @current_user_cart_id = @current_user.cart.id
+    # @user = User.find(params[:id])
+    # @user_cart_id = @user.cart.id
 
     @product_cart = ProductCart.new
     # form_forでProductCartのインスタンスを作った際、product_id/cart_idが入るようにしている

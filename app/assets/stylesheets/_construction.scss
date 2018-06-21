@@ -1,0 +1,12 @@
+.construction_wrapper {
+  width: 100%;
+}
+
+.construction_content {
+  width: 1000px;
+  margin: 0 auto;
+  &__image {
+    height: 80%;
+    width: 100%;
+  }
+}
