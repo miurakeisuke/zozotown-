@@ -24,18 +24,16 @@
             <td class="send_info">
               <div>
                 <p class="name">
-                  <span>姜 弘正</span> 様
+                  <span><%= @info.name %></span> 様
                 </p>
                 <p class="add">
                   住所：〒
-                  <span>1110000</span>
-                  <span>東京都</span>
-                  <span>〜〜市</span>
-                  <span>〜〜〜丁目11-1</span>
+                  <span><%= @info.postal_code %></span>
+                  <span><%= @info.address %></span>
                 </p>
                 <p class="tel">
                   電話：
-                  <span>090-0000-0000</span>
+                  <span><%= @info.tel_number %></span>
                 </p>
               </div>
             </td>
@@ -50,7 +48,7 @@
         <tbody>
           <tr>
             <td class="ttl">支払い方法</td>
-            <td class="payment">ツケ払い （お振込み手数料はお客様負担となります）</td>
+            <td class="payment"><%= @howtopay %></td>
             <td class="price">¥324</td>
             <td class="change">
               <a class="change_btn" href="#">変更</a>
@@ -86,26 +84,15 @@
                   <p class="pretty p-switch p-fill">
                     <input type="checkbox" />
                     <span class="state p-success">
-                      <label>指定なし：1～3日以内に発送</label>
-                    </span>
-                  </p>
-                  <p class="pretty p-switch p-fill">
-                    <input type="checkbox" />
-                    <span class="state p-success">
-                      <label>日時指定：午前中</label>
-                    </span>
-                  </p>
-                  <p class="pretty p-switch p-fill">
-                    <input type="checkbox" />
-                    <span class="state p-success">
-                      <label>即日配送：<span class="text">最短</span> 6月13日(水) 午前中</label>
+                      <label><%= @delivery %></label>
                     </span>
                   </p>
                 </td>
                 <td class="price">
                   <p><span>¥0</span></p>
-                  <p><span>¥0</span></p>
-                  <p><span>¥350</span></p>
+<!-- 一旦のコメントアウト、選択したもの以外薄くする機能が実装できたら、コメントアウト外してください -->
+<!--                   <p><span>¥0</span></p>
+                  <p><span>¥350</span></p> -->
                 </td>
                 <td class="change">
                   <a class="change_btn" href="#">変更</a>
