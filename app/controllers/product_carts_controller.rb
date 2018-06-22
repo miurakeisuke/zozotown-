@@ -17,7 +17,7 @@ class ProductCartsController < ApplicationController
 
   private
   def move_to_current_cart
-    redirect_to "/users/1/carts/1"
+    redirect_to "/users/#{current_user.id}/carts/#{current_user.id}"
   end
 
   def cart_params
