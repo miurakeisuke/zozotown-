@@ -1,10 +1,10 @@
 .product_contacts__view {
-  margin-left: 10px;
-  height: 300px;
+  margin-left: 30px;
+  height: 600px;
   width: 100%;
   border: 1px solid black;
   &__header {
-    height: 20%;
+    height: 10%;
     display: flex;
     background-color: #EEEEEE;
     width: 310px;
@@ -21,21 +21,33 @@
     }
   }
   &__contents {
-    height: 50%;
+    height: 70%;
     overflow: scroll;
+    display: flex;
+    &__name {
+      margin-left: 5px;
+      flex-flow: column;
+      border-right: 1px solid black;
+    }
+    &__message {
+      margin-left: 5px;
+    }
   }
   &__footer {
-    height: 30%;
-    margin-top: 20px;
+    height: 20%;
+    border-top: 1px solid black;
+    background-color: #EEEEEE;
     &__form {
+      border: 1px solid #ededed;
     }
     &__solved_btn {
-      border: 1px solid #ededed;
+      border: 1px solid black;
       border-radius: 10px;
       margin: 7px;
       padding: 5px;
       text-align: center;
-      background-color: #EEEEEE;
+      background-color: #7fffd4;
+      margin-top: 30px;
     }
   }
 }

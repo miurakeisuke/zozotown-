@@ -16,4 +16,5 @@ class Product < ApplicationRecord
   # has_many :users, through: :products_users
   has_many :product_carts, dependent: :destroy
   has_many :carts, through: :product_carts
+  has_many :contacts, dependent: :destroy
 end
