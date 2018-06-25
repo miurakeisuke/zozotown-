@@ -1,0 +1,41 @@
+.product_contacts__view {
+  margin-left: 10px;
+  height: 300px;
+  width: 100%;
+  border: 1px solid black;
+  &__header {
+    height: 20%;
+    display: flex;
+    background-color: #EEEEEE;
+    width: 310px;
+    border-bottom: 1px solid black;
+    &__zozo {
+      font-weight:bold;
+      line-height: 60px;
+      margin-left: 10px;
+      font-size: 15px;
+    }
+    &__icon {
+      margin: 0 20px;
+      line-height: 75px;
+    }
+  }
+  &__contents {
+    height: 50%;
+    overflow: scroll;
+  }
+  &__footer {
+    height: 30%;
+    margin-top: 20px;
+    &__form {
+    }
+    &__solved_btn {
+      border: 1px solid #ededed;
+      border-radius: 10px;
+      margin: 7px;
+      padding: 5px;
+      text-align: center;
+      background-color: #EEEEEE;
+    }
+  }
+}
