@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 
   def create
-    @contacts = Product.find(1).contacts
+    # binding.pry
     @new_contact = Contact.create(content: contact_params[:content], product_id: contact_params[:product_id])
 
     if @new_contact.save
@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
 private
 
   def contact_params
-    params.require(:contact).permit(:content).merge(product_id: 1)
+    params.require(:contact).permit(:content).merge(product_id: params[:product_id])
   end
 
 end
