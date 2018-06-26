@@ -10,13 +10,8 @@ $(function() {
   }
   $('#new_contact').on('submit', function(e){
     e.preventDefault();
-    //フォームが送信された時のイベントを止める
     var formData = new FormData(this);
     var form_url = $(this).attr('action')
-    console.log(this);
-    console.log(formData);
-    //sendボタンから送られてきた情報を取得するため
-    //thisは#new_contactに関連するフォームの情報を取得している
     $.ajax({
       url: form_url,
       type: "POST",
@@ -25,14 +20,11 @@ $(function() {
       processData: false,
       contentType: false
     })
-    //上記はjsonのリクエストで送る値
     .done(function(data) {
-      // data.forEach(function(newContent){
-      console.log(data);
       var html = buildHTML(data);
-      console.log(data);
       $('.product_contacts__view__contents').append(html)
-      // $('.product_contacts__view__footer__form__btn').val('')
+      $("#new_contact")[0].reset();
+      $(".product_contacts__view__footer__form__btn").prop('disabled', false);
     })
     .fail(function() {
       alert('通信に失敗しました');
