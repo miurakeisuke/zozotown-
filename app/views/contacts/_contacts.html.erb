@@ -25,7 +25,7 @@
   </div>
   <div class="product_contacts__view__footer">
     <div class="product_contacts__view__footer__form">
-      <%= form_for @product_contact, url: '/products/1/contacts', id: "contact_form_comment"  do |f| %>
+      <%= form_for @product_contact, url: '/products/1/contacts' do |f| %>
       <%= f.text_field :content, class: "product_contacts__view__footer__form__input", placeholder: "お問い合わせ内容を記載ください（30文字以内）" %>
       <%= f.submit 'SEND', class: "product_contacts__view__footer__form__btn" %>
     <% end %>
