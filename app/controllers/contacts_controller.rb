@@ -1,17 +1,16 @@
 class ContactsController < ApplicationController
+
   def create
+    @contacts = Product.find(1).contacts
+    Contact.create(content: contact_params[:content], product_id: contact_params[:product_id])
+    redirect_to '/products/1'
   end
+
+
+private
+
+  def contact_params
+    params.require(:contact).permit(:content).merge(product_id: 1)
+  end
+
 end
-
-
-# class CommentsController < ApplicationController
-#   def create
-#     @comment = Comment.create(text: comment_params[:text], tweet_id: comment_params[:tweet_id], user_id: current_user.id)
-#     redirect_to "/tweets/#{@comment.tweet.id}"
-#   end
-
-#   private
-#   def comment_params
-#     params.permit(:text, :tweet_id)
-#   end
-# end

@@ -21,6 +21,8 @@ class ProductsController < ApplicationController
 
     @product_cart = ProductCart.new
     # form_forでProductCartのインスタンスを作った際、product_id/cart_idが入るようにしている
+    @product_contact = Contact.new
+    @contacts = Product.find(1).contacts
   end
 
 end
