@@ -1,7 +1,6 @@
 class ContactsController < ApplicationController
 
   def create
-    # binding.pry
     @new_contact = Contact.create(content: contact_params[:content], product_id: contact_params[:product_id])
 
     if @new_contact.save
