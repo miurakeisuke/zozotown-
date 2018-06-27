@@ -1,7 +1,7 @@
 $(function() {
-    function buildHTML(contact){
+  function buildHTML(contact){
     var html = `<div class="product_contacts__view__contents__name">
-                  <i class="fa fa-user" aria-hidden="true"></i> 山田寿夫 様
+                  <i class="fa fa-user" aria-hidden="true"></i> ${contact.name} 様
                 </div>
                 <div class="product_contacts__view__contents__message">
                   <i class="fa fa-question-circle-o" aria-hidden="true"></i> ${contact.content}
