@@ -1,0 +1,41 @@
+<div class="product_contacts__view">
+  <div class="product_contacts__view__header">
+    <div class="product_contacts__view__header__zozo">
+      ZOZOTOWN-CHAT-SPACE
+    </div>
+    <div class="product_contacts__view__header__icon">
+      <i class="fa fa-comments-o fa-3x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="product_contacts__view__contents">
+    <div class="product_contacts__view__contents__name">
+      <i class="fa fa-users" aria-hidden="true"></i> ZOZOTOWNスタッフ
+    </div>
+    <div class="product_contacts__view__contents__message">
+      <i class="fa fa-comment"></i> こんにちは！疑問をチャットで解決しませんか？
+    </div>
+    <% @contacts.each do |contact| %>
+    <div class="product_contacts__view__contents__name">
+      <i class="fa fa-user" aria-hidden="true"></i> <%= current_user.name %> 様
+      <input name="current_user_name", type="hidden", value= current_user.name, class='current_user_name' >
+    </div>
+    <div class="product_contacts__view__contents__message">
+      <i class="fa fa-question-circle-o" aria-hidden="true"></i> <%= contact.content %>
+    </div>
+    <% end %>
+  </div>
+  <div class="product_contacts__view__footer">
+    <div class="product_contacts__view__footer__form">
+      <%= form_for [@product, @product_contact] do |f| %>
+      <%= f.text_field :content, class: "product_contacts__view__footer__form__input", placeholder: "お問い合わせ内容を記載ください（30文字以内）" %>
+      <%= f.submit 'SEND', class: "product_contacts__view__footer__form__btn" %>
+    <% end %>
+    </div>
+  <div class="product_contacts__view__footer__solved_btn">
+    SOLVED!
+  </div>
+  <div class="product_contacts__view__footer__point">
+    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>SOLVED!ボタンか10分経過後、履歴は自動消去されます
+  </div>
+  </div>
+</div>
