@@ -1,11 +1,11 @@
 class ContactsController < ApplicationController
 
   def create
-    @new_contact = Contact.create(content: contact_params[:content], product_id: contact_params[:product_id])
+    @new_contact = Contact.create(contact_params)
 
     if @new_contact.save
       respond_to do |format|
-        format.html { redirect_to "/products/1" }
+        format.html { redirect_to "product_path" }
         format.json
       end
     end
