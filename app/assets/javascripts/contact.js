@@ -38,3 +38,10 @@ $(function(){
     $('.product_contacts__view__footer__btn').show();
   })
 });
+
+$(function(){
+  $('#contact_event').click(function(){
+    console.log('クリックされました');
+    $('.product_contacts__view').fadeIn("slow");
+  })
+});
