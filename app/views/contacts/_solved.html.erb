@@ -1,5 +1,5 @@
 <div class="product_contacts__view__footer__btn">
-  <% @contacts.each do |contact| %>
+  <% @contacts.first(1).each do |contact| %>
     <%= form_for [@product, contact], method: :delete do |f| %>
       <%= f.submit 'SOLVED!', class: "product_contacts__view__footer__solved__btn" %>
     <% end %>
