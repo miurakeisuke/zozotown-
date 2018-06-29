@@ -36,7 +36,14 @@
     お問い合わせをしてみましょう！
   </div>
                    <!-- チャットしている時に表示 -->
-    <%= render 'contacts/solved' %>
+  <div class="product_contacts__view__footer__btn">
+    <% @contacts.first(1).each do |contact| %>
+      <%= form_for [@product, contact], method: :delete do |f| %>
+        <%= f.submit 'SOLVED!', class: "product_contacts__view__footer__solved__btn" %>
+      <% end %>
+    <% end %>
+  </div>
+                          <!-- 注意点 -->
   <div class="product_contacts__view__footer__point">
     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>SOLVED!ボタンか10分経過後、履歴は自動消去されます
   </div>
