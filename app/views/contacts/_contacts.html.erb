@@ -1,4 +1,4 @@
-<div class="product_contacts__view">
+<div class="product_contacts__view" id="modal_open_contact">
   <div class="product_contacts__view__header">
     <div class="product_contacts__view__header__zozo">
       ZOZOTOWN-CHAT-SPACE
@@ -29,11 +29,14 @@
       <%= form_for [@product, @product_contact] do |f| %>
       <%= f.text_field :content, class: "product_contacts__view__footer__form__input", placeholder: "お問い合わせ内容を記載ください（30文字以内）" %>
       <%= f.submit 'SEND', class: "product_contacts__view__footer__form__btn" %>
-    <% end %>
+      <% end %>
     </div>
-  <div class="product_contacts__view__footer__solved_btn">
-    SOLVED!
+                   <!-- チャットしていない時に表示 -->
+  <div class="product_contacts__view__footer__contact">
+    お問い合わせをしてみましょう！
   </div>
+                   <!-- チャットしている時に表示 -->
+    <%= render 'contacts/solved' %>
   <div class="product_contacts__view__footer__point">
     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>SOLVED!ボタンか10分経過後、履歴は自動消去されます
   </div>
