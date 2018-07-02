@@ -19,7 +19,7 @@
     </div>
     <% @contacts.each do |contact| %>
     <div class="product_contacts__view__contents__name">
-      <i class="fa fa-user" aria-hidden="true"></i> <%= contact.user.name %> 様
+      <i class="fa fa-user" aria-hidden="true"></i> <%= current_user.name %> 様
       <input name="current_user_name", type="hidden", value= current_user.name, class='current_user_name' >
     </div>
     <div class="product_contacts__view__contents__message">
