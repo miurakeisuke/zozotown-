@@ -276,7 +276,7 @@
               </div>
               <p class="brandName"><%= product.name %></p>
               <p class="price">
-                <span>¥</span><%= product.price %><span class="tax">税込</span>
+                <span>¥</span><%= product.price.to_s(:delimited) %><span class="tax">税込</span>
               </p>
             </div>
           </li>
@@ -296,7 +296,7 @@
               </div>
               <p class="brandName"><%= product.name %></p>
               <p class="price">
-                <span>¥</span><%= product.price %><span class="tax">税込</span>
+                <span>¥</span><%= product.price.to_s(:delimited) %><span class="tax">税込</span>
               </p>
             </div>
           </li>
