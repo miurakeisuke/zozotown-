@@ -1,0 +1,63 @@
+<div class="deposits__wrapper">
+  <div class="deposits__title ">
+    管理者専用ページ（査定結果入力用）
+  </div>
+  <%= form_for @deposit do |f| %>
+  <div class="deposits__form">
+    <div class="deposits__form__title">
+      査定済み衣類入力フォーム
+    </div>
+    <div class="deposits__form__name">
+      <div class="deposits__form__name-category">
+        商品名
+      </div>
+      <div class="deposits__form__name-input">
+        <%= f.text_field :name, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__assesment_price">
+      <div class="deposits__form__assesment_price-category">
+        査定額
+      </div>
+      <div class="deposits__form__assesment_price-input">
+        <%= f.number_field :assesment_price, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__user_id">
+      <div class="deposits__form__user_id-category">
+        お客様ID
+      </div>
+      <div class="deposits__form__user_id-input">
+        <%= f.number_field :user_id, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__warehouse_id">
+      <div class="deposits__form__warehouse_id-category">
+        貸し倉庫ID
+      </div>
+      <div class="deposits__form__warehouse_id-input">
+        <%= f.number_field :warehouse_id, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__brand">
+      <div class="deposits__form__brand-category">
+        ブランド名
+      </div>
+      <div class="deposits__form__brand-input">
+        <%= f.text_field :brand, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__size">
+      <div class="deposits__form__size-category">
+        サイズ
+      </div>
+      <div class="deposits__form__size-input">
+        <%= f.text_field :size, class: "form_box" %>
+      </div>
+    </div>
+    <div class="deposits__form__registration">
+      <%= f.submit '査定情報を登録する', class: "deposits__form__registration-btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>

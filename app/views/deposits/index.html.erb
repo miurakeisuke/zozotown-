@@ -1,0 +1,36 @@
+<div class="deposits__wrapper">
+  <div class="deposits__title ">
+    管理者専用ページ（お預かり商品一覧画面）
+  </div>
+  <div class="deposits__view">
+    <% if @deposits.present? %>
+    <% @deposits.each do |deposit| %>
+    <div class="deposits__list">
+      <div class="deposits__list__id">
+        ID:<span><%= deposit.id %></span>
+      </div>
+      <div class="deposits__list__name">
+        商品名：<span><%= deposit.name %></span>
+      </div>
+      <div class="deposits__list__assesment_price">
+        査定額：<span>¥<%= deposit.assesment_price %></span>
+      </div>
+      <div class="deposits__list__user">
+        所持ユーザー：<span><%= deposit.user.name %>様</span>
+      </div>
+      <div class="deposits__list__warehouse_id">
+        保管倉庫：<span><%= deposit.warehouse_id %>番</span>
+      </div>
+      <div class="deposits__list__brand">
+        ブランド名：<span><%= deposit.brand %></span>
+      </div>
+      <div class="deposits__list__size">
+        サイズ：<span><%= deposit.size %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="deposits__new_link">
+    <%= link_to "査定した商品を追加する", new_deposit_path, class: "new_link__btn" %>
+</div>
