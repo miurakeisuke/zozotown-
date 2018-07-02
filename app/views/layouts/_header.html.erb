@@ -22,19 +22,21 @@
             <li class="customer-name">
               <p>
                 <% if user_signed_in? %>
-                  <span><%= current_user.name %>様</span>
+                  <span><%= current_user.name %> 様</span>
                 <% else %>
                   <span><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>
                 <% end %>
               </p>
-              <ul class="name-dropdown">
-                <li><%= link_to "登録情報", constructions_path, class: "title" %></li>
-                <li><a href="#">注文履歴・発送状況</a></li>
-                <li><a href="/constructions">メールマガジン</a></li>
-                <li>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </li>
-              </ul>
+              <% if user_signed_in? %>
+                <ul class="name-dropdown">
+                  <li><%= link_to "登録情報", constructions_path, class: "title" %></li>
+                  <li><a href="#">注文履歴・発送状況</a></li>
+                  <li><a href="/constructions">メールマガジン</a></li>
+                  <li>
+                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  </li>
+                </ul>
+              <% end %>
             </li>
             <li id="fa-comment-o">
               <a class="icon fa-comment-o" href="/constructions"><span class="notice"></span></a>
