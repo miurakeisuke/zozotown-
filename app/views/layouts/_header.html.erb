@@ -22,7 +22,7 @@
             <li class="customer-name">
               <p>
                 <% if user_signed_in? %>
-                  <span><%= current_user.name %>様</span>
+                  <span><%= current_user.name %> 様</span>
                 <% else %>
                   <span><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>
                 <% end %>
