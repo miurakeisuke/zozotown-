@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
 
     @product_contact = Contact.new
     @contacts = Product.find(params[:id]).contacts
-    @contact_find = current_user.contacts
+    # @contact_user = Contact.find(params[:id]).user.id
   end
 
 end

@@ -18,8 +18,12 @@
       font-size: 18px;
     }
     &__icon {
-      margin: 0 20px;
+      margin: 0 15px;
       line-height: 80px;
+      &__close {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
   &__contents {

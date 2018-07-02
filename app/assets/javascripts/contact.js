@@ -33,7 +33,7 @@ $(function() {
 });
 
 $(function(){
-  $('.product_contacts__view__footer__form__btn').click(function(){
+  $('.product_contacts__view__footer__form__btn').click('turbolinks:load', function(){
     $('.product_contacts__view__footer__contact').hide();
     $('.product_contacts__view__footer__btn').show();
   })
@@ -41,7 +41,6 @@ $(function(){
 
 $(function(){
   $('#contact_event').click(function(){
-    console.log('クリックされました');
     $('.product_contacts__view').fadeIn("slow");
   })
 });
