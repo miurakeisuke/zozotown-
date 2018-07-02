@@ -29,8 +29,8 @@
     </div>
     <a href="http://www.dot-st.com/globalwork/" class="products_details_main__right__value__review"><span id="">8</span>件の着用レビュー</a>
     <div class="products_details_main__right__value__price clearfix">
-      <div class="products_details_main__right__value__price-discount">¥4000 ↓</div>
-      <div class="products_details_main__right__value__price-data">¥<%= @product.price %></div>
+      <div class="products_details_main__right__value__price-discount">¥4,000 ↓</div>
+      <div class="products_details_main__right__value__price-data">¥<%= @product.price.to_s(:delimited) %></div>
       <div class="products_details_main__right__value__price-tax">税込</div>
       <div class="products_details_main__right__value__price-balloon">
         <p class="balloon-up">
