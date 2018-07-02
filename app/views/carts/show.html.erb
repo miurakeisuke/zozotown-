@@ -1,3 +1,4 @@
+<%= render '/layouts/header' %>
 <body id="zozotown-carts">
   <div class="wrapper">
     <header>
@@ -42,7 +43,7 @@
                 <% end %>
               </ul>
               <div class="carts__left_contents__products-price">
-                ¥ <%= cart_product.price %>
+                ¥ <%= cart_product.price.to_s(:delimited) %>
                 <% $total_price += cart_product.price %>
               </div>
             <div class="carts__left_contents__products-btn">
@@ -60,7 +61,7 @@
             商品合計
           </div>
           <div class="carts__left_contents__total-value">
-            ¥ <%= $total_price %>
+            ¥ <%= $total_price.to_s(:delimited) %>
           </div>
         </div>
       </div>

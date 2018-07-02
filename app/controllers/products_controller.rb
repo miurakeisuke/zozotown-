@@ -16,9 +16,6 @@ class ProductsController < ApplicationController
     @shops = Shop.all
     @shop = @shops.find(params[:id])
 
-    @user_cart_id = current_user.cart.id
-    @current_user_cart_id = current_user.cart.id
-
     @product_cart = ProductCart.new
 
     @product_contact = Contact.new
