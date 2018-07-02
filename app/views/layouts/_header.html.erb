@@ -34,6 +34,20 @@
                 <li>
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
                 </li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to "貸し倉庫申請", new_warehouse_path, method: :get %>
+                  <% else %>
+                    <%= link_to "貸し倉庫申請", user_session_path, method: :post %>
+                  <% end %>
+                </li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to "貸し倉庫確認", warehouse_path(current_user.id), method: :get %>
+                  <% else %>
+                    <%= link_to "貸し倉庫確認", user_session_path, method: :post %>
+                  <% end %>
+                </li>
               </ul>
             </li>
             <li id="fa-comment-o">

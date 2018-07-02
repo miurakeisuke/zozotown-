@@ -1,0 +1,72 @@
+<%= render '/layouts/header' %>
+<%= render '/layouts/contents-bar' %>
+<div class="warehouses__deposits__wrapper clearfix">
+  <div class="warehouses__deposits__left clearfix">
+    <div class="warehouses__deposits__view clearfix">
+      <div class="warehouses__deposits__view__title">
+        <%= current_user.name %>様のお預かり衣服一覧
+      </div>
+      <% $total_price = 0 %>
+      <% if @deposits.present? %>
+      <% @deposits.each do |deposit| %>
+      <ul class="warehouses__deposits__view__info">
+        <li class="warehouses__deposits__view__info__content">名前：
+          <p><%= deposit.name %></p>
+        </li>
+        <li class="warehouses__deposits__view__info__content">ブランド名：
+          <p><%= deposit.brand %></p>
+        </li>
+        <li class="warehouses__deposits__view__info__content">サイズ:
+          <p><%= deposit.size %></p>
+        </li>
+      </ul>
+      <div class="warehouses__deposits__view__price clearfix">
+      買取査定額： ¥ <%= deposit.assesment_price %>
+        <% $total_price += deposit.assesment_price %>
+      </div>
+      <% end %>
+    </div>
+    <div class="warehouses__deposits__view__total clearfix">
+      <div class="warehouses__deposits__view__total-title">
+        査定額合計
+      </div>
+      <div class="warehouses__deposits__view__total-value">
+        ¥ <%= $total_price %>
+      </div>
+    </div>
+  </div>
+  <div class="warehouses__deposits__right clearfix">
+    <div class="warehouses__deposits__purchase clearfix">
+      <div class="warehouses__deposits__purchase-total">
+        現在の査定額合計  ¥ <%= $total_price %>
+      </div>
+      <div class="warehouses__deposits__purchase-form">
+        <a href="/constructions" class="purchase_link">買取に進む</a>
+      </div>
+    </div>
+    <div class="warehouses__deposits__pick_up">
+      <div class="warehouses__deposits__pick_up-total">
+        <% if @deposits.present? %>
+          現在のお預かり点数 <%= @deposits.length %>点
+        <% else %>
+          現在のお預かり点数 0 点
+        <% end %>
+      </div>
+      <div class="warehouses__deposits__pick_up-form">
+        <a href="/constructions" class="pick_up_link">引取に進む</a>
+      </div>
+    </div>
+    <div class="warehouses__deposits__update">
+      <div class="warehouses__deposits__update-form">
+        <div class="update_attention">まだご不要な衣類がありますか？</div>
+        <%= link_to "預ける衣服を追加する", edit_warehouse_path, class: "update_btn"%>
+      </div>
+    </div>
+    <div class="warehouses__deposits__attention">
+      <p>※表示されている衣類は、査定が終了しているものです。</p>
+      <p>※状況によってはお預け頂いた商品が表示されていないことがあります。</p>
+    </div>
+  </div>
+  <% end %>
+</div>
+ <%= render '/layouts/footer' %>

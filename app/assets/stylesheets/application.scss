@@ -17,6 +17,18 @@
 @import "./signup";
 @import "./construction";
 
+//管理者ページのcss
+@import "./deposits";
+@import "./deposits_index";
+
+
+//追加機能貸し倉庫のビューファイル
+@import "./warehouses/warehouses_new";
+@import "./warehouses/warehouses_update";
+@import "./warehouses/warehouses_show";
+@import "./warehouses/warehouses_edit";
+
+
 // TopPageに当たるスタイルシート
 @import "./toppage/common";
 @import "./toppage/left";
