@@ -16,11 +16,12 @@ class ProductsController < ApplicationController
     @shops = Shop.all
     @shop = @shops.find(params[:id])
 
-    @user_cart_id = current_user.cart.id
-    @current_user_cart_id = current_user.cart.id
+    # @current_user_cart_id = current_user.cart.id
 
     @product_cart = ProductCart.new
-    # form_forでProductCartのインスタンスを作った際、product_id/cart_idが入るようにしている
+
+    @product_contact = Contact.new
+    @contacts = Product.find(params[:id]).contacts
   end
 
 end

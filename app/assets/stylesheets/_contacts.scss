@@ -1,0 +1,60 @@
+.product_contacts__view {
+  margin-left: 30px;
+  height: 700px;
+  width: 100%;
+  border: 1px solid black;
+  &__header {
+    height: 10%;
+    display: flex;
+    background-color: #EEEEEE;
+    border-bottom: 1px solid black;
+    &__zozo {
+      font-weight:bold;
+      line-height: 70px;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+    &__icon {
+      margin: 0 20px;
+      line-height: 80px;
+    }
+  }
+  &__contents {
+    height: 70%;
+    overflow: scroll;
+    &__name {
+      flex-flow: column;
+    }
+    &__message {
+      border-bottom: 1px solid black;
+    }
+  }
+  &__footer {
+    height: 20%;
+    border-top: 1px solid black;
+    background-color: #EEEEEE;
+    &__form {
+      border: 1px solid #ededed;
+      &__input {
+      border-radius: 10px;
+      margin: 7px;
+      width: 100%;
+      }
+      &__btn {
+      width: 150px;
+      margin: 0 100px;
+      }
+    }
+    &__solved_btn {
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 7px;
+      padding: 5px;
+      text-align: center;
+      background-color: #7fffd4;
+    }
+    &__point {
+      margin: 10px;
+    }
+  }
+}
