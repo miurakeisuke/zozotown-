@@ -17,21 +17,23 @@
     <div class="product_contacts__view__contents__message">
       <i class="fa fa-comment"></i> こんにちは！疑問をチャットで解決しませんか？
     </div>
-    <% @contacts.each do |contact| %>
-    <div class="product_contacts__view__contents__name">
-      <i class="fa fa-user" aria-hidden="true"></i> <%= contact.user.name %> 様
-      <input name="current_user_name", type="hidden", value= current_user.name, class='current_user_name' >
-    </div>
-    <div class="product_contacts__view__contents__message">
-      <i class="fa fa-question-circle-o" aria-hidden="true"></i> <%= contact.content %>
-    </div>
-    <% end %>
+      <% @contacts.each do |contact| %>
+        <% if contact.user_id == current_user.id %>
+          <div class="product_contacts__view__contents__name">
+            <i class="fa fa-user" aria-hidden="true"></i> <%= contact.user.name %> 様
+            <input name="current_user_name", type="hidden", value= current_user.name, class='current_user_name' >
+          </div>
+          <div class="product_contacts__view__contents__message">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i> <%= contact.content %>
+          </div>
+        <% end %>
+      <% end %>
   </div>
   <div class="product_contacts__view__footer">
     <div class="product_contacts__view__footer__form">
       <%= form_for [@product, @product_contact] do |f| %>
-      <%= f.text_field :content, class: "product_contacts__view__footer__form__input", placeholder: "お問い合わせ内容を記載ください（30文字以内）" %>
-      <%= f.submit 'SEND', class: "product_contacts__view__footer__form__btn" %>
+        <%= f.text_field :content, class: "product_contacts__view__footer__form__input", placeholder: "お問い合わせ内容を記載ください（30文字以内）" %>
+        <%= f.submit 'SEND', class: "product_contacts__view__footer__form__btn" %>
       <% end %>
     </div>
                    <!-- チャットしていない時に表示 -->
