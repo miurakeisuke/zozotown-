@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
     @product_cart = ProductCart.new
 
     @product_contact = Contact.new
-    @contacts = Product.find(params[:id]).contacts.where(user_id: User.find(params[:id]))
+    @contacts = Product.find(params[:id]).contacts
   end
 
 end
