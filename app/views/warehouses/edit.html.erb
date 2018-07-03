@@ -1,0 +1,45 @@
+<%= render '/layouts/header/header' %>
+<%= render '/layouts/contents-bar' %>
+<div class="warehouses__edit__wrapper">
+  <div class="warehouses__edit__body">
+    <div class="warehouses__edit__form">
+      <div class="warehouses__edit__form__title">
+        追加お預かり申請フォーム
+      </div>
+      <div class="blank_space">
+      </div>
+      <div class="warehouses__edit__form__current_status">
+        <% if @deposits.present? %>
+          現在のお預かり数：<span class="status-figure"><%= @deposits.length %>着</span>
+        <% else %>
+          現在のお預かり数：
+          <span class="status-figure">0着</span>
+        <% end %>
+      </div>
+      <%= form_for @warehouse do |f| %>
+      <div class="warehouses__edit__form__select">
+        <div class="cloth_text">
+          お預かり着数
+        </div>
+        <div class="cloth_value">
+          <%= f.select :quantity, [["１着","1"],["２着","2"],["３着","3"],["４着","4"],["５着","5"],["６着","6"],["７着","7"],["８着","8"],["９着","9"],["１０着","10"]] %>
+        </div>
+      </div>
+      <div class="warehouses__edit__form__attention">
+        <p>※一度のお申し込みでお預かりできるのは１０着まで
+        <p>※料金は１着につき５０円</p>
+        <p>※送っていただいた衣類は、到着後３営業日を目安として査定を行い、</p>
+        <p class="space_text">お客様の個人ページに情報を追記いたします。</p>
+        <p>※こちらに衣類が到着していても、査定が終了していない衣服は</p>
+        <p class="space_text">個人ページには記載されず、また買取の対象となりません。</p>
+        <p class="space_text">あらかじめご了承ください。</p>
+      </div>
+      <div class="warehouses__edit__form__btn">
+        <%= f.submit '追加で衣服を預ける', class: "decision_btn" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render '/layouts/footer' %>

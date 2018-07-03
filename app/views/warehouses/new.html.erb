@@ -1,0 +1,64 @@
+<%= render '/layouts/header/header' %>
+<%= render '/layouts/contents-bar' %>
+<div class="warehouses__wrapper clearfix">
+  <div class=breadcrumbs>
+    <%= render_breadcrumbs separator: ' ＞ ' %>
+  </div>
+  <div class="warehouses__application clearfix">
+    <%= form_for @warehouse do |f| %>
+    <div class="warehouses__application__form clearfix">
+      <div class="warehouses__application__form__title">
+        <div class="title__text">
+          衣服預かり申し込みフォーム
+        </div>
+      </div>
+      <div class="warehouses__application__form__user_info">
+        <div class="user_info__content">
+          <p>ユーザー情報</p>
+          <p><%= current_user.name %> 様</p>
+          <p>郵便番号：〒<%= current_user.postal_code %></p>
+          <p>住所：<%= current_user.address %></p>
+          <p>電話番号：<%= current_user.tel_number %></p>
+        </div>
+        <div class="user_info__attention">
+          <p>ユーザー情報に変更があれば</p>
+          <p>
+            <span>
+              <a href="/" class="attention_link">ここをクリック
+              </a>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="warehouses__application__form__cloth">
+        <div class="cloth_text">
+          お預かり着数
+        </div>
+        <div class="cloth_value">
+          <%= f.select :quantity, [["１着","1"],["２着","2"],["３着","3"],["４着","4"],["５着","5"],["６着","6"],["７着","7"],["８着","8"],["９着","9"],["１０着","10"]], class: "cloth_value_select" %>
+        </div>
+        <div class="cloth_fee">
+          ※一度のお申し込みでお預かりできるのは１０着まで
+          ※料金は１着につき５０円
+        </div>
+      </div>
+      <div class="warehouses__application__form__assesment">
+        <p>商品の状態確認および査定額に関しては、こちらに送付物が到着し次第、順次確認を行い、</p>
+        <p>３営業日を目安としてお客様の個人ページに掲載をさせていただきます。</p>
+      </div>
+      <div class="warehouses__application__form__destination">
+        <p>送付先住所</p>
+        <p>郵便番号：〒１００ー００１４</p>
+        <p>東京都千代田区永田町１−７−１</p>
+        <p>上様方</p>
+        <p>TEL：0120-441-202</p>
+      </div>
+      <div class="warehouses__application__form__btn">
+        <%= f.submit '衣服を預ける', :class=>"decision_btn" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= render '/layouts/footer' %>
+

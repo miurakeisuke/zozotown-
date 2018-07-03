@@ -1,4 +1,5 @@
 require 'cart_helper.rb'
+require 'header_helper.rb'
 
 module ApplicationHelper
   include CartHelper
@@ -21,5 +22,6 @@ module ApplicationHelper
 #   else
 #     ３パターンから選択
 # end
+  include HeaderHelper
 
 end

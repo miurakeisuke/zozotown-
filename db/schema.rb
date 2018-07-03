@@ -38,6 +38,26 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_contacts_on_product_id"
+  end
+
+  create_table "deposits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.integer "assesment_price", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "warehouse_id"
+    t.string "brand", default: "", null: false
+    t.string "size", default: "", null: false
+    t.index ["user_id"], name: "index_deposits_on_user_id"
+    t.index ["warehouse_id"], name: "index_deposits_on_warehouse_id"
+
+    create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["product_id"], name: "index_contacts_on_product_id"
     t.index ["user_id"], name: "index_contacts_on_user_id"
@@ -128,8 +148,19 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "warehouses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity", default: 0
+    t.index ["user_id"], name: "index_warehouses_on_user_id"
+  end
+
   add_foreign_key "carts", "users"
   add_foreign_key "colors", "products"
+  add_foreign_key "contacts", "products"
+  add_foreign_key "deposits", "users"
+  add_foreign_key "deposits", "warehouses"
   add_foreign_key "contacts", "products"
   add_foreign_key "contacts", "users"
   add_foreign_key "images", "products"
@@ -140,4 +171,5 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
   add_foreign_key "shop_brands", "brands"
   add_foreign_key "shop_brands", "shops"
   add_foreign_key "sizes", "products"
+  add_foreign_key "warehouses", "users"
 end
