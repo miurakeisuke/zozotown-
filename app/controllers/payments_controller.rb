@@ -1,4 +1,4 @@
-class PaymentsController < ApplicationController
-  def index
-  end
-end
+# class PaymentsController < ApplicationController
+#   def index
+#   end
+# end
