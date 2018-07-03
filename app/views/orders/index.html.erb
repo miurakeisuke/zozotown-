@@ -63,9 +63,10 @@
             <td class="ttl">ZOZOポイント</td>
             <td>
               ご利用可能ポイント：
-              <span>240</span>
+              <span>0</span>
               ポイント / 今回の還元ポイント：
-              <span>22</span>
+              <% $get_point = $total_price/100 %>
+              <span><%= $get_point.round.to_s(:delimited) %></span>
               ポイント
             </td>
           </tr>
@@ -89,7 +90,7 @@
                   </p>
                 </td>
                 <td class="price">
-                  <p><span>¥0</span></p>
+                  <p><span>¥200</span></p>
 <!-- 一旦のコメントアウト、選択したもの以外薄くする機能が実装できたら、コメントアウト外してください -->
 <!--                   <p><span>¥0</span></p>
                   <p><span>¥350</span></p> -->
@@ -125,7 +126,7 @@
                   </div>
                 </td>
                 <td class="price">
-                  <span>¥2,380</span>
+                  <span>¥<%= $total_price_with_postage.to_s(:delimited) %></span>
                 </td>
                 <td class="change">
                   <a class="change_btn" href="#">変更</a>
@@ -187,7 +188,7 @@
       <div class="products_total_payment">
         <dl class="goods_total clearfix">
           <dt>商品合計</dt>
-          <dd id="subtotal">¥2,376</dd>
+          <dd id="subtotal">¥<%= $total_price.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 割引オプション選択 -->
@@ -217,7 +218,7 @@
             </span>
           </p>
           <p class="user_point">
-            ご利用可能ポイント：<span id="">240</span>
+            ご利用可能ポイント：<span id="">0</span>
             ポイント
           </p>
         </div>
@@ -226,7 +227,7 @@
       <div class="discount_option">
         <dl class="goods_total clearfix">
           <dt>品代</dt>
-          <dd id="subtotal">¥2,376</dd>
+          <dd id="subtotal">¥<%= $total_price.to_s(:delimited) %></dd>
         </dl>
         <dl class="coupon_point clearfix">
           <dt>クーポン・ポイント</dt>
@@ -251,7 +252,7 @@
           <dt>合計
             <span class="tax_text">(税込)</span>
           </dt>
-          <dd id="final_payment">¥3,000</dd>
+          <dd id="final_payment">¥<%= $total_price_with_postage.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 諸注意 -->
