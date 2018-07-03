@@ -33,13 +33,13 @@ $(function() {
 });
 
 $(function(){
-  $('.product_contacts__view__footer__form__btn').click(function(){
+  $('.product_contacts__view__footer__form__btn').on('click',function(){
     $('.product_contacts__view__footer__contact').hide();
   })
 });
 
 $(function(){
-  $('#contact_event').click(function(){
+  $('#contact_event').on('click',function(){
     $('.product_contacts__view').fadeIn("slow");
   })
 });
