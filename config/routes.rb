@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :carts, only: [:show, :update, :destroy]
   end
   resources :products, only: [:index, :show] do
-    resources :contacts, only: [:create]
+    resources :contacts, only: [:create, :destroy]
   end
   resources :brands, only: :index
   resources :sitemaps, only: :index
