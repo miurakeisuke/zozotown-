@@ -184,6 +184,9 @@
 
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
+      <%= form_tag(action: :pay, method: :post) do %>
+        <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key=PAYJP_PUBLIC_KEY></script>
+      <% end %>
       <div class="confirm_btn">
         <div class="btn">
           <!-- リンク先は/orders/newになる予定 -->

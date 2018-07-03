@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   resources :rankings, only: :index
   resources :users, only: [:index] do
     resources :carts, only: [:show, :update, :destroy] do
-      resources :orders, only: [:index, :new, :create]
+      resources :orders, only: [:index, :new, :create] do
+        collection do
+          post 'pay'
+        end
+      end
     end
   end
   resources :products, only: [:index, :show] do
