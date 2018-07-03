@@ -4,6 +4,9 @@ class OrdersController < ApplicationController
     @current_user_cart_products = current_user.cart.products
   end
 
+def new
+end
+
   def pay
     @current_user_cart_products = current_user.cart.products
     Payjp.api_key = 'sk_test_4d88d67a345efad56bad436f'
@@ -14,5 +17,5 @@ class OrdersController < ApplicationController
     )
     redirect_to "/users/1/carts/1/orders/new"
   end
-  
+
 end
