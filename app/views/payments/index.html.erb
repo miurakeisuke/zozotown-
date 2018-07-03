@@ -144,7 +144,7 @@
           <div class="payments_contents__right__next_link__fee">
             <div class="payments_contents__right__next_link__fee-products">
               <li class="fee_title">商品合計</li>
-              <li class="fee_detail">¥5,400</li>
+              <li class="fee_detail">¥<%= $total_price.to_s(:delimited) %></li>
             </div>
             <div class="payments_contents__right__next_link__fee-postage">
               <li class="fee_title">送料</li>
@@ -158,7 +158,8 @@
           <div class="payments_contents__right__next_link__total">
             <li class="total_title">合計</li>
             <li class="total_tax">（税込）</li>
-            <li class="total_detail">¥5,600</li>
+            <% $total_price_with_postage = $total_price + 200 %>
+            <li class="total_detail">¥<%= $total_price_with_postage.to_s(:delimited) %></li>
           </div>
         </div>
       </div>
