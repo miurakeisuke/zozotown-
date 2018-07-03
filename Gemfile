@@ -81,3 +81,4 @@ gem "pry-rails"
 gem 'fog-aws'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'payjp'

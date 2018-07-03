@@ -13,7 +13,7 @@
       </p>
     </div>
 
-<!-- 最終確認ページ左 -->
+                            <!-- 最終確認ページ左 -->
 
     <div class="confirm_left clearfix">
       <!-- お届け先情報 -->
@@ -24,16 +24,16 @@
             <td class="send_info">
               <div>
                 <p class="name">
-                  <span><%= @info.name %></span> 様
+                  <span><%= current_user.name %></span> 様
                 </p>
                 <p class="add">
                   住所：〒
-                  <span><%= @info.postal_code %></span>
-                  <span><%= @info.address %></span>
+                  <span><%= current_user.postal_code %></span>
+                  <span><%= current_user.address %></span>
                 </p>
                 <p class="tel">
                   電話：
-                  <span><%= @info.tel_number %></span>
+                  <span><%= current_user.tel_number %></span>
                 </p>
               </div>
             </td>
@@ -182,12 +182,21 @@
                                     <!-- 最終確認ページ右 -->
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
+      <%= form_tag('/users/1/carts/1/orders/pay/', :method => :post) do %>
+        <script
+          type = "text/javascript"
+          src = "https://checkout.pay.jp/"
+          class = "payjp-button"
+          data-key = 'pk_test_9469c6a6e86cbe0d165f8de3'
+          data-on-created = "onCreated"
+          data-text = "支払う"
+          data-submit-text = "支払う"
+          data-partial = "true">
+        </script>
+        <input type = "submit">
+      <% end %>
       <div class="confirm_btn">
         <div class="btn">
-          <!-- リンク先は/orders/newになる予定 -->
-          <a href="#">
-            <img src="https://zozo.jp/_cart/order/img/btn_accrue.png" alt="#">
-          </a>
         </div>
       </div>
       <!-- 商品合計 -->
@@ -258,7 +267,8 @@
           <dt>合計
             <span class="tax_text">(税込)</span>
           </dt>
-          <dd id="final_payment">¥<%= $total_price_with_postage.to_s(:delimited) %></dd>
+          <% total_price_with_postage = $total_price + 200 %>
+          <dd id="final_payment">¥<%= total_price_with_postage.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 諸注意 -->
