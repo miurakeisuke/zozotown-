@@ -12,10 +12,9 @@ class WarehousesController < ApplicationController
   end
 
   def create
-    @warehouse = Warehouse.new(warehouse_params)
+    @warehouse = current_user.warehouses.build(warehouse_params)
     @warehouse.save
      redirect_to root_path
-     # warehouse_path(@warehouse.id)
   end
 
   def update
@@ -34,7 +33,7 @@ class WarehousesController < ApplicationController
   private
 
   def warehouse_params
-    params.require(:warehouse).permit(:quantity).merge(user_id: current_user.id)
+    params.require(:warehouse).permit(:quantity)
   end
 
 end

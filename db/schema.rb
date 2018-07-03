@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
     t.index ["product_id"], name: "index_colors_on_product_id"
   end
 
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_contacts_on_product_id"
+  end
+
   create_table "deposits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.integer "assesment_price", default: 0, null: false
@@ -44,7 +52,7 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
     t.string "size", default: "", null: false
     t.index ["user_id"], name: "index_deposits_on_user_id"
     t.index ["warehouse_id"], name: "index_deposits_on_warehouse_id"
-  
+
     create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.bigint "product_id"
@@ -150,6 +158,7 @@ ActiveRecord::Schema.define(version: 2018_07_02_053932) do
 
   add_foreign_key "carts", "users"
   add_foreign_key "colors", "products"
+  add_foreign_key "contacts", "products"
   add_foreign_key "deposits", "users"
   add_foreign_key "deposits", "warehouses"
   add_foreign_key "contacts", "products"

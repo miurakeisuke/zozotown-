@@ -1,0 +1,127 @@
+.deposits__wrapper {
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.deposits__title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.deposits__form {
+  margin: 50px auto 0;
+  padding: 20px 30px;
+  width: 700px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  background-color: #EEEEEE;
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+  }
+  &__name {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__assesment_price {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__user_id {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__warehouse_id {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__brand {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__size {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    &-category {
+      width: 15%;
+    }
+    &-input {
+      width: 85%;
+      padding-left: 50px;
+    }
+  }
+  &__registration {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    &-btn {
+      color: #ffffff ;
+      display: block;
+      border-radius: 4px;
+      padding: 10px 35px;
+      background-color: #2490D0;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+}
+
+.form_box {
+  width: 70%;
+}
+
+
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: "";
+}
