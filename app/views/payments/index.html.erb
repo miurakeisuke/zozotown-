@@ -1,3 +1,4 @@
+                            <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
 <div class="payments_wrapper">
   <div class="payments_header">
     <a href="#" class="payments_header__logo">ZOZOTOWN</a>
@@ -6,6 +7,7 @@
   <div class="payments__contents">
     <div method="get" class="payments__contents__form clearfix">
     <%= form_tag({ controller: 'orders', action: 'index'}, { method: :get, id: 'fm' }) do %>
+                                     <!-- コンテンツ左部分 -->
       <div class="payments__contents__left">
         <div class="payments__contents__left__destination">
           <div class="payments__contents__left__destination__title">
@@ -15,18 +17,12 @@
           </div>
           <div class="payments__contents__left__destination__check_box">
             <div class="payments__contents__left__destination__check_box-user_info checked">
-              <!-- 以下では、仮でユーザー1にしています。本番ではcurrent_userにしてください -->
               <%= radio_button 'payment', 'info', current_user.id, { checked: true} %>
                 <%= "　" + current_user.name + "様" %><br>
                 <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
                 <%=  "　　" +  "〒" + current_user.postal_code %><br>
                 <%=  "　　" + "住所：" + current_user.address %><br>
                 <%=  "　　" + "電話：" + current_user.tel_number %>
-            </div>
-            <div class="payments__contents__left__destination__check_box-add_info">
-              <%= radio_button 'payment', 'address', "新しいお届け先", {} %>
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              　新しいお届け先（設定なし）
             </div>
             <div class="payments__contents__left__destination__check_box-add_info-text">
             </div>
@@ -41,23 +37,9 @@
           </div>
           <div class="payments__contents__left__shipping_method__check_box" >
             <div class="payments__contents__left__shipping_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'delivery', "指定なし", { checked: true } %>　指定なし　　1～3日以内に発送　　　　　　0円
-              <label for="radio-add_date" class="radio-add_date"></label>
-              <div class="payments__contents__left__shipping_method__check_box-add_info-text">
-              </div>
-            </div>
-            <div class="payments__contents__left__shipping_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'delivery', "日時指定", {} %>　日時指定（設定なし）　希望日時の選択　　0円
-              <label for="radio-add_date" class="radio-add_date"></label>
-              <div class="payments__contents__left__shipping_method__check_box-add_info-text">
-              </div>
-            </div>
-            <div class="payments__contents__left__shipping_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'delivery', "即日配送", {} %>　即日配送（設定なし）　　　　　　　　　　350円
-              <label for="radio-add_date" class="radio-add_date"></label>
+              <%= radio_button 'payment', 'delivery', "指定なし", { checked: true} %>　指定なし　　1～3日以内に発送　　　　　　0円
+              <label for="radio-add_date" class="radio-add_date">
+              </label>
               <div class="payments__contents__left__shipping_method__check_box-add_info-text">
               </div>
             </div>
@@ -71,69 +53,19 @@
           </div>
           <div class="payments__contents__left__payments_method__check_box" >
             <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "ツケ払い", { checked: true} %>　ツケ払い
+            </div>
+          <div class="payments__contents__left__payments_method__check_box" >
+            <div class="payments__contents__left__payments_method__check_box-add_info">
+              <%= radio_button 'payment', 'howtopay', "クレジットカード",  { checked: true} %>　クレジットカード
               <label for="radio-add_pay" class="radio-add_pay"></label>
               <div class="payments__contents__left__payments_method__check_box-add_info-text">
               </div>
             </div>
           </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "ZOZOCARD", {} %>　ZOZOCARD
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
-          </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "クレジットカード", {} %>　クレジットカード
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
-          </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "代金引換", {} %>　代金引換
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
-          </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "LINE Pay", {} %>　LINE Pay
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
-          </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "コンビニ", {} %>　コンビニ
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
-          </div>
-          <div class="payments__contents__left__payments_method__check_box" >
-            <div class="payments__contents__left__payments_method__check_box-add_info">
-              <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
-              <%= radio_button 'payment', 'howtopay', "クロネコ代金後払い", {} %>　クロネコ代金後払い
-              <label for="radio-add_pay" class="radio-add_pay"></label>
-              <div class="payments__contents__left__payments_method__check_box-add_info-text">
-              </div>
-            </div>
           </div>
         </div>
       </div>
+                                   <!-- コンテンツ右部分 -->
       <div class="payments_contents__right">
         <div class="payments_contents__right__next_link">
           <div class="payments_contents__right__next_link-btn">
@@ -164,20 +96,6 @@
         </div>
       </div>
       <% end %>
-    </div>
-    <div class="payments__contents__bottom">
-      <li class="payments__contents__bottom__attention">
-        ※
-        <a href="#" class="attention-link">ZOZOCARDとは？</a>
-      </li>
-      <li class="payments__contents__bottom__attention">
-        ※デビット機能付きカード、カード会社発行のプリペイドカードのご利用はお控えください。詳しくは、
-        <a href="#" class="attention-link">注意事項</a>
-        をご確認ください
-      </li>
-      <li class="payments__contents__bottom__attention">
-        ※コンビニを選択された場合、お支払いを確認後に配送方法「指定なし」でのお届けとなります。
-      </li>
     </div>
   </div>
 </div>

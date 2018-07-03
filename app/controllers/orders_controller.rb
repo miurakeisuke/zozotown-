@@ -14,5 +14,5 @@ class OrdersController < ApplicationController
     )
     redirect_to "/users/1/carts/1/orders/new"
   end
-
+  
 end
