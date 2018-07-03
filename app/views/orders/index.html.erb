@@ -182,7 +182,7 @@
                                     <!-- 最終確認ページ右 -->
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
-      <%= form_tag('/users/1/carts/1/orders/pay/', :method => :post) do %>
+      <%= form_tag('/users/#{current_user.id}/carts/#{current_user.carts.id}/orders/pay/', :method => :post) do %>
         <script
           type = "text/javascript"
           src = "https://checkout.pay.jp/"
