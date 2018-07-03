@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index] do
     resources :carts, only: [:show, :update, :destroy] do
-      resources :orders, only: [:index, :new, :create] do
+      resources :orders, only: [:index, :new] do
         collection do
           post 'pay'
         end
