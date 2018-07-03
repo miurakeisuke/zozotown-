@@ -13,8 +13,11 @@ class WarehousesController < ApplicationController
 
   def create
     @warehouse = current_user.warehouses.build(warehouse_params)
-    @warehouse.save
-     redirect_to root_path
+    if @warehouse.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def update

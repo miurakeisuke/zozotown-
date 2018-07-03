@@ -4,9 +4,7 @@
   </div>
   <div class="deposits__view">
     <% if @deposits.present? %>
-    <% @deposits.each do |deposit| %>
-      <%= render partial: "deposits_view", locals: { deposit: deposit } %>
-    <% end %>
+      <%= render partial: "deposits_view", collection: @deposits, as: :deposit %>
     <% end %>
   </div>
   <div class="deposits__new_link">

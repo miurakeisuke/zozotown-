@@ -10,8 +10,11 @@ class DepositsController < ApplicationController
 
   def create
     @deposit = Deposit.new(deposit_params)
-    @deposit.save
-    redirect_to deposits_path
+    if @deposit.save
+      redirect_to deposits_path
+    else
+      render :new
+    end
   end
 
   private
