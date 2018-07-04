@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations'
   }
   root 'products#index'
   resources :rankings, only: :index
@@ -26,7 +24,5 @@ Rails.application.routes.draw do
 
   resources :product_carts, only: [:create, :update]
   resources :constructions, only: [:index]
-  resources :warehouses, only: [:new, :edit, :update, :show, :create]
-  resources :deposits, only: [:index, :new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
