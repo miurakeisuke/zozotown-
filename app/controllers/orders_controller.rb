@@ -4,18 +4,33 @@ class OrdersController < ApplicationController
     @current_user_cart_products = current_user.cart.products
   end
 
-def new
-end
+  def new
+  end
 
   def pay
     @current_user_cart_products = current_user.cart.products
+
     Payjp.api_key = 'sk_test_4d88d67a345efad56bad436f'
     Payjp::Charge.create(
     amount: @current_user_cart_products.sum(:price) + 200,
     card: params['payjp-token'],
     currency: 'jpy',
     )
-    redirect_to "/users/1/carts/1/orders/new"
+
+    current_user.cart.products.each do |each_product|
+      Order.create(product_id: each_product.id, user_id: current_user.id)
+    end
+
+    cart_reset
+
+    redirect_to "/users/#{current_user.id}/carts/#{current_user.cart.id}/orders/new"
+
+  end
+
+  private
+
+  def cart_reset
+    current_user.cart.product_carts.destroy_all
   end
 
 end
