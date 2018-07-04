@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
 
   def pay
     @current_user_cart_products = current_user.cart.products
+
     Payjp.api_key = 'sk_test_4d88d67a345efad56bad436f'
     Payjp::Charge.create(
     amount: @current_user_cart_products.sum(:price) + 200,
@@ -16,7 +17,9 @@ class OrdersController < ApplicationController
     currency: 'jpy',
     )
 
-    Order.create(pay_params)
+    current_user.cart.products.each do |each_product|
+      Order.create(product_id: each_product.id, user_id: current_user.id)
+    end
 
     cart_reset
 
@@ -25,13 +28,6 @@ class OrdersController < ApplicationController
   end
 
   private
-  def pay_params
-    params.permit(:product_id, :user_id).merge(product_id: 1, user_id: current_user.id)
-  end
-
-  def cart_product
-    current_user.cart.product_carts
-  end
 
   def cart_reset
     current_user.cart.product_carts.destroy_all
