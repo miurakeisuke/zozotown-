@@ -1,7 +1,7 @@
                             <!-- ここはビューの都合上全角を入力しているので、ご注意ください。 -->
 <div class="payments_wrapper">
   <div class="payments_header">
-    <a href="#" class="payments_header__logo">ZOZOTOWN</a>
+    <%= link_to "ZOZOTOWN", root_path, class: "payments_header__logo" %>
     <h3 class="payments_header__title">お届け先・配送方法・お支払い方法</h3>
   </div>
   <div class="payments__contents">
@@ -80,7 +80,8 @@
             </div>
             <div class="payments_contents__right__next_link__fee-postage">
               <li class="fee_title">送料</li>
-              <li class="fee_detail">¥200</li>
+              <% postage = 200 %>
+              <li class="fee_detail">¥<%= postage %></li>
             </div>
             <div class="payments_contents__right__next_link__fee-commission">
               <li class="fee_title">支払い手数料</li>
@@ -90,7 +91,7 @@
           <div class="payments_contents__right__next_link__total">
             <li class="total_title">合計</li>
             <li class="total_tax">（税込）</li>
-            <% $total_price_with_postage = $total_price + 200 %>
+            <% $total_price_with_postage = $total_price + postage %>
             <li class="total_detail">¥<%= $total_price_with_postage.to_s(:delimited) %></li>
           </div>
         </div>

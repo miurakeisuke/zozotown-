@@ -1,7 +1,7 @@
 <div class="confirm_wrapper">
   <div class="confirm_header">
     <p>
-      <a href="#">ZOZOTOWN</a>
+      <%= link_to "ZOZOTOWN", root_path, class: "title" %>
     </p>
   </div>
 
@@ -102,46 +102,7 @@
             </tbody>
           </table>
           <!-- 商品 -->
-          <% @current_user_cart_products.each do |current_user_cart_product| %>
-            <table class="delivery_products_table">
-              <tbody>
-                <tr>
-                  <td class="ttl">商品</td>
-                  <% current_user_cart_product.images.each do |image| %>
-                    <td class="delivery_products_img">
-                      <img src="<%= image.url %>" alt="#">
-                  <% end %>
-                  </td>
-                  <td class="delivery_products_info">
-                    <div>
-                      <p class=""><%= current_user_cart_product.shop.name %></p>
-                      <p class=""><%= current_user_cart_product.brand.name %></p>
-                      <p class=""><%= current_user_cart_product.name %></p>
-                      <p>
-                        <% current_user_cart_product.colors.each do |color| %>
-                          カラー：<span class=""><%= color.name %></span>
-                        <% end %>
-                      </p>
-                      <p>
-                        <% current_user_cart_product.sizes.each do |size| %>
-                          サイズ：<span class=""><%= size.name %></span>
-                        <% end %>
-                      </p>
-                      <p>
-                        数量：<span class="">1</span>
-                      </p>
-                    </div>
-                  </td>
-                  <td class="price">
-                    <span>¥<%= current_user_cart_product.price.to_s(:delimited) %></span>
-                  </td>
-                  <td class="change">
-                    <a class="change_btn" href="#">変更</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          <% end %>
+            <%= render partial: "current_user_cart_product", collection: @current_user_cart_products %>
           <!-- 送料 -->
           <table class="postage_table">
             <tbody>

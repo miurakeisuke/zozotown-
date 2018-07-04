@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
 
     cart_reset
 
-    redirect_to "/users/#{current_user.id}/carts/#{current_user.cart.id}/orders/new"
+    redirect_to new_user_cart_order_path
 
   end
 

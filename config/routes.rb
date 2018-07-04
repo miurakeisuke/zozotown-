@@ -23,9 +23,6 @@ Rails.application.routes.draw do
   resources :brands, only: :index
   resources :sitemaps, only: :index
   resources :shops, only: :index
-  # resources :users, only: [:index] do
-  #   resources :payments, only: :index
-  # end
 
   resources :product_carts, only: [:create, :update]
   resources :constructions, only: [:index]
