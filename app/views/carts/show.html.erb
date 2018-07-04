@@ -24,7 +24,6 @@
               <ul class="carts__left_contents__products-info">
                 <li><%= cart_product.name %></li>
                 <li><%= cart_product.brand.name %></li>
-                <li>デニムシャツ半袖/788441</li>
                 <% cart_product.colors.each do |color| %>
                 <li>カラー: <%= color.name %></li>
                 <% end %>
@@ -57,6 +56,11 @@
       </div>
                     <!-- ここからright_content -->
       <div class="carts__right_contents">
+        <div class="navi">
+          <p>
+            <img src="http://zozo.jp/_cart/order/img/step_01.gif" alt="#">
+          </p>
+        </div>
         <form method="post" class="carts__right_contents__registar_link">
           <div class="carts__right_contents__registar_link-btn">
             <p class="btn">

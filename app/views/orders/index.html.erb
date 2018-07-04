@@ -1,3 +1,4 @@
+<%= form_tag("/users/#{current_user.id}/carts/#{current_user.cart.id}/orders/pay/", method: :post) do %>
 <div class="confirm_wrapper">
   <div class="confirm_header">
     <p>
@@ -48,7 +49,19 @@
         <tbody>
           <tr>
             <td class="ttl">支払い方法</td>
-            <td class="payment"><%= @howtopay %></td>
+            <td class="payment">クレジットカード</td>
+            <td>
+              <script
+                type = "text/javascript"
+                src = "https://checkout.pay.jp/"
+                class = "payjp-button"
+                data-key = 'pk_test_9469c6a6e86cbe0d165f8de3'
+                data-on-created = "onCreated"
+                data-text = "カード情報を登録"
+                data-submit-text = "支払う"
+                data-partial = "true">
+              </script>
+            </td>
             <td class="price">¥0</td>
             <td class="change">
               <a class="change_btn" href="#">変更</a>
@@ -85,15 +98,12 @@
                   <p class="pretty p-switch p-fill">
                     <input type="checkbox" />
                     <span class="state p-success">
-                      <label><%= @delivery %></label>
+                      <label>指定なし</label>
                     </span>
                   </p>
                 </td>
                 <td class="price">
-                  <p><span>¥<%= @postage %></span></p>
-<!-- 一旦のコメントアウト、選択したもの以外薄くする機能が実装できたら、コメントアウト外してください -->
-<!--                   <p><span>¥0</span></p>
-                  <p><span>¥350</span></p> -->
+                  <p><span>¥0</span></p>
                 </td>
                 <td class="change">
                   <a class="change_btn" href="#">変更</a>
@@ -143,22 +153,8 @@
                                     <!-- 最終確認ページ右 -->
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
-      <%= form_tag("/users/#{current_user.id}/carts/#{current_user.cart.id}/orders/pay/", method: :post) do %>
-        <script
-          type = "text/javascript"
-          src = "https://checkout.pay.jp/"
-          class = "payjp-button"
-          data-key = 'pk_test_9469c6a6e86cbe0d165f8de3'
-          data-on-created = "onCreated"
-          data-text = "支払う"
-          data-submit-text = "支払う"
-          data-partial = "true">
-        </script>
-        <%= submit_tag %>
-      <% end %>
       <div class="confirm_btn">
-        <div class="btn">
-        </div>
+        <%= submit_tag "注文を確定する", class: "order_btn" %>
       </div>
       <!-- 商品合計 -->
       <div class="products_total_payment">
@@ -248,3 +244,4 @@
     </div>
   </div>
 </div>
+<% end %>
