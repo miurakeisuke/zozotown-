@@ -1,6 +1,6 @@
 <div class="arigato_wrapper">
   <div class="arigato__header clearfix">
-    <a href="https://www.amazon.co.jp/" class="arigato__header__link">ZOZOTOWN</a>
+    <%= link_to "ZOZOTOWN", root_path, class: "arigato__header__link" %>
   </div>
   <div class="arigato__message clearfix">
     <div class="arigato__message__content">
@@ -9,7 +9,7 @@
       </div>
       <div class="arigato__message__content__info">
         <div class="arigato__message__content__info__user_name">
-          平平平平 様
+          <%= current_user.name %> 様
         </div>
         <div class="arigato__message__content__info__thanks">
           ご注文ありがとうございます。
@@ -68,7 +68,7 @@
   </div>
   <div class="arigato__footer clearfix">
     <div class="arigato__footer__content">
-      <a href="http://www.dot-st.com/globalwork/" class="arigato__footer__content__redirect_btn">ZOZOTOWNトップへ</a>
+      <%= link_to "ZOZOTOWNトップへ", root_path, class: "arigato__footer__content__redirect_btn" %>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="confirm_wrapper">
   <div class="confirm_header">
     <p>
-      <a href="#">ZOZOTOWN</a>
+      <%= link_to "ZOZOTOWN", root_path, class: "title" %>
     </p>
   </div>
 
@@ -13,7 +13,7 @@
       </p>
     </div>
 
-<!-- 最終確認ページ左 -->
+                            <!-- 最終確認ページ左 -->
 
     <div class="confirm_left clearfix">
       <!-- お届け先情報 -->
@@ -24,16 +24,16 @@
             <td class="send_info">
               <div>
                 <p class="name">
-                  <span><%= @info.name %></span> 様
+                  <span><%= current_user.name %></span> 様
                 </p>
                 <p class="add">
                   住所：〒
-                  <span><%= @info.postal_code %></span>
-                  <span><%= @info.address %></span>
+                  <span><%= current_user.postal_code %></span>
+                  <span><%= current_user.address %></span>
                 </p>
                 <p class="tel">
                   電話：
-                  <span><%= @info.tel_number %></span>
+                  <span><%= current_user.tel_number %></span>
                 </p>
               </div>
             </td>
@@ -49,7 +49,7 @@
           <tr>
             <td class="ttl">支払い方法</td>
             <td class="payment"><%= @howtopay %></td>
-            <td class="price">¥324</td>
+            <td class="price">¥0</td>
             <td class="change">
               <a class="change_btn" href="#">変更</a>
             </td>
@@ -63,9 +63,10 @@
             <td class="ttl">ZOZOポイント</td>
             <td>
               ご利用可能ポイント：
-              <span>240</span>
+              <span>0</span>
               ポイント / 今回の還元ポイント：
-              <span>22</span>
+              <% $get_point = $total_price/100 %>
+              <span><%= $get_point.round.to_s(:delimited) %></span>
               ポイント
             </td>
           </tr>
@@ -89,7 +90,7 @@
                   </p>
                 </td>
                 <td class="price">
-                  <p><span>¥0</span></p>
+                  <p><span>¥<%= @postage %></span></p>
 <!-- 一旦のコメントアウト、選択したもの以外薄くする機能が実装できたら、コメントアウト外してください -->
 <!--                   <p><span>¥0</span></p>
                   <p><span>¥350</span></p> -->
@@ -101,45 +102,14 @@
             </tbody>
           </table>
           <!-- 商品 -->
-          <table class="delivery_products_table">
-            <tbody>
-              <tr>
-                <td class="ttl">商品</td>
-                <td class="delivery_products_img">
-                  <img src="https://img4.zozo.jp/goodsimages/22050537/22050537B_1_D.jpg" alt="#">
-                </td>
-                <td class="delivery_products_info">
-                  <div>
-                    <p class="">MONO-MART</p>
-                    <p class="">Champion</p>
-                    <p class="">Champion Authentic T-SHIRTS/ チャン</p>
-                    <p>
-                      カラー：<span class="">ホワイト</span>
-                    </p>
-                    <p>
-                      サイズ：<span class="">L</span>
-                    </p>
-                    <p>
-                      数量：<span class="">1</span>
-                    </p>
-                  </div>
-                </td>
-                <td class="price">
-                  <span>¥2,380</span>
-                </td>
-                <td class="change">
-                  <a class="change_btn" href="#">変更</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <%= render partial: "current_user_cart_product", collection: @current_user_cart_products %>
           <!-- 送料 -->
           <table class="postage_table">
             <tbody>
               <tr>
                 <td class="ttl">送料</td>
                 <td class="price">
-                  <span>¥200</span>
+                  <span>¥<%= @postage %></span>
                 </td>
               </tr>
             </tbody>
@@ -170,24 +140,31 @@
         </tbody>
       </table>
     </div>
-
-<!-- 最終確認ページ右 -->
-
+                                    <!-- 最終確認ページ右 -->
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
+      <%= form_tag(pay_user_cart_orders_path, method: :post) do %>
+        <script
+          type = "text/javascript"
+          src = "https://checkout.pay.jp/"
+          class = "payjp-button"
+          data-key =  <%= ENV['PAYJP_PUBLIC_KEY'] %>
+          data-on-created = "onCreated"
+          data-text = "支払う"
+          data-submit-text = "支払う"
+          data-partial = "true">
+        </script>
+        <%= submit_tag %>
+      <% end %>
       <div class="confirm_btn">
         <div class="btn">
-          <!-- リンク先は/orders/newになる予定 -->
-          <a href="#">
-            <img src="https://zozo.jp/_cart/order/img/btn_accrue.png" alt="#">
-          </a>
         </div>
       </div>
       <!-- 商品合計 -->
       <div class="products_total_payment">
         <dl class="goods_total clearfix">
           <dt>商品合計</dt>
-          <dd id="subtotal">¥2,376</dd>
+          <dd id="subtotal">¥<%= $total_price.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 割引オプション選択 -->
@@ -217,7 +194,7 @@
             </span>
           </p>
           <p class="user_point">
-            ご利用可能ポイント：<span id="">240</span>
+            ご利用可能ポイント：<span id="">0</span>
             ポイント
           </p>
         </div>
@@ -226,7 +203,7 @@
       <div class="discount_option">
         <dl class="goods_total clearfix">
           <dt>品代</dt>
-          <dd id="subtotal">¥2,376</dd>
+          <dd id="subtotal">¥<%= $total_price.to_s(:delimited) %></dd>
         </dl>
         <dl class="coupon_point clearfix">
           <dt>クーポン・ポイント</dt>
@@ -241,7 +218,7 @@
       <div class="final_total_payment">
         <dl class="postage_fee clearfix">
           <dt>送料</dt>
-          <dd id="postage">¥200</dd>
+          <dd id="postage">¥<%= @postage %></dd>
         </dl>
         <dl class="commission_total clearfix">
           <dt>支払い手数料</dt>
@@ -251,13 +228,14 @@
           <dt>合計
             <span class="tax_text">(税込)</span>
           </dt>
-          <dd id="final_payment">¥3,000</dd>
+          <% total_price_with_postage = $total_price + @postage %>
+          <dd id="final_payment">¥<%= total_price_with_postage.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 諸注意 -->
       <div class="attention">
         <div class="attention_note">
-          <p>※送料は一律¥200です。</p>
+          <p>※送料は一律¥<%= @postage %>です。</p>
         </div>
         <div class="return">
           <p>ご注文完了前に必ずサイズ・カラー・価格・数量のご確認をお願いいたします。</p>
@@ -267,7 +245,6 @@
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </div>
