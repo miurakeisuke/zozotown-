@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   def pay
     @current_user_cart_products = current_user.cart.products
 
-    Payjp.api_key = 'sk_test_4d88d67a345efad56bad436f'
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
     amount: @current_user_cart_products.sum(:price) + 200,
     card: params['payjp-token'],
