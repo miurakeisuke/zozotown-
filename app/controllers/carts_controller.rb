@@ -3,6 +3,7 @@ class CartsController < ApplicationController
     @cart = Cart.find(params[:id])
     @cart_products = @cart.products
     @product_cart = ProductCart.ids
+    @postage = POSTAGE
   end
 
   def update

@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def index
     @current_user_cart_products = current_user.cart.products
+    @postage = POSTAGE
   end
 
   def new
