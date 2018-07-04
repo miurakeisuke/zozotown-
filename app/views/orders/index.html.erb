@@ -90,7 +90,7 @@
                   </p>
                 </td>
                 <td class="price">
-                  <p><span>¥200</span></p>
+                  <p><span>¥<%= postage %></span></p>
 <!-- 一旦のコメントアウト、選択したもの以外薄くする機能が実装できたら、コメントアウト外してください -->
 <!--                   <p><span>¥0</span></p>
                   <p><span>¥350</span></p> -->
@@ -109,7 +109,7 @@
               <tr>
                 <td class="ttl">送料</td>
                 <td class="price">
-                  <span>¥200</span>
+                  <span>¥<%= postage %></span>
                 </td>
               </tr>
             </tbody>
@@ -143,7 +143,7 @@
                                     <!-- 最終確認ページ右 -->
     <div class="confirm_right">
       <!-- 注文確定ボタン -->
-      <%= form_tag("/users/#{current_user.id}/carts/#{current_user.cart.id}/orders/pay/", :method => :post) do %>
+      <%= form_tag(pay_user_cart_orders_path, method: :post) do %>
         <script
           type = "text/javascript"
           src = "https://checkout.pay.jp/"
@@ -218,7 +218,7 @@
       <div class="final_total_payment">
         <dl class="postage_fee clearfix">
           <dt>送料</dt>
-          <dd id="postage">¥200</dd>
+          <dd id="postage">¥<%= postage %></dd>
         </dl>
         <dl class="commission_total clearfix">
           <dt>支払い手数料</dt>
@@ -228,14 +228,14 @@
           <dt>合計
             <span class="tax_text">(税込)</span>
           </dt>
-          <% total_price_with_postage = $total_price + 200 %>
+          <% total_price_with_postage = $total_price + postage %>
           <dd id="final_payment">¥<%= total_price_with_postage.to_s(:delimited) %></dd>
         </dl>
       </div>
       <!-- 諸注意 -->
       <div class="attention">
         <div class="attention_note">
-          <p>※送料は一律¥200です。</p>
+          <p>※送料は一律¥<%= postage %>です。</p>
         </div>
         <div class="return">
           <p>ご注文完了前に必ずサイズ・カラー・価格・数量のご確認をお願いいたします。</p>

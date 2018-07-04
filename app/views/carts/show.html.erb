@@ -60,7 +60,7 @@
         <form method="post" class="carts__right_contents__registar_link">
           <div class="carts__right_contents__registar_link-btn">
             <p class="btn">
-              <%= link_to 'レジへ進む', user_cart_orders_path( cart_id: current_user.cart.id), class: "g_btn btn_m" %>
+              <%= link_to 'レジへ進む', user_cart_orders_path(cart_id: current_user.cart.id), class: "g_btn btn_m" %>
             </p>
           </div>
           <div class="carts__right_contents__registar_link-postage">
@@ -68,7 +68,7 @@
             </i>
             <div class="information">
               <p>
-                送料は一律200円になりました。
+                送料は一律<%= postage %>円になりました。
               </p>
               <a href">
                 詳細はこちら
