@@ -1,0 +1,12 @@
+<div class="deposits__wrapper">
+  <div class="deposits__title ">
+    管理者専用ページ（お預かり商品一覧画面）
+  </div>
+  <div class="deposits__view">
+    <% if @deposits.present? %>
+      <%= render partial: "deposits_view", collection: @deposits, as: :deposit %>
+    <% end %>
+  </div>
+  <div class="deposits__new_link">
+    <%= link_to "査定した商品を追加する", new_deposit_path, class: "new_link__btn" %>
+</div>

@@ -1,0 +1,39 @@
+<%= render '/layouts/header/header' %>
+<%= render '/layouts/contents-bar' %>
+<div class="warehouses__edit__wrapper">
+  <div class="warehouses__edit__body">
+    <div class="warehouses__edit__form">
+      <div class="warehouses__edit__form__title">
+        追加お預かり申請フォーム
+      </div>
+      <div class="blank_space">
+      <%= $total_deposits = 30 %>
+      </div>
+      <div class="warehouses__edit__form__current_status">
+        現在のお預かり数：
+        <span class="status-figure">着</span>
+      </div>
+      <div class="warehouses__edit__form__remaining">
+        <%= current_user.name %> 様のお預かり限界数まで
+
+      </div>
+      <div class="warehouses__edit__form__select">
+        <div class="cloth_select">
+        </div>
+        <div class="cloth_fee">
+          <p>※会員一人あたりお預かりできるのは合計3０着まで</p>
+          <p>※料金は１着につき５０円</p>
+          <p>※送っていただいた衣類は、到着後３営業日を目安として査定を行い、</p>
+          <p> お客様の個人ページに情報を追記いたします。</p>
+        </div>
+      </div>
+      <div class="warehouses__edit__form__btn">
+        <p class="decision_btn-frame">
+          <input type="submit" value="追加で衣服を預ける" class="decision_btn">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render '/layouts/footer' %>
