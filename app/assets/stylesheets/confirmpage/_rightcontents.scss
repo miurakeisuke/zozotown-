@@ -6,10 +6,18 @@
   width: 303px;
   padding: 0 0 20px 0;
   margin-right: 10px;
-
   .confirm_btn {
-    padding: 0 20px 14px 20px;
     margin-top: 12px;
+    .order_btn {
+      font-size: 20px;
+      margin: 15px 0 0 25px;
+      background-color: #198fcc;
+      color: white;
+      text-align: center;
+      padding: 5px 56px;
+      border: 1px solid #2FA0DC;
+      cursor: pointer;
+    }
   }
   .products_total_payment {
     padding: 5px 20px 0;
