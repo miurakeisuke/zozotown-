@@ -14,7 +14,7 @@ class WarehousesController < ApplicationController
   def create
     @warehouse = current_user.warehouses.build(warehouse_params)
     if @warehouse.save
-      redirect_to root_path
+      redirect_to root_path;
     else
       render :new
     end
